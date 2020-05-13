@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { } from '@angular/cdk'
 import { AngularMaterialModule } from './angular-material.module';
@@ -14,13 +14,21 @@ import { DataResolverService } from './shared/data-resolver.service';
 import { CommonDataService } from './shared/common-data.service';
 import { ControlBarComponent } from './structure/control-bar/control-bar.component';
 import { PlayerDropdownComponent } from './structure/control-bar/components/player-dropdown/player-dropdown.component';
+import { DashboardComponent } from './structure/dashboard/dashboard/dashboard.component';
+import { ParallelCoordComponent } from './charts/parallel-coord/parallel-coord.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { LoaderService } from './shared/loader.service';
+import { LoaderInterceptorService } from './shared/loader-interceptor.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
     ControlBarComponent,
-    PlayerDropdownComponent
+    PlayerDropdownComponent,
+    DashboardComponent,
+    ParallelCoordComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -31,7 +39,9 @@ import { PlayerDropdownComponent } from './structure/control-bar/components/play
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [CommonDataService,DataResolverService],
+  providers: [CommonDataService,DataResolverService,
+    LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptorService, multi: true }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

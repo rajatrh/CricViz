@@ -3,14 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DataResolverService } from './shared/data-resolver.service';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './structure/dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: AppComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
     resolve:{
-      cres: DataResolverService
+      data: DataResolverService
     } 
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
   }
 ];
 

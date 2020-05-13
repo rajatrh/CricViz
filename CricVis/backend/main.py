@@ -5,38 +5,38 @@ import random
 import pandas as pd
 from flask import Flask
 from flask_cors import CORS
+from flask import request
+from flask import jsonify
 
 
 app = Flask(__name__)
 
-cors = CORS(app, resources={r'/*': {"origins": "http://localhost:4200"}})
+cors = CORS(app)
 
-teamsDF = pd.read_csv('./data/teams.csv', index_col=0)
-playersDF = pd.read_csv('./data/players.csv', index_col=0)
-venueDF = pd.read_csv('./data/venues.csv', index_col=0)
+teamsDF = pd.read_csv('./data/top_teams.csv', index_col=0)
+playersDF = pd.read_csv('./data/top_players.csv', index_col=0)
+venueDF = pd.read_csv('./data/top_venues.csv', index_col=0)
+batsmanDF = pd.read_csv('./data/top_batsman.csv', index_col=0)
+scorecardDF = pd.read_csv('./data/top_batsman_score.csv', index_col=0)
 
 @app.route('/')
 def home():
     return json.dumps({'resp' :'All OK'})
 
-@app.route('/getTeams')
-def getTeams():
-    resultJSON = teamsDF.to_json(orient='records')
+@app.route('/setupData')
+def setup():
+    return json.dumps({'teams' : json.loads(teamsDF.to_json(orient='records')),
+    'batsmen' : json.loads(batsmanDF.to_json(orient='records')),
+    'players' : json.loads(playersDF.to_json(orient='records')),
+    'venues' : json.loads(venueDF.to_json(orient='records'))})
+
+@app.route('/fetchPlayerScorecard')
+def fetchPlayerInfo():
+    pId = request.args.get('id')
+    ret = scorecardDF[scorecardDF['playerId'] == float(pId)]
+    resultJSON = ret.to_json(orient='records')
     return resultJSON
 
-@app.route('/getPlayers')
-def getPlayers():
-    resultJSON = playersDF.to_json(orient='records')
-    return resultJSON
-
-@app.route('/getVenues')
-def getVenues():
-    resultJSON = venueDF.to_json(orient='records')
-    return resultJSON
-
-@app.route('/test')
-def welcome():
-    return 'Welcome'
 
 if __name__ == '__main__':
     port = 8081

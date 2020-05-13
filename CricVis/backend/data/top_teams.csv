@@ -1,0 +1,298 @@
+,id,fullName,shortName,abbreviation,type,primaryColor,secondaryColor
+0,1,Chennai Super Kings,Super Kings,CSK,m,FDB913,0081E5
+1,2,Deccan Chargers,Deccan,DEC,m,65727A,FFFFFF
+2,3,Delhi Capitals,Delhi,DC,m,004C93,F83430
+3,4,Kings XI Punjab,Kings XI,KXIP,m,DA1F3D,FFFFFF
+4,5,Kolkata Knight Riders,Knight Riders,KKR,m,6F2C91,FFFFFF
+5,6,Mumbai Indians,Mumbai,MI,m,00AEEF,FFFFFF
+6,7,Pune Warriors India,Warriors,PWI,m,00719E,FFFFFF
+7,8,Rajasthan Royals,Royals,RR,m,004B8C,FFFFFF
+8,9,Royal Challengers Bangalore,Challengers,RCB,m,000000,FF3245
+9,10,Kochi Tuskers Kerala,Tuskers,KTK,,FF9F00,FFFFFF
+10,11,England,England,ENG,m,04064D,FE1448
+11,12,Ireland,Ireland,IRE,m,000066,81E13A
+12,13,Sri Lanka,Sri Lanka,SL,m,1B2E96,FFC500
+13,14,India,India,IND,m,0057AF,FF5500
+14,15,Australia,Australia,AUS,m,0B661E,FFD500
+15,16,New Zealand,New Zealand,NZ,m,1F1F1F,E8EBED
+16,17,Afghanistan,Afghanistan,AFG,m,0954AF,FC0011
+17,18,Zimbabwe,Zimbabwe,ZIM,m,CD151C,F8B526
+18,19,South Africa,South Africa,SA,m,0B5425,F5AB00
+19,20,Pakistan,Pakistan,PAK,m,206500,70E101
+20,21,West Indies,West Indies,WI,m,7D1041,E2DA14
+21,22,Bangladesh,Bangladesh,BAN,m,00644C,F91A22
+22,23,Sri Lanka A,Sri Lanka A,SLA,m,02ABDC,737D1D
+23,24,Sri Lanka Women,Sri Lanka ,SLw,w,02ABDC,737D1D
+24,25,South Africa Women,South Africa ,SAw,w,0B5425,F5AB00
+25,26,New Zealand Women,New Zealand,NZw,w,1F1F1F,E8EBED
+26,27,West Indies Women,West Indies,WIw,w,7D1041,E2DA14
+27,28,England Women,England,ENGw,w,04064D,FE1448
+28,29,Pakistan Women,Pakistan ,PAKw,w,206500,70E101
+29,30,Australia Women,Australia,AUSw,w,0B661E,FFD500
+30,31,India Women,India ,INDw,w,0057AF,FF5500
+31,32,Cape Cobras,Cobras,COB,m,495793,FFFFFF
+32,33,New South Wales Blues,NSW Blues,NSW,m,A3C8DD,FFFFFF
+33,34,Diamond Eagles,Eagles,DE,m,66FF00,FFFFFF
+34,35,Victorian Bushrangers,Bushrangers,VB,m,FFD339,FFFFFF
+35,36,Otago Volts,Volts,OT,m,6612D9,FFFFFF
+36,37,Somerset,Somerset,SOM,m,922D46,FFFFFF
+37,38,Sussex Sharks,Sharks,SS,m,588EB4,FFFFFF
+38,39,Wayamba Elevens,Wayamba,WE,m,20A23E,FFFFFF
+39,40,Trinidad & Tobago,T&T,T&T,m,D23A58,FFFFFF
+40,41,Highveld Lions,Lions,HL,m,64FFFF,FFFFFF
+41,42,Warriors,Warriors,WAR,m,9ECA40,FFFFFF
+42,43,Central Districts Stags,Stags,CS,m,00FF00,FFFFFF
+43,44,South Australian Redbacks,Redbacks,SAR,m,D43032,FFFFFF
+44,45,Guyana,Guyana,GUY,m,64FF64,FFFFFF
+45,46,Ruhunu Eleven,Ruhunu,RUE,m,E2343A,FFFFFF
+46,47,Auckland Aces,Aces,AA,m,4E9FD3,FFFFFF
+47,48,Leicestershire Foxes,Leicestershire,LEI,m,0057B1,FFFFFF
+48,49,Hampshire,Hampshire,HAM,m,FFFFFF,FFFFFF
+49,50,Perth Scorchers,Scorchers,PER,m,FF9400,FFFFFF
+50,51,Sialkot Stallions,Stallions,SIA,m,FFFFFF,FFFFFF
+51,52,Sydney Sixers,Sixers,SYD,m,97046E,FFFFFF
+52,53,Titans,Titans,TTN,m,FFFFFF,FFFFFF
+53,54,Uva Next,Uva,UVA,m,,
+54,55,Yorkshire,Yorkshire,YOR,m,FFFFFF,FFFFFF
+55,56,Adelaide Strikers,Strikers,AS,m,009EDB,FFFFFF
+56,57,Brisbane Heat,Brisbane,BRI,m,03A1AC,FFFFFF
+57,58,Hobart Hurricanes,Hurricanes,HOB,m,712CB9,FFFFFF
+58,59,Melbourne Renegades,Renegades,MR,m,E50126,FFFFFF
+59,60,Melbourne Stars,Stars,MS,m,39912B,FFFFFF
+60,61,Sydney Thunder,Thunder,ST,m,FFFFFF,FFFFFF
+61,62,Sunrisers Hyderabad,Sunrisers,SRH,m,FF9C00,FFFFFF
+62,63,Mumbai Combined XI,Mumbai XI,MXI,w,FFFFFF,FFFFFF
+63,64,Odisha XI,Odisha,OXI,w,FFFFFF,FFFFFF
+64,65,Bermuda,Bermuda,BER,m,2E517B,FFFFFF
+65,66,Canada,Canada,CAN,m,BF2025,FFFFFF
+66,67,Kenya,Kenya,KEN,m,0A7875,FFFFFF
+67,68,Netherlands,Netherlands,NED,m,061832,F03D03
+68,69,Scotland,Scotland,SCO,m,1D2338,84A2E1
+69,70,Argentina,Argentina,ARG,m,FFFFFF,FFFFFF
+72,73,Belgium,Belgium,BEL,m,FFEF08,FFFFFF
+73,74,Bhutan,Bhutan,BHU,m,FFFFFF,FFFFFF
+75,76,Botswana,Botswana,BOT,m,89CFF0,FFFFFF
+77,78,Bahrain,Bahrain,BRN,m,FFFFFF,FFFFFF
+80,81,Cayman Islands,Cayman Islands,CAY,m,FFFFFF,FFFFFF
+82,83,China,China,CHN,m,DE2910,FFDE00
+89,90,Czech Republic,Czech Republic,CZE,m,FFFFFF,FFFFFF
+90,91,Denmark,Denmark,DEN,m,FE0000,FFFFFF
+92,93,Fiji,Fiji,FIJ,m,00EDFF,FFFFFF
+93,94,Finland,Finland,FIN,m,3F89BA,FFFFFF
+97,98,Germany,Germany,GER,m,FFFFFF,FFFFFF
+98,99,Ghana,Ghana,GHA,m,FFFFFF,FFFFFF
+101,102,Guernsey,Guernsey,GSY,m,2BC44F,FFF024
+102,103,Hong Kong,Hong Kong,HK,m,1A1617,FFFFFF
+104,105,Indonesia,Indonesia,INA,m,FF174D,FFFFFF
+105,106,Isle of Man,Isle of Man,IOM,m,FFFFFF,FFFFFF
+107,108,Israel,Israel,ISR,m,FFFFFF,FFFFFF
+108,109,Italy,Italy,ITA,m,006FB9,FFFFFF
+109,110,Japan,Japan,JPN,m,0516FF,FF120A
+110,111,Jersey,Jersey,JSY,m,FFFFFF,FFFFFF
+111,112,Kuwait,Kuwait,KUW,m,007A3D,CE1126
+114,115,Malaysia,Malaysia,MAS,m,1E226E,FFFFFF
+116,117,Maldives,Maldives,MDV,m,FFFFFF,FFFFFF
+122,123,Myanmar,Myanmar,MYA,m,FFFFFF,FFFFFF
+123,124,Namibia,Namibia,NAM,m,174CC5,F81D00
+124,125,Nepal,Nepal,NEP,m,53647F,FFFFFF
+125,126,Nigeria,Nigeria,NGR,m,1B4D05,FFFFFF
+126,127,Norway,Norway,NOR,m,FFFFFF,FFFFFF
+127,128,Oman,Oman,OMA,m,B30121,06B89F
+130,132,Philippines,Philippines,PHI,m,3341FF,FFFFFF
+131,133,Papua New Guinea,PNG,PNG,m,161926,E0BA00
+133,135,Qatar,Qatar,QAT,m,9C2D11,FFFFFF
+135,137,Rwanda,Rwanda,RWA,m,006400,FFFFFF
+136,138,Samoa,Samoa,SAM,m,0593FF,FF0A0A
+137,139,Saudi Arabia,Saudi Arabia,SDA,m,FFFFFF,FFFFFF
+138,140,Sweden,Sweden,SWE,m,FFFFFF,FFFFFF
+140,142,Singapore,Singapore,SIN,m,FF3112,FFFFFF
+144,146,Spain,Spain,ESP,m,FF1C1C,FFFFFF
+146,148,Suriname,Suriname,SUR,m,FFFFFF,FFFFFF
+148,150,Tanzania,Tanzania,TAN,m,FFFFFF,FFFFFF
+151,153,Thailand,Thailand,THA,m,0044AA,FF6DAA
+153,155,United Arab Emirates,UAE,UAE,m,CE963F,FFFFFF
+154,156,Uganda,Uganda,UGA,m,EADF35,FFFFFF
+155,157,USA,USA,USA,m,E1121C,FFFFFF
+156,158,Vanuatu,Vanuatu,VAN,m,2F610A,FFFFFF
+158,161,Faisalabad Wolves,Wolves,FW,m,7D357E,FFFFFF
+159,162,Ireland Women,Ireland ,IREw,w,000066,81E13A
+160,163,Japan Women,Japan,JPNw,w,0516FF,FF120A
+161,164,Netherlands Women,Netherlands,NEDw,w,061832,F03D03
+162,165,Zimbabwe Women,Zimbabwe,ZIMw,w,F2200B,546C87
+163,166,Thailand Women,Thailand,THAw,w,0044AA,FF6DAA
+164,167,Canada Women,Canada,CANw,w,BF2025,FFFFFF
+166,169,Kandurata Maroons,Maroons,KM,m,ACDBF9,FFFFFF
+167,170,Bangladesh Women,Bangladesh,BANw,w,00644C,F91A22
+168,171,Afghanistan Under 19s,Afghanistan U19,AFGu19,b,0954AF,FC0011
+169,172,Australia Under 19s,Australia U19,AUSu19,b,0B661E,FFD500
+170,173,Bangladesh Under 19s,Bangladesh U19,BANu19,b,00644C,F91A22
+171,174,Canada Under 19s,Canada U19,CANu19,b,BF2025,FFFFFF
+172,175,England Under 19s,England U19,ENGu19,b,04064D,FE1448
+173,176,India Under 19s,India U19,INDu19,b,0057AF,FF5500
+174,177,Namibia Under 19s,Namibia U19,NAMu19,b,174CC5,F81D00
+175,178,New Zealand Under 19s,New Zealand U19,NZu19,b,1F1F1F,E8EBED
+176,179,Pakistan Under 19s,Pakistan U19,PAKu19,b,206500,70E101
+177,180,Papua New Guinea Under 19s,Papua New Guinea U19,PNGu19,b,161926,E0BA00
+178,181,Scotland Under 19s,Scotland U19,SCOu19,b,1D2338,84A2E1
+179,182,South Africa Under 19s,South Africa U19,SAu19,b,0B5425,F5AB00
+180,183,Sri Lanka Under 19s,Sri Lanka U19,SLu19,b,1B2E96,FFC500
+181,184,United Arab Emirates Under 19s,United Arab Emirates U19,UAEu19,b,CE963F,FFFFFF
+182,185,West Indies Under 19s,West Indies U19,WIu19,b,7D1041,E2DA14
+183,186,Zimbabwe Under 19s,Zimbabwe U19,ZIMu19,b,F2200B,546C87
+184,187,Andhra,Andhra,ACA,m,FFFFFF,FFFFFF
+185,188,Assam,Assam,ASCA,m,FFFFFF,FFFFFF
+186,189,Baroda,Baroda,BCA,m,FFFFFF,FFFFFF
+187,190,Bengal,Bengal,CAB,m,FFFFFF,FFFFFF
+188,191,Delhi,Delhi,DDCA,m,FFFFFF,FFFFFF
+189,192,Goa,Goa,GOACA,m,FFFFFF,FFFFFF
+190,193,Gujarat,Gujarat,GCA,m,FFFFFF,FFFFFF
+191,194,Haryana,Haryana,HCA,m,FFFFFF,FFFFFF
+192,195,Himachal,Himachal,HPCA,m,FFFFFF,FFFFFF
+193,196,Hyderabad,Hyderabad,HYCA,m,FFFFFF,FFFFFF
+194,197,J & K,J & K,JKCA,m,FFFFFF,FFFFFF
+195,198,Jharkhand,Jharkhand,JSCA,m,FFFFFF,FFFFFF
+196,199,Karnataka,Karnataka,KSCA,m,FFFFFF,FFFFFF
+197,200,Kerala,Kerala,KCA,m,FFFFFF,FFFFFF
+199,202,Maharashtra,Maharashtra,MHCA,m,FFFFFF,FFFFFF
+200,203,Mumbai,Mumbai,MCA,m,FFFFFF,FFFFFF
+201,204,Odisha,Odisha,OCA,m,FFFFFF,FFFFFF
+202,205,Punjab,Punjab,PCA,m,FFFFFF,FFFFFF
+203,206,Railways,Railways,RSPB,m,FFFFFF,FFFFFF
+204,207,Rajasthan,Rajasthan,RCA,m,FFFFFF,FFFFFF
+206,209,Saurashtra,Saurashtra,SCA,m,FFFFFF,FFFFFF
+207,210,Tamil Nadu,Tamil Nadu,TNCA,m,FFFFFF,FFFFFF
+208,211,Tripura,Tripura,TCA,m,FFFFFF,FFFFFF
+210,213,Vidarbha,Vidarbha,VCA,m,FFFFFF,FFFFFF
+240,243,India A,India A,IND-A,m,FFFFFF,FFFFFF
+241,244,India B,India B,IND-B,m,FFFFFF,FFFFFF
+270,273,INDIA Blue,INDIA Blue,INDBLU,m,FFFFFF,FFFFFF
+271,274,INDIA Red,INDIA Red,INDRED,m,FFFFFF,FFFFFF
+272,275,New Zealand A,New Zealand A,New Zealand A,m,,
+273,276,West Indies A,West Indies A,West Indies A,m,93232F,5C1515
+278,281,Chhattisgarh,Chhattisgarh,CSCS,m,FFFFFF,FFFFFF
+392,395,Australia A,Australia A,Australia A,m,FFFFFF,FFFFFF
+393,396,South Africa A,South Africa A,South Africa A,m,29804E,FFB300
+395,398,Northern Knights,Knights,NK,m,D867A9,FFFFFF
+396,399,Southern Express,Express,SE,m,B1BC34,FFFFFF
+397,400,Lahore Lions,Lions,LIO,m,F29255,FFFFFF
+398,401,Dolphins,Dolphins,DOL,m,70AE7F,FFFFFF
+399,402,Barbados Tridents,Tridents,BT,m,2C53BA,FFFFFF
+400,403,Northern Territory,Northern Territory,NT,m,FFFFFF,FFFFFF
+401,404,Western Australia,Western Australia,WA,m,FFFFFF,
+402,405,Northern Districts,Northern Districts,ND,m,,
+403,406,South Australia,South Australia,SAus,m,,
+405,408,Auckland,Auckland,AUK,m,,
+406,409,Tasmania,Tasmania,TAS,m,,
+407,410,Queensland Second XI,Queensland Second XI,QUE,m,,
+408,411,Canterbury,Canterbury,CTB,m,,
+409,412,Otago,Otago,OTA,m,,
+410,413,Queensland,Queensland,QUE,m,FFFFFF,FFFFFF
+411,414,New Zealand XI,New Zealand XI,NZXI,m,FFFFFF,FFFFFF
+412,415,ACT Comets,Australian Capital Territory,ACT,m,FFFFFF,FFFFFF
+413,416,Wellington,Wellington,WEL,m,FFFFFF,FFFFFF
+418,425,Nepal Under 19s,Nepal U19,NEPu19,b,53647F,FFFFFF
+421,428,Ireland Under 19s,Ireland U19,IREu19,b,000066,81E13A
+422,429,Fiji Under 19s,Fiji U19,FIJu19,b,00EDFF,FFFFFF
+423,430,Papua New Guinea Women,Papua New Guinea,PNGw,w,161926,E0BA00
+424,431,China Women,China,CHNw,w,DE2910,FFDE00
+425,432,Scotland Women,Scotland,SCOw,w,1D2338,84A2E1
+426,433,Gujarat Lions,Gujarat Lions,GL,m,E5BA0F,383838
+427,434,Rising Pune Supergiant,Supergiant,RPS,m,FFC0CB,AA3355
+439,446,HPCA XI,Himachal XI,HPCAXI,,FFFFFF,FFFFFF
+440,447,TNCA City Juniors,TNCA City Juniors,TNCA,w,FFFFFF,FFFFFF
+441,448,Mumbai CA XI,Mumbai CA XI,MCAXI,m,FFFFFF,FFFFFF
+443,450,Hong Kong Women,Hong Kong,HKw,w,1A1617,FFFFFF
+444,451,Nepal Women,Nepal,NEPw,w,53647F,FFFFFF
+449,456,INDIA Green,INDIA Green,INDGRE,m,FFFFFF,FFFFFF
+450,457,Derbyshire,Derbyshire,DER,m,FFFFFF,FFFFFF
+451,458,Durham,Durham,DUR,m,FFFFFF,FFFFFF
+452,459,Essex,Essex,ESS,m,FFFFFF,FFFFFF
+453,460,Glamorgan,Glamorgan,GLA,m,FFFFFF,FFFFFF
+454,461,Gloucestershire,Gloucestershire,GLO,m,FFFFFF,FFFFFF
+455,463,Kent,Kent,KEN,m,FFFFFF,FFFFFF
+456,464,Lancashire,Lancashire,LAN,m,FFFFFF,FFFFFF
+457,465,Leicestershire,Leicestershire,LEI,m,FFFFFF,FFFFFF
+458,466,Middlesex,Middlesex,MID,m,FFFFFF,FFFFFF
+459,467,Northamptonshire,Northants,NOR,m,FFFFFF,FFFFFF
+460,468,Nottinghamshire,Nottinghamshire,NOT,m,FFFFFF,FFFFFF
+461,470,Surrey,Surrey,SUR,m,FFFFFF,FFFFFF
+462,471,Sussex,Sussex,SUS,m,FFFFFF,FFFFFF
+463,472,Warwickshire,Warwickshire,WAR,m,FFFFFF,FFFFFF
+464,473,Worcestershire,Worcestershire,WOR,m,FFFFFF,FFFFFF
+465,475,Lancashire Thunder,Lancashire Thunder,LT,w,FFFFFF,FFFFFF
+466,476,Loughborough Lightning,Loughborough Lightning,LL,w,FFFFFF,FFFFFF
+467,477,Southern Vipers,Southern Vipers,SV,w,,
+468,478,Surrey Stars,Surrey Stars,SS,w,,
+469,479,Western Storm,Western Storm,WS,w,,
+470,480,Yorkshire Diamonds,Yorkshire Diamonds,YD,w,,
+472,482,England Lions,Lions,ENL,m,023B7A,FFFFFF
+474,484,Malaysia Under 19s,Malaysia U19,MASu19,b,1E226E,FFFFFF
+475,485,Saudi Arabia Under 19s,Saudia Arabia U19,SDAu19,b,FFFFFF,FFFFFF
+476,486,Kuwait Under 19s,Kuwait U19,KUWu19,b,007A3D,CE1126
+477,487,Bahrain Under 19s,Bahrain U19,BRNu19,b,FFFFFF,FFFFFF
+478,488,Hong Kong Under 19s,Hong Kong U19,HKu19,b,1A1617,FFFFFF
+479,489,Qatar Under 19s,Qatar U19,QATu19,b,9C2D11,FFFFFF
+480,490,Thailand Under 19s,Thailand U19,THAu19,b,0044AA,FF6DAA
+481,491,Singapore Under 19s,Singapore U19,SINu19,b,FF3112,FFFFFF
+482,492,Oman Under 19s,Oman U19,OMAu19,b,B30121,06B89F
+483,510,Cricket Australia XI,Cricket Australia XI,CAXI,,FFFFFF,FFFFFF
+484,511,Victoria,,,,,
+485,512,South Australian Scorpions,,,,,
+486,513,New South Wales Breakers,,,,,
+487,514,ACT Meteors,,,,,
+488,515,Western Fury,,,,,
+489,516,BCB Select XI,BCB Select XI,BCB Select XI,m,FFFFFF,FFFFFF
+510,539,Islamabad United,Islamabad United,ISU,m,FFFFFF,FFFFFF
+511,540,Karachi Kings,Karachi Kings,KAK,m,,
+512,541,Lahore Qalandars,Lahore Qalandars,LAQ,m,FFFFFF,FFFFFF
+513,542,Peshawar Zalmi,Peshawar Zalmi,PEZ,m,FFFFFF,FFFFFF
+514,543,Quetta Gladiators,Quetta Gladiators,QUG,m,FFFFFF,FFFFFF
+520,549,North,North,North,m,FFFFFF,FFFFFF
+521,550,South,South,South,m,FFFFFF,FFFFFF
+524,553,WICB President's XI,,,,,
+525,554,University of West Indies Vice Chancellor's XI,,,,,
+532,561,Unicorns,Unicorns,,m,FFFFFF,FFFFFF
+533,562,MCC,MCC,MCC,,FFFFFF,FFFFFF
+534,563,Cambridge MCCU,Cambs MCCU,Cambs MCCU,,FFFFFF,FFFFFF
+535,564,Durham MCCU,Durham MCCU,Durham MCCU,,FFFFFF,FFFFFF
+536,565,Leeds Bradford MCCU,Lds-Brd MCCU,Lds-Brd MCCU,,FFFFFF,FFFFFF
+537,566,Loughborough MCCU,Lbrough MCCU,Lbrough MCCU,,FFFFFF,FFFFFF
+538,567,Oxford MCCU,Oxford MCCU,Oxford MCCU,,FFFFFF,FFFFFF
+539,568,Cardiff MCCU,Cardiff MCCU,Cardiff MCCU,,FFFFFF,FFFFFF
+541,570,Prime Minister's XI,,,,,
+552,583,Governor-General XI,,,,,
+579,610,Namibia Women,Namibia,NAMw,w,174CC5,F81D00
+580,611,Uganda Women,Uganda,UGAw,w,EADF35,FFFFFF
+581,612,Tanzania Women,Tanzania,TANw,w,FFFFFF,FFFFFF
+582,613,Kenya Women,Kenya,KENw,w,0A7875,FFFFFF
+584,615,United Arab Emirates Women,United Arab Emirates,UAEw,w,CE963F,FFFFFF
+597,641,World XI,World XI,WXI,,FFFFFF,FFFFFF
+606,650,ACT Invitational XI,,,,,
+610,654,Rangpur Riders,,,,,
+611,655,Chittagong Vikings,,,,,
+612,656,Malaysia Women,Malaysia,MASw,w,1E226E,FFFFFF
+627,671,WACA XI,WACA XI,WACA XI,,FFFFFF,FFFFFF
+629,673,NW Academy,,,,,
+633,677,Multan Sultans,Multan Sultans,MUL,m,FFFFFF,FFFFFF
+645,689,Jamaica XI,,,,,
+647,691,Antigua Masterblasters,,,,,
+656,701,Trailblazers,Trailblazers,TRL,w,FFFFFF,FFFFFF
+657,702,Supernovas,Supernovas,SPN,w,FFFFFF,FFFFFF
+661,706,ECB XI,,,,,
+694,739,SLC XI,,,,,
+695,740,Services,,SSCB,,FFFFFF,FFFFFF
+696,741,Uttar Pradesh,,UPCA,,FFFFFF,FFFFFF
+716,761,Board President XI,,,,,
+755,801,Madhya Pradesh,,MPCA,,FFFFFF,FFFFFF
+762,808,Bihar,,BICA,,FFFFFF,FFFFFF
+763,809,Arunachal Pradesh,,ARCA,,FFFFFF,FFFFFF
+764,810,Sikkim,,SICA,,FFFFFF,FFFFFF
+765,811,Meghalaya,,MECA,,FFFFFF,FFFFFF
+766,812,Nagaland,,NCA,,FFFFFF,FFFFFF
+767,813,Manipur,,MNCA,,FFFFFF,FFFFFF
+801,847,India U19 A,,,,,
+802,848,Nepal U19,,,,,
+803,849,Cricket Association of Mizoram,,CAM,,FFFFFF,FFFFFF
+804,850,Cricket Association of Pondicherry,,CAP,,FFFFFF,FFFFFF
+805,851,Cricket Association of Uttarakhand,,CAU,,FFFFFF,FFFFFF
+806,852,Windies,,,,,

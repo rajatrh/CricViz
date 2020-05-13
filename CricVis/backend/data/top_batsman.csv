@@ -1,0 +1,886 @@
+,id,fullName,shortName,nationality,dateOfBirth,rightArmedBowl,rightHandedBat,bowlingStyle
+0,1,MS Dhoni,MS Dhoni,India,1981-07-07,True,True,
+2,3,Jade Dernbach,J Dernbach,England,1986-04-03,False,True,
+6,7,Murali Vijay,M Vijay,India,1984-04-01,False,False,
+7,8,Ravichandran Ashwin,R Ashwin,India,1986-09-17,False,False,
+8,9,Ravindra Jadeja,R Jadeja,India,1988-12-06,False,False,
+11,12,Subramaniam Badrinath,S Badrinath,India,1980-08-30,False,False,
+13,14,Suresh Raina,S Raina,India,1986-11-27,True,False,
+15,16,Wriddhiman Saha,W Saha,India,1984-10-24,True,True,
+18,19,George Bailey,G Bailey,Australia,1982-09-07,False,False,
+19,20,Michael Hussey,M Hussey,Australia,1975-05-27,False,False,
+21,22,Scott Styris,S Styris,New Zealand,1975-07-10,False,False,
+22,23,Nuwan Kulasekara,N Kulasekara,Sri Lanka,1982-07-22,False,False,
+23,24,Faf du Plessis,F du Plessis,South Africa,1984-07-13,True,True,LEG_SPIN
+24,25,Dwayne Bravo,DJ Bravo,West India,1983-10-07,True,True,
+25,26,Albie Morkel,A Morkel,South Africa,1981-06-10,False,False,
+26,27,Kumar Sangakkara,K Sangakkara,Sri Lanka,1977-10-27,False,False,
+29,30,Amit Mishra,A Mishra,India,1982-11-24,True,True,
+33,34,Ashish Reddy,AA Reddy,India,1981-02-24,False,False,
+35,36,Dwaraka Ravi Teja,D Ravi Teja,India,1987-09-05,False,False,
+37,38,Ishant Sharma,I Sharma,India,1988-09-02,False,True,
+40,41,Shikhar Dhawan,S Dhawan,India,1985-12-05,False,False,
+43,44,Parthiv Patel,P Patel,India,1985-03-09,False,False,
+44,45,Virender Sehwag,V Sehwag,India,1978-10-20,False,False,
+46,47,Ajit Agarkar,A Agarkar,India,1977-12-04,False,False,
+47,48,Ashok Dinda,A Dinda,India,1984-03-25,True,True,
+48,49,Irfan Pathan,I Pathan,India,1984-10-27,False,False,
+51,52,Naman Ojha,N Ojha,India,1983-07-20,True,True,
+52,53,Pawan Negi,P Negi,India,1983-01-06,False,False,
+56,57,Shahbaz Nadeem,S Nadeem,India,1989-08-12,False,True,
+58,59,Umesh Yadav,U Yadav,India,1987-10-25,True,True,FAST_SEAM
+59,60,Unmukt Chand,U Chand,India,1993-03-26,False,False,
+60,61,Varun Aaron,V Aaron,India,1989-10-29,True,True,
+61,62,Venugopal Rao,V Rao,India,1982-02-26,False,False,
+63,64,Yogesh Nagar,Y Nagar,India,1990-01-06,False,False,
+64,65,Adam Gilchrist,A Gilchrist,Australia,1971-11-14,False,False,
+65,66,Abhishek Nayar,A Nayar,India,1983-10-08,False,False,
+71,72,Mandeep Singh,M Singh,India,1991-12-18,True,True,
+75,76,Piyush Chawla,P Chawla,India,1988-12-24,False,False,
+76,77,Praveen Kumar,P Kumar,India,1986-10-02,True,True,
+77,78,Rajagopal Sathish,R Sathish,India,1981-01-14,False,False,
+83,84,Gautam Gambhir,G Gambhir,India,1981-10-14,False,False,
+85,86,Jaydev Unadkat,J Unadkat,India,1991-10-18,False,True,
+87,88,Laxmi Ratan Shukla,L Ratan Shukla,India,1981-05-06,False,False,
+88,89,Manoj Tiwary,M Tiwary,India,1985-11-14,True,True,
+89,90,Manvinder Bisla,M Bisla,India,1984-12-27,False,False,
+91,92,Rajat Bhatia,R Bhatia,India,1979-10-22,True,True,
+93,94,Mohammad Shami,M Shami,India,1990-03-09,True,True,
+94,95,Shreevats Goswami,S Goswami,India,1989-05-18,False,False,
+95,96,Yusuf Pathan,Y Pathan,India,1982-11-17,False,True,
+96,97,Sachin Tendulkar,S Tendulkar,India,1973-04-24,True,True,
+98,99,Aditya Tare,A Tare,India,1987-11-07,True,True,
+99,100,Ambati Rayudu,A Rayudu,India,1985-09-23,True,True,
+100,101,Dhawal Kulkarni,D Kulkarni,India,1988-12-10,True,True,
+101,102,Dinesh Karthik,D Karthik,India,1985-06-01,True,True,
+102,103,Harbhajan Singh,H Singh,India,1980-07-03,True,True,
+105,106,Pragyan Ojha,P Ojha,India,1986-09-05,False,False,ORTHODOX
+106,107,Rohit Sharma,R Sharma,India,1987-04-30,True,True,
+107,108,Suryakumar Yadav,S Yadav,India,1990-09-14,True,True,
+109,110,Tirumalasetti Suman,T Suman,India,1983-12-15,False,True,
+111,112,RP Singh,RP Singh,India,1985-12-06,False,True,
+112,113,Yuvraj Singh,Y Singh,India,1981-12-12,False,False,
+114,115,Ashish Nehra,A Nehra,India,1979-04-29,False,True,
+115,116,Bhuvneshwar Kumar,B Kumar,India,1990-12-05,True,True,
+122,123,Manish Pandey,M Pandey,India,1989-09-10,False,True,
+123,124,Mithun Manhas,M Manhas,India,1979-10-12,False,False,
+126,127,Robin Uthappa,R Uthappa,India,1985-11-11,True,True,
+129,130,Sourav Ganguly,S Ganguly,India,1972-07-08,False,False,
+130,131,Rahul Dravid,R Dravid,India,1973-01-11,True,True,
+134,135,Ajinkya Rahane,A Rahane,India,1988-06-06,True,True,
+138,139,Ashok Menaria,A Menaria,India,1990-10-29,False,False,
+147,148,Stuart Binny,S Binny,India,1984-06-03,True,True,
+155,156,Cheteshwar Pujara,C Pujara,India,1988-01-25,False,False,
+156,157,Harshal Patel,H Patel,India,1990-11-23,True,True,
+157,158,Mayank Agarwal,M Agarwal,India,1991-02-18,True,True,
+158,159,Mohammad Kaif,M Kaif,India,1980-12-01,False,False,
+162,163,Saurabh Tiwary,S Tiwary,India,1989-12-30,True,False,
+163,164,Virat Kohli,V Kohli,India,1988-11-05,True,True,
+164,165,Zaheer Khan,Z Khan,India,1978-10-07,False,True,
+165,166,Vinay Kumar,V Kumar,India,1984-02-12,True,True,
+166,167,Aaron Finch,A Finch,Australia,1986-11-17,False,True,
+167,168,Colin Ingram,C Ingram,South Africa,1985-07-03,False,True,
+168,169,Morne Morkel,M Morkel,South Africa,1984-10-06,False,False,
+169,170,David Warner,D Warner,Australia,1986-10-27,False,False,
+170,171,James Hopes,J Hopes,Australia,2012-02-27,False,True,
+171,172,Kevin Pietersen,K Pietersen,England,1980-06-27,False,False,
+172,173,Roelof van der Merwe,R van der Merwe,Netherlands,1984-12-31,False,False,
+173,174,Travis Birt,T Birt,Australia,1981-12-09,False,False,
+174,175,Mahela Jayawardene,M Jayawardene,Sri Lanka,1977-05-27,False,False,
+175,176,Doug Bracewell,D Bracewell,New Zealand,1990-09-28,False,False,
+176,177,Andre Russell,A Russell,West India,1988-04-29,True,True,
+177,178,Cameron White,C White,Australia,1983-08-18,False,False,
+178,179,Chris Lynn,C Lynn,Australia,1990-04-10,False,True,
+179,180,Dale Steyn,D Steyn,South Africa,1983-06-27,False,False,
+180,181,Dan Christian,D Christian,Australia,1983-05-04,True,True,
+181,182,JP Duminy,JP Duminy,South Africa,1984-04-14,False,False,
+183,184,Darren Bravo,DM Bravo,West India,1989-02-06,False,False,
+185,186,David Hussey,D Hussey,Australia,1977-07-15,False,False,
+186,187,David Miller,D Miller,South Africa,1989-06-10,False,False,
+188,189,Nathan Rimmington,N Rimmington,Australia,1982-11-11,False,False,
+189,190,Ryan Harris,R Harris,Australia,1979-10-11,False,False,
+190,191,Shaun Marsh,S Marsh,Australia,1983-07-09,False,False,
+191,192,Stuart Broad,S Broad,England,1986-06-24,True,False,FAST_SEAM
+192,193,James Faulkner,J Faulkner,Australia,1990-04-29,False,True,
+193,194,Azhar Mahmood,A Mahmood,England,1975-02-28,False,False,
+194,195,Brad Haddin,B Haddin,Australia,1977-10-23,False,True,
+195,196,Brett Lee,B Lee,Australia,1976-11-08,False,False,
+196,197,Eoin Morgan,E Morgan,England,1986-09-10,False,False,
+197,198,Jacques Kallis,J Kallis,South Africa,1975-10-16,False,False,
+198,199,James Pattinson,J Pattinson,Australia,1990-05-03,False,False,
+199,200,Ryan ten Doeschate,R ten Doeschate,Netherlands,1980-06-30,False,False,
+200,201,Shakib Al Hasan,S Al Hasan,Bangladesh,1987-03-24,False,False,
+201,202,Brendon McCullum,B McCullum,New Zealand,1981-09-27,True,True,
+202,203,Sunil Narine,S Narine,West India,1988-05-26,False,False,
+203,204,Marchant de Lange,M de Lange,South Africa,1990-10-13,False,False,
+204,205,Aiden Blizzard,A Blizzard,Australia,1984-06-27,False,False,
+205,206,Andrew Symonds,A Symonds,Australia,1975-06-09,False,True,
+206,207,Clint McKay,C McKay,Australia,1983-02-22,False,True,
+208,209,James Franklin,J Franklin,New Zealand,1980-11-07,False,True,
+209,210,Kieron Pollard,K Pollard,West India,1987-05-12,True,True,
+210,211,Lasith Malinga,L Malinga,Sri Lanka,1983-08-28,True,True,
+211,212,Herschelle Gibbs,H Gibbs,South Africa,1974-02-23,False,True,
+212,213,Mitchell Johnson,M Johnson,Australia,1981-11-02,False,False,
+213,214,Robin Peterson,R Peterson,South Africa,1979-08-04,False,True,
+214,215,Thisara Perera,NTLC Perera,Sri Lanka,1989-04-03,False,True,
+215,216,Alfonso Thomas,A Thomas,South Africa,1977-02-09,False,False,
+216,217,Angelo Mathews,A Mathews,Sri Lanka,1987-06-02,True,True,
+217,218,Callum Ferguson,C Ferguson,Australia,1984-11-21,False,False,
+218,219,Graeme Smith,G Smith,South Africa,1981-02-01,False,False,
+219,220,Jesse Ryder,J Ryder,New Zealand,1984-08-06,False,False,
+220,221,Mitchell Marsh,M Marsh,Australia,1991-10-20,False,True,
+221,222,Nathan McCullum,N McCullum,New Zealand,1980-09-01,False,True,
+222,223,Wayne Parnell,W Parnell,South Africa,1989-07-30,False,False,
+223,224,Johan Botha,J Botha,South Africa,1982-05-02,False,False,
+224,225,Paul Collingwood,P Collingwood,England,1976-05-26,False,False,
+225,226,Ross Taylor,R Taylor,New Zealand,1984-03-08,False,False,
+226,227,Shane Watson,S Watson,Australia,1981-06-17,True,True,
+228,229,Brad Hodge,B Hodge,Australia,1974-12-29,False,False,
+229,230,Dinesh Chandimal,D Chandimal,Sri Lanka,1989-11-18,False,False,
+232,233,AB de Villiers,AB de Villiers,South Africa,1984-02-17,True,True,
+235,236,Chris Gayle,C Gayle,West India,1979-09-21,True,False,
+237,238,Luke Pomersbach,L Pomersbach,Australia,1984-09-28,False,False,
+238,239,Rilee Rossouw,R Rossouw,South Africa,1989-10-09,False,False,
+239,240,Tillakaratne Dilshan,T Dilshan,Sri Lanka,1976-10-14,False,False,
+242,243,Daniel Vettori,D Vettori,New Zealand,1979-01-27,False,False,
+252,253,Gurkeerat Mann Singh,GM Singh,India,1990-06-29,True,True,OFF_SPIN
+256,258,Sanju Samson,S Samson,India,1994-11-11,True,True,
+259,261,Kuldeep Yadav,K Yadav,India,1994-12-14,False,False,
+264,266,Richard Levi,R Levi,South Africa,1988-01-14,False,True,
+269,271,Steve Smith,S Smith,Australia,1989-06-02,True,True,
+270,272,Marlon Samuels,M Samuels,West India,1981-01-05,False,False,
+273,275,Owais Shah,O Shah,England,1978-10-22,False,False,
+274,276,Karun Nair,K Nair,India,1991-12-06,True,True,
+280,282,Glenn Maxwell,G Maxwell,Australia,1988-10-14,True,True,OFF_SPIN
+283,285,Luke Wright,L Wright,England,1985-03-07,False,False,
+284,286,Michael Clarke,M Clarke,Australia,1981-04-02,False,False,
+285,287,Tamim Iqbal,T Iqbal,Bangladesh,1989-03-20,False,False,
+286,288,Ryan McLaren,R McLaren,South Africa,1983-02-09,False,False,
+288,290,Matthew Wade,M Wade,Australia,1987-12-26,False,True,
+290,292,Shane Warne,S Warne,Australia,1969-09-13,False,True,
+291,293,Jacob Oram,J Oram,New Zealand,1978-07-28,False,False,
+294,296,Michael Klinger,M Klinger,Australia,1980-07-04,False,True,
+295,297,Kedar Jadhav,K Jadhav,India,1985-03-26,True,True,
+300,303,Tim Paine,T Paine,Australia,1984-12-08,False,True,
+303,306,Mark Boucher,MV Boucher,South Africa,1976-12-03,False,True,
+304,307,Tim Southee,T Southee,New Zealand,1988-12-11,True,True,
+306,309,Michael Lumb,M Lumb,England,1980-12-02,False,True,
+311,314,Shoaib Malik,S Malik,Pakistan,1982-02-01,False,True,
+312,315,Younis Khan,Younis Khan,Pakistan,1977-11-29,False,True,
+313,316,Kamran Akmal,K Akmal,Pakistan,1982-01-13,False,True,
+318,321,Sohail Tanvir,Sohail Tanvir,Pakistan,1984-12-12,False,True,
+322,325,Ramnaresh Sarwan,R Sarwan,West India,1980-06-23,False,True,
+323,326,Simon Katich,S Katich,Australia,1975-08-21,False,False,
+329,332,Misbah-ul-Haq,Misbah-ul-Haq,Pakistan,1974-05-28,False,True,
+330,333,Shivnarine Chanderpaul,S Chanderpaul,West India,1974-08-16,False,False,
+335,338,Luke Ronchi,L Ronchi,New Zealand,1981-04-23,False,True,
+339,342,Sanath Jayasuriya,ST Jayasuriya,Sri Lanka,1969-06-30,False,True,
+348,352,Matthew Hayden,ML Hayden,Australia,1971-10-29,False,True,
+349,353,Chamara Kapugedera,CK Kapugedera,Sri Lanka,1987-02-24,False,True,
+354,358,Ajantha Mendis,A Mendis,Sri Lanka,1985-03-11,False,True,
+355,359,Umar Gul,U Gul,Pakistan,1984-04-14,False,True,
+357,361,Ricky Ponting,R Ponting,Australia,1974-12-19,False,True,
+362,367,Shahid Afridi,S Afridi,Pakistan,1980-03-01,False,True,
+369,374,Ravi Bopara,R Bopara,England,1985-05-04,False,True,
+373,378,Rob Quiney,R Quiney,Australia,1982-08-20,False,False,
+379,385,GR Napier,GR Napier,,2012-04-30,False,True,
+382,388,Moises Henriques,M Henriques,Australia,1987-02-01,False,True,
+384,391,Mashrafe Mortaza,M Mortaza,Bangladesh,1983-10-05,False,True,
+393,400,Adam Voges,A Voges,Australia,1979-10-04,False,True,
+403,410,Kemar Roach,K Roach,West India,1988-06-30,False,True,
+406,413,Dwayne Smith,DR Smith,West India,1983-04-12,True,True,
+409,417,Mignon du Preez,M du Preez,South Africa,1989-06-13,False,True,
+410,418,Trisha Chetty,T Chetty,South Africa,1988-06-26,False,True,
+415,423,Shabnim Ismail,S Ismail,South Africa,1988-10-05,False,True,
+416,424,Marizanne Kapp,M Kapp,South Africa,1990-01-04,False,True,
+420,428,Sune Luus,S Luus,South Africa,1996-01-05,False,True,
+422,430,Dane van Niekerk,D van Niekerk,South Africa,1993-05-14,False,True,
+423,431,Martin Guptill,M Guptill,New Zealand,1986-09-30,True,True,
+426,434,Adam Milne,A Milne,New Zealand,1992-04-13,True,True,
+428,439,BJ Watling,BJ Watling,New Zealand,1985-07-09,False,True,
+429,440,Kane Williamson,K Williamson,New Zealand,1990-08-08,False,True,
+430,441,Mohammad Hafeez,M Hafeez,Pakistan,1980-10-17,False,True,
+432,443,Asad Shafiq,A Shafiq,Pakistan,1986-01-28,False,True,
+435,447,Nasir Jamshed,N Jamshed,Pakistan,1989-12-06,False,False,
+437,449,Saeed Ajmal,S Ajmal,Pakistan,1977-10-14,False,True,
+438,453,Umar Akmal,U Akmal,Pakistan,1990-05-26,False,True,
+440,456,Hashim Amla,H Amla,South Africa,1983-03-31,True,True,
+441,457,Farhaan Behardien,F Behardien,South Africa,1983-10-09,False,True,
+445,461,Alex Blackwell,A Blackwell,Australia,1983-08-31,False,True,
+446,462,Jess Cameron,J Cameron,Australia,1989-06-26,False,True,
+449,465,Rachael Haynes,R Haynes,Australia,1986-12-26,False,False,
+450,466,Alyssa Healy,A Healy,Australia,1990-03-24,False,True,
+452,468,Jess Jonassen,J Jonassen,Australia,1992-11-05,False,False,
+453,469,Meg Lanning,M Lanning,Australia,1992-03-25,False,True,
+455,471,Ellyse Perry,E Perry,Australia,1990-11-03,False,True,
+457,473,Lisa Sthalekar,L Sthalekar,Australia,1979-08-13,False,True,
+458,474,Suzie Bates,S Bates,New Zealand,1987-09-16,False,True,
+461,477,Nicola Browne,N Browne,New Zealand,1983-09-14,False,True,
+462,478,Sophie Devine,S Devine,New Zealand,1989-09-01,False,True,
+464,480,Sara McGlashan,S McGlashan,New Zealand,1982-03-28,False,True,
+466,482,Katey Martin,K Martin,New Zealand,1985-02-07,False,True,
+471,487,Amy Satterthwaite,A Satterthwaite,New Zealand,1986-10-07,False,False,
+472,488,Pat Cummins,P Cummins,Australia,1993-05-08,True,True,FAST_SEAM
+474,490,Mitchell Starc,M Starc,Australia,1990-01-30,False,True,
+475,491,Mushfiqur Rahim,M Rahim,Bangladesh,1988-09-01,False,True,
+476,492,Mahmudullah,Mahmudullah,Bangladesh,1986-02-04,False,True,
+482,498,Nasir Hossain,N Hossain,Bangladesh,1991-11-30,False,True,
+485,501,Upul Tharanga,WU Tharanga,Sri Lanka,1985-02-02,False,False,
+486,502,Lahiru Thirimanne,L Thirimanne,Sri Lanka,1989-09-07,False,False,
+487,503,Jeevan Mendis,J Mendis,Sri Lanka,1983-01-15,False,False,
+488,504,Rangana Herath,R Herath,Sri Lanka,1978-03-19,False,False,
+489,505,Nuwan Pradeep,N Pradeep,Sri Lanka,1986-10-19,False,True,
+490,506,Jonny Bairstow,J Bairstow,England,1989-09-26,False,True,
+491,507,Tim Bresnan,T Bresnan,England,1985-02-28,False,True,
+492,508,Danny Briggs,D Briggs,England,1991-04-30,False,True,
+493,509,Jos Buttler,J Buttler,England,1990-09-08,True,True,
+494,510,Steven Finn,S Finn,England,1989-04-04,False,True,
+495,511,Alex Hales,A Hales,England,1989-01-03,False,True,
+496,512,Craig Kieswetter,C Kieswetter,England,1987-11-28,False,True,
+497,513,Samit Patel,S Patel,England,1984-11-30,False,True,
+498,514,Graeme Swann,G Swann,England,1979-03-24,False,True,
+499,515,William Porterfield,W Porterfield,Ireland,1984-09-06,False,False,
+501,517,George Dockrell,G Dockrell,Ireland,1992-07-22,False,True,
+502,518,Trent Johnston,T Johnston,Ireland,1974-04-29,False,True,
+504,520,Ed Joyce,E Joyce,Ireland,1978-09-22,False,False,
+505,521,Tim Murtagh,T Murtagh,Ireland,1981-08-02,False,False,
+506,522,Kevin O'Brien,K O'Brien,Ireland,1984-03-04,False,True,
+507,523,Niall O'Brien,N O'Brien,Ireland,1981-11-08,False,False,
+508,524,Boyd Rankin,B Rankin,Ireland,1984-07-05,False,False,
+510,526,Paul Stirling,P Stirling,Ireland,1990-09-03,False,True,
+511,527,Stuart Thompson,S Thompson,Ireland,1991-08-15,False,False,
+513,529,Gary Wilson,G Wilson,Ireland,1986-02-05,False,True,
+514,530,Brendan Taylor,B Taylor,Zimbabwe,1986-02-06,False,True,
+515,531,Elton Chigumbura,E Chigumbura,Zimbabwe,1986-03-14,False,True,
+516,532,Graeme Cremer,G Cremer,Zimbabwe,1986-09-19,False,True,
+517,533,Craig Ervine,C Ervine,Zimbabwe,1985-08-19,False,False,
+518,534,Kyle Jarvis,K Jarvis,Zimbabwe,1989-02-16,False,True,
+519,535,Hamilton Masakadza,H Masakadza,Zimbabwe,1983-08-09,False,True,
+521,537,Chris Mpofu,C Mpofu,Zimbabwe,1985-11-27,False,True,
+524,540,Vusi Sibanda,V Sibanda,Zimbabwe,1983-10-10,False,True,
+525,541,Prosper Utseya,P Utseya,Zimbabwe,1985-03-26,False,True,
+527,543,Malcolm Waller,M Waller,Zimbabwe,1984-02-28,False,True,
+528,544,Charlotte Edwards,C Edwards,England,1979-12-17,False,True,
+529,545,Tammy Beaumont,T Beaumont,England,1991-03-11,False,True,
+530,546,Arran Brindle,A Brindle,England,1981-11-23,False,True,
+531,547,Katherine Brunt,K Brunt,England,1985-07-02,False,True,
+533,549,Lydia Greenway,L Greenway,England,1985-08-06,False,False,
+534,550,Jenny Gunn,J Gunn,England,1986-05-09,False,True,
+535,551,Danielle Hazell,D Hazell,England,1988-05-13,False,True,
+536,552,Heather Knight,H Knight,England,1990-12-26,False,True,
+537,553,Laura Marsh,L Marsh,England,1986-12-05,False,True,
+538,555,Anya Shrubsole,A Shrubsole,England,1991-12-07,False,True,
+539,556,Sarah Taylor,S Taylor,England,1989-05-20,False,True,
+540,557,Danni Wyatt,D Wyatt,England,1991-04-22,False,True,
+541,558,Mithali Raj,M Raj,India,1982-12-03,False,True,
+542,559,Harmanpreet Kaur,H Kaur,India,1989-03-08,False,True,
+545,562,Jhulan Goswami,J Goswami,India,1982-11-25,False,True,
+551,568,Punam Raut,P Raut,India,1989-10-14,False,True,
+555,572,Merissa Aguilleira,M Aguilleira,West India,1985-12-14,False,True,
+556,573,Stafanie Taylor,S Taylor,West India,1991-06-11,False,True,
+557,574,Shemaine Campbelle,S Campbelle,West India,1992-10-14,False,True,
+559,576,Shanel Daley,S Daley,West India,1988-12-25,False,False,
+560,577,Deandra Dottin,D Dottin,West India,1991-06-21,False,True,
+561,578,Stacy-Ann King,SA King,West India,1983-07-17,False,False,
+563,580,Anisa Mohammed,A Mohammed,West India,1988-09-07,False,True,
+569,586,Shaminda Eranga,S Eranga,Sri Lanka,1986-06-23,False,True,
+571,588,Akila Dananjaya,A Dananjaya,Sri Lanka,1993-10-04,False,False,
+572,589,Darren Sammy,D Sammy,West India,1983-12-20,False,True,
+574,591,Johnson Charles,J Charles,West India,1989-01-14,False,True,
+575,592,Fidel Edwards,F Edwards,West India,1982-02-06,False,True,
+576,593,Denesh Ramdin,D Ramdin,West India,1985-03-13,False,True,
+577,594,Ravi Rampaul,R Rampaul,West India,1984-10-15,False,False,
+578,595,Lendl Simmons,L Simmons,West India,1985-01-25,True,True,
+579,596,Shashikala Siriwardana,S Siriwardana,Sri Lanka,1985-02-14,False,True,
+583,600,Chamari Athapaththu,C Athapaththu,Sri Lanka,1990-02-09,False,False,
+585,602,Udeshika Prabodani,U Prabodani,Sri Lanka,1985-09-20,False,True,
+590,607,Dilani Manodara,D Manodara,Sri Lanka,1982-12-08,False,True,
+592,609,Sripali Weerakkody,S Weerakkody,Sri Lanka,1986-01-07,False,False,
+593,610,Nawroz Mangal,N Mangal,Afghanistan,1984-07-15,False,True,
+594,611,Asghar Afghanistan,A Afghanistan,Afghanistan,1987-02-22,False,True,
+595,612,Dawlat Zadran,D Zadran,Afghanistan,1983-03-19,False,True,
+596,613,Gulbadin Naib,G Naib,Afghanistan,1991-03-16,False,True,
+599,616,Javed Ahmadi,J Ahmadi,Afghanistan,1992-01-02,False,True,
+601,618,Mohammad Nabi,M Nabi,Afghanistan,1985-01-01,True,True,OFF_SPIN
+602,619,Mohammad Shahzad,M Shahzad,Afghanistan,1988-01-31,False,True,
+603,620,Najibullah Zadran,N Zadran,Afghanistan,1993-02-28,False,False,
+605,622,Samiullah Shinwari,S Shinwari,Afghanistan,1987-02-03,False,True,
+606,623,Shafiqullah,Shafiqullah,Afghanistan,1989-08-07,False,True,
+608,625,Sana Mir,S Mir,Pakistan,1986-01-05,False,True,
+609,626,Nain Abidi,SNF Abidi,Pakistan,1985-05-23,False,True,
+610,627,Asmavia Iqbal Khokhar,AI Khokar,Pakistan,1988-01-01,False,True,
+612,629,Bismah Maroof,B Maroof,Pakistan,1992-07-18,False,False,
+614,631,Javeria Khan,J Khan,Pakistan,1988-05-14,False,True,
+617,635,Nahida Khan,N Khan,Pakistan,1986-11-03,False,True,
+618,636,Nida Dar,N Dar,Pakistan,1987-01-02,False,True,
+619,637,Qanita Jalil,Q Jalil,Pakistan,1982-03-21,False,True,
+624,642,Rory Kleinveldt,R Kleinveldt,South Africa,1983-03-15,False,True,
+625,643,Vernon Philander,V Philander,South Africa,1985-06-24,False,True,
+628,646,Phil Hughes,P Hughes,Australia,1988-11-30,False,False,
+629,647,Ben Rohrer,B Rohrer,Australia,1981-03-26,False,True,
+634,652,Dean Elgar,D Elgar,South Africa,1987-06-11,False,False,
+641,659,Peter Siddle,P Siddle,Australia,1984-11-25,False,True,
+644,662,Hamish Rutherford,H Rutherford,New Zealand,1989-04-27,False,False,
+650,668,Neil Wagner,N Wagner,New Zealand,1986-03-13,False,False,
+651,669,Marcus Trescothick,ME Trescothick,England,1975-12-25,False,False,
+655,673,PD Trego,PD Trego,,2012-09-06,False,True,
+656,674,JC Hildreth,JC Hildreth,,2012-09-06,False,True,
+662,680,Andy Hodd,AJ Hodd,England,1984-01-12,False,True,
+678,696,Michael Yardy,MH Yardy,England,1980-11-27,False,True,
+681,699,WJ Durston,WJ Durston,,2012-09-06,False,True,
+689,707,Alviro Petersen,A Petersen,South Africa,1980-12-05,False,True,
+698,716,Kushal Janith Perera,KJ Perera,Sri Lanka,2012-09-06,False,False,
+699,717,Ashwell Prince,AG Prince,South Africa,1977-05-28,False,True,
+707,725,K Noema-Barnett,K Noema-Barnett,,2012-09-06,False,True,
+712,730,Mitchell McClenaghan,M McClenaghan,New Zealand,1986-06-11,False,False,
+715,733,Tom Cooper,T Cooper,Australia,1986-11-26,False,True,
+729,747,Devendra Bishoo,D Bishoo,West India,1985-11-06,False,True,
+730,748,John Hastings,J Hastings,Australia,1985-11-04,False,True,
+751,769,Jason Mohammed,J Mohammed,West India,1986-09-23,False,True,
+752,770,James Adams,J Adams,England,1980-09-23,False,False,
+755,773,Colin Munro,C Munro,New Zealand,1987-03-11,False,False,
+759,777,JJ Cobb,JJ Cobb,England,2012-09-06,False,True,
+768,786,Nick Compton,N Compton,England,1983-06-26,False,True,
+774,792,Steve O'Keefe,S O'Keefe,Australia,1984-12-09,False,True,
+778,796,Adil Rashid,A Rashid,England,1988-02-17,False,True,
+779,797,Nathan Lyon,N Lyon,Australia,1987-11-20,False,True,
+780,798,Kane Richardson,K Richardson,Australia,1991-02-12,True,True,
+786,806,Amy Jones,A Jones,England,1993-06-13,False,True,
+787,808,Seekkuge Prasanna,S Prasanna,Sri Lanka,1985-06-27,False,True,
+790,811,Sachithra Senanayake,S Senanayake,Sri Lanka,1985-02-09,False,True,
+796,817,Dushmantha Chameera,D Chameera,Sri Lanka,1992-01-11,False,True,
+799,820,Colin de Grandhomme,C de Grandhomme,New Zealand,1986-07-22,True,True,FAST_SEAM
+804,825,Michael Carberry,M Carberry,England,1980-09-29,False,False,
+805,826,Liam Dawson,L Dawson,England,1990-03-01,False,True,
+806,827,Sean Ervine,S Ervine,Zimbabwe,1982-12-06,False,False,
+810,831,James Vince,J Vince,England,1991-03-14,False,True,
+811,832,Christopher Wood,C Wood,England,1990-06-27,False,True,
+812,833,Temba Bavuma,T Bavuma,South Africa,1990-05-17,False,True,
+813,834,Quinton de Kock,Q de Kock,South Africa,1992-12-17,False,False,
+815,836,Chris Morris,C Morris,South Africa,1987-04-30,True,True,FAST_SEAM
+819,840,Nathan Coulter-Nile,N Coulter-Nile,Australia,1987-10-11,False,True,
+822,843,Joe Mennie,J Mennie,Australia,1988-12-24,False,True,
+825,846,Sarfaraz Ahmed,S Ahmed,Pakistan,1987-05-22,False,True,
+833,854,Abdur Rehman,A Rehman,Pakistan,1980-03-01,False,False,
+834,855,Haris Sohail,H Sohail,Pakistan,1989-01-09,False,False,
+836,857,Josh Hazlewood,J Hazlewood,Australia,1991-01-08,False,False,
+837,858,Nic Maddinson,N Maddinson,Australia,1991-12-21,False,False,
+839,860,Peter Nevill,P Nevill,Australia,1985-10-13,False,True,
+841,862,Heino Kuhn,H Kuhn,South Africa,1984-04-01,False,True,
+846,867,Jacques Rudolph,J Rudolph,South Africa,1981-05-04,False,False,
+848,869,David Wiese,D Wiese,South Africa,1985-05-18,False,True,
+850,871,Shannon Gabriel,S Gabriel,West India,1988-04-28,False,True,
+851,872,Evin Lewis,E Lewis,West India,1991-12-27,False,False,
+858,879,Gary Ballance,G Ballance,England,1989-11-22,False,False,
+859,880,Andrew Gale,A Gale,England,1983-11-28,False,False,
+860,881,Oliver Hannon-Dalby,O Hannon-Dalby,England,1989-06-20,False,False,
+863,884,Adam Lyth,A Lyth,England,1987-09-25,False,False,
+864,885,Steve Patterson,S Patterson,England,1983-10-03,False,True,
+865,886,Azeem Rafiq,A Rafiq,England,1991-02-27,False,True,
+866,887,Joe Root,J Root,England,1990-12-30,True,True,OFF_SPIN
+867,888,Ryan Sidebottom,R Sidebottom,England,1978-01-15,False,False,
+870,891,Yashoda Mendis,Y Mendis,Sri Lanka,1986-09-15,False,True,
+876,897,Ed Cowan,E Cowan,Australia,1982-06-16,False,True,
+877,898,Imran Tahir,I Tahir,South Africa,1979-03-27,True,True,
+878,899,Alastair Cook,A Cook,England,1984-12-25,False,False,
+879,900,James Anderson,J Anderson,England,1982-07-30,False,False,
+880,901,Ian Bell,I Bell,England,1982-04-11,False,True,
+881,902,Stuart Meaker,S Meaker,England,1989-01-21,False,True,
+882,903,Graham Onions,G Onions,England,1982-09-09,False,True,
+884,905,Matt Prior,M Prior,England,1982-02-26,False,True,
+885,906,Jonathan Trott,J Trott,England,1981-04-22,False,True,
+888,909,Michael Neser,M Neser,Australia,1990-03-29,False,True,
+891,912,Joe Burns,J Burns,Australia,1989-09-06,False,True,
+892,913,Ben Cutting,B Cutting,Australia,1987-01-30,False,True,
+897,918,Ben Dunk,B Dunk,Australia,1987-03-11,False,False,
+898,919,Michael Hogan,M Hogan,Australia,1981-05-31,False,True,
+902,923,Jonathan Wells,J Wells,Australia,1988-08-13,False,True,
+910,931,Jackson Bird,J Bird,Australia,1986-12-11,False,True,
+911,932,Peter Handscomb,P Handscomb,Australia,1991-04-26,False,True,
+914,935,Ashton Agar,A Agar,Australia,1993-10-14,False,False,
+918,939,Daniel Hughes,D Hughes,Australia,1989-02-16,False,False,
+920,941,Kurtis Patterson,K Patterson,Australia,1993-04-05,False,False,
+921,942,Sean Abbott,S Abbott,Australia,1992-02-29,False,True,
+922,943,Mark Cosgrove,M Cosgrove,Australia,1984-06-14,False,False,
+927,948,Usman Khawaja,U Khawaja,Australia,1986-12-18,False,False,
+929,950,Chris Rogers,C Rogers,Australia,1977-08-31,False,False,
+931,952,Chris Tremain,C Tremain,Australia,1991-08-10,False,True,
+933,954,Dimuth Karunaratne,D Karunaratne,Sri Lanka,1988-04-21,False,False,
+934,956,Dhammika Prasad,D Prasad,Sri Lanka,1983-05-30,False,True,
+936,958,Adam Zampa,A Zampa,Australia,1992-03-31,True,True,
+937,959,Alex Doolan,A Doolan,Australia,1985-11-29,False,True,
+940,962,James Tredwell,J Tredwell,England,1982-02-27,False,False,
+942,964,Marcus Stoinis,M Stoinis,Australia,1989-08-16,False,True,
+943,965,Hilton Cartwright,H Cartwright,Australia,1992-02-14,False,True,
+944,966,James Harris,J Harris,England,1990-05-16,False,True,
+945,967,Chris Woakes,C Woakes,England,1989-03-02,True,True,FAST_SEAM
+946,968,Corey Anderson,C Anderson,New Zealand,1990-12-13,False,False,
+947,969,Trent Boult,T Boult,New Zealand,1989-07-22,False,True,
+948,970,Peter Fulton,P Fulton,New Zealand,1979-02-01,False,True,
+949,971,Jimmy Neesham,J Neesham,New Zealand,1990-09-17,False,False,
+950,972,Dean Brownlie,D Brownlie,New Zealand,1984-07-30,False,True,
+952,974,Jeetan Patel,J Patel,New Zealand,1980-05-07,False,True,
+957,979,Ahmed Shehzad,A Shehzad,Pakistan,1991-11-23,False,True,
+959,981,Junaid Khan,J Khan,Pakistan,1989-12-24,False,True,
+960,982,Mohammad Irfan,M Irfan,Pakistan,1982-06-06,False,True,
+961,983,Umar Amin,U Amin,Pakistan,1989-10-16,False,False,
+962,984,Zulfiqar Babar,Z Babar,Pakistan,1978-12-10,False,True,
+963,985,Azhar Ali,Azhar Ali,Pakistan,1985-02-19,False,True,
+965,987,Anwar Ali,Anwar Ali,Pakistan,1987-11-25,False,True,
+966,988,Wahab Riaz,W Riaz,Pakistan,1985-06-28,False,True,
+967,993,Suranga Lakmal,S Lakmal,Sri Lanka,1987-03-10,False,True,
+972,998,Elyse Villani,E Villani,Australia,1989-10-06,False,True,
+973,999,Georgia Elwiss,G Elwiss,England,1991-05-31,False,True,
+978,1004,Rachel Priest,R Priest,New Zealand,1985-06-13,False,True,
+987,1013,Chloe Tryon,C Tryon,South Africa,1994-01-25,False,True,
+994,1020,Travis Head,T Head,Australia,1993-12-29,True,False,
+997,1023,Grant Elliott,G Elliott,New Zealand,1979-03-21,False,True,
+1047,1074,Tino Best,T Best,West India,1981-08-26,False,True,
+1048,1075,Jason Holder,J Holder,West India,1991-11-05,False,True,
+1049,1076,Kieran Powell,K Powell,West India,1990-03-06,False,True,
+1050,1077,Devon Thomas,D Thomas,West India,1989-11-12,False,True,
+1053,1080,Rahat Ali,Rahat Ali,Pakistan,1988-09-12,False,True,
+1056,1083,Vijay Shankar,V Shankar,India,1991-01-26,True,True,MEDIUM_SEAM
+1058,1085,Manan Vohra,M Vohra,India,1993-07-18,False,True,
+1061,1088,Rishi Dhawan,R Dhawan,India,1990-02-19,False,True,
+1068,1095,Regis Chakabva,R Chakabva,Zimbabwe,1987-09-20,False,True,
+1070,1097,Tendai Chatara,T Chatara,Zimbabwe,1991-02-28,False,True,
+1071,1098,Chamu Chibhabha,C Chibhabha,Zimbabwe,1986-09-06,False,True,
+1075,1102,Sean Williams,S Williams,Zimbabwe,1986-09-26,False,False,
+1077,1105,Kyle Abbott,K Abbott,South Africa,1987-06-18,False,True,
+1079,1107,Mohit Sharma,M Sharma,India,1991-12-19,False,True,
+1085,1113,Axar Patel,A Patel,India,1994-01-20,False,False,
+1089,1117,Hanuma Vihari,H Vihari,India,1993-10-13,True,True,OFF_SPIN
+1090,1118,Karn Sharma,K Sharma,India,1987-10-23,True,False,
+1096,1124,Jasprit Bumrah,J Bumrah,India,1993-12-06,True,True,
+1097,1125,KL Rahul,KL Rahul,India,1992-04-18,False,True,
+1100,1128,Richmond Mutumbami,R Mutumbami,Zimbabwe,1989-06-11,False,True,
+1101,1129,Sikandar Raza,S Raza,Zimbabwe,1986-04-24,False,True,
+1102,1130,Mominul Haque,M Haque,Bangladesh,1991-09-29,False,False,
+1105,1133,Shamsur Rahman,S Rahman,Bangladesh,1988-06-05,False,True,
+1107,1135,Rubel Hossain,R Hossain,Bangladesh,1990-01-01,False,True,
+1108,1136,Tinashe Panyangara,T Panyangara,Zimbabwe,1985-10-21,False,True,
+1110,1138,Devon Smith,DS Smith,West India,1981-10-21,False,False,
+1112,1140,Tom Latham,T Latham,New Zealand,1992-04-02,False,False,
+1113,1141,Kyle Coetzer,K Coetzer,Scotland,1984-04-14,False,True,
+1114,1142,Preston Mommsen,P Mommsen,Scotland,1987-10-14,False,True,
+1115,1143,Richie Berrington,R Berrington,Scotland,1987-04-03,False,True,
+1118,1146,Josh Davey,J Davey,Scotland,1990-08-03,False,True,
+1122,1150,Matt Machan,M Machan,Scotland,1991-02-15,False,False,
+1123,1151,David Murphy,D Murphy,Scotland,1989-06-24,False,True,
+1124,1152,Rob Taylor,R Taylor,Scotland,1989-12-21,False,False,
+1126,1154,Ben Stokes,B Stokes,England,1991-06-04,True,False,
+1128,1156,Calum MacLeod,C MacLeod,Scotland,1988-11-15,False,True,
+1129,1157,Collins Obuya,C Obuya,Kenya,1981-07-27,False,True,
+1142,1170,Peter Borren,P Borren,Netherlands,1983-08-21,False,True,
+1143,1171,Wesley Barresi,W Barresi,Netherlands,1984-05-03,False,True,
+1150,1178,Stephan Myburgh,S Myburgh,Netherlands,1984-02-28,False,False,
+1152,1180,Pieter Seelaar,P Seelaar,Netherlands,1987-07-02,False,True,
+1154,1182,John Mooney,J Mooney,Ireland,1982-02-10,False,False,
+1156,1184,Craig Wallace,C Wallace,Scotland,1990-06-27,False,True,
+1158,1188,Matthew Cross,M Cross,Scotland,1992-10-15,False,True,
+1160,1190,Andrew Balbirnie,A Balbirnie,Ireland,1990-12-28,False,True,
+1161,1191,Stuart Poynter,S Poynter,Ireland,1990-10-18,False,True,
+1166,1201,Mohammad Rizwan,Mohammad Rizwan,Pakistan,1992-06-01,False,True,
+1169,1205,Khurram Khan,K Khan,UAE,1971-06-21,False,False,
+1171,1207,Amjad Javed,A Javed,UAE,1980-07-05,False,True,
+1176,1212,Muhammad Naveed,M Naveed,UAE,1987-06-03,False,True,
+1178,1214,Swapnil Patil,S Patil,UAE,1985-04-15,False,True,
+1179,1215,Rohan Mustafa,R Mustafa,UAE,1988-10-07,False,True,
+1180,1216,Shaiman Anwar,S Anwar,UAE,1979-03-15,False,True,
+1214,1250,Rahmat Shah,R Shah,Afghanistan,1993-07-06,False,True,
+1215,1251,Mirwais Ashraf,M Ashraf,Afghanistan,1988-06-30,False,True,
+1219,1256,James Taylor,J Taylor,England,1990-01-06,False,True,
+1222,1259,Simon Kerrigan,Simon Kerrigan,England,1989-05-10,False,True,
+1223,1260,Sohaib Maqsood,S Maqsood,Pakistan,1987-04-15,False,True,
+1226,1265,Asif Ali,A Ali,Pakistan,1989-04-13,False,False,
+1237,1276,Hardus Viljoen,H Viljoen,South Africa,1989-03-06,False,True,
+1241,1280,Neil Broom,N Broom,New Zealand,1983-11-20,False,True,
+1242,1281,Mark Craig,M Craig,New Zealand,1987-03-23,False,False,
+1246,1285,Ashton Turner,A Turner,Australia,1993-01-25,False,True,
+1251,1290,Graeme van Buuren,G van Buuren,South Africa,1990-08-22,False,True,
+1254,1293,Milinda Siriwardana,M Siriwardana,Sri Lanka,1985-12-04,False,False,
+1256,1295,Dhananjaya de Silva,D de Silva,Sri Lanka,1991-09-06,False,True,
+1257,1296,Khurram Manzoor,K Manzoor,Pakistan,1986-06-10,False,True,
+1260,1299,Chris Jordan,C Jordan,England,1988-10-04,True,True,
+1261,1300,Jamie Overton,J Overton,England,1994-04-10,False,True,
+1263,1302,Anamul Haque,A Haque,Bangladesh,1993-12-16,False,True,
+1264,1304,Ish Sodhi,I Sodhi,New Zealand,1992-10-31,False,True,
+1268,1308,Anton Devcich,A Devcich,New Zealand,1985-09-26,False,False,
+1271,1311,Chadwick Walton,C Walton,West India,1985-07-03,False,True,
+1273,1313,Noor Ali Zadran,N Zadran,Afghanistan,1988-07-10,False,True,
+1309,1350,Jamie Atkinson,J Atkinson,Hong Kong,1990-08-13,False,True,
+1310,1351,Tanwir Afzal,T Afzal,Hong Kong,1988-06-12,False,True,
+1317,1358,Mark Chapman,M Chapman,Hong Kong,1994-06-27,False,False,
+1318,1359,Babar Hayat,B Hayat,Hong Kong,1992-01-05,False,True,
+1320,1361,Aizaz Khan,A Khan,Hong Kong,1993-03-21,False,True,
+1321,1362,Nizakat Khan,N Khan,Hong Kong,1992-07-08,False,True,
+1326,1367,Gareth Berg,G Berg,Italy,1981-01-18,False,True,
+1343,1384,Paras Khadka,P Khadka,Nepal,1987-10-24,False,True,
+1344,1385,Gyanendra Malla,G Malla,Nepal,1987-07-06,False,True,
+1359,1400,Ben Cooper,B Cooper,Netherlands,1992-02-10,False,False,
+1362,1403,Assad Vala,A Vala,Papua,1987-08-05,False,False,
+1363,1404,Tony Ura,T Ura,Papua,1989-10-15,False,True,
+1365,1406,Mahuru Dai,M Dai,Papua,1984-05-30,False,True,
+1375,1416,Geraint Jones,G Jones,Papua,1976-07-14,False,True,
+1376,1417,Safyaan Sharif,S Sharif,Scotland,1991-05-24,False,True,
+1377,1418,Michael Leask,M Leask,Scotland,1990-10-29,False,True,
+1417,1460,Kraigg Brathwaite,K Brathwaite,West India,1992-12-01,False,True,
+1419,1462,Sharjeel Khan,S Khan,Pakistan,1989-08-14,False,False,
+1424,1467,Jimmy Peirson,J Peirson,Australia,1992-10-13,False,True,
+1429,1472,Solomon Mire,S Mire,Zimbabwe,1989-08-21,False,True,
+1436,1479,Jordan Silk,J Silk,Australia,1992-04-13,False,True,
+1437,1480,Andrew Tye,A Tye,Australia,1986-12-12,True,True,
+1439,1482,Scott Borthwick,S Borthwick,England,1990-04-19,False,False,
+1442,1485,Kaushal Silva,K Silva,Sri Lanka,1986-05-27,False,True,
+1443,1486,Dilruwan Perera,MDK Perera,Sri Lanka,1982-07-22,False,True,
+1447,1490,Andre Fletcher,A Fletcher,West India,1987-11-28,False,True,
+1448,1491,Ben McDermott,B McDermott,Australia,1994-12-12,False,True,
+1450,1493,Imrul Kayes,I Kayes,Bangladesh,1987-02-02,False,False,
+1462,1505,Matt Henry,M Henry,New Zealand,1991-12-14,False,True,
+1463,1507,Ihsanullah,Ihsanullah,Afghanistan,1997-12-28,False,True,
+1486,1534,Ed Barnard,E Barnard,England,1995-11-20,False,True,
+1493,1541,Joe Clarke,J Clarke,England,1996-05-26,False,True,
+1494,1542,Ben Duckett,B Duckett,England,1994-10-17,False,False,
+1495,1543,Harry Finch,H Finch,England,1995-02-10,False,True,
+1496,1544,Matt Fisher,M Fisher,England,1997-11-09,False,True,
+1497,1545,Miles Hammond,M Hammond,England,1996-01-11,False,False,
+1498,1546,Ryan Higgins,R Higgins,England,1995-04-03,False,True,
+1499,1547,Rob Jones,R Jones,England,1995-11-03,False,True,
+1500,1548,Will Rhodes,W Rhodes,England,1995-03-02,False,True,
+1501,1549,Rob Sayer,R Sayer,England,1995-01-25,False,True,
+1502,1550,Josh Shaw,J Shaw,England,1996-01-03,False,True,
+1503,1551,Dom Sibley,D Sibley,England,1995-09-05,False,True,
+1504,1552,Jonathan Tattersall,J Tattersall,England,1994-12-15,False,True,
+1506,1554,Luke Wood,L Wood,England,1995-08-02,False,False,
+1508,1556,Deepak Hooda,D Hooda,India,1995-04-19,False,True,
+1515,1563,Shreyas Iyer,S Iyer,India,1994-12-06,True,True,LEG_SPIN
+1516,1564,Sarfaraz Khan,S Khan,India,1997-10-22,True,True,
+1519,1567,Sami Aslam,S Aslam,Pakistan,1995-12-12,False,False,
+1520,1568,Imam-ul-Haq,Imam ul-Haq,Pakistan,1995-12-22,False,False,
+1540,1588,Mosaddek Hossain,M Hossain,Bangladesh,1995-12-10,False,True,
+1546,1594,Mustafizur Rahman,M Rahman,Bangladesh,1995-09-06,False,False,FAST_SEAM
+1548,1596,Liton Das,L Das,Bangladesh,1994-10-13,False,True,
+1549,1597,Mehidy Hasan,M Hasan,Bangladesh,1997-10-25,False,True,
+1594,1642,Andy Umeed,A Umeed,Scotland,1996-04-19,False,True,
+1614,1662,Andile Phehlukwayo,A Phehlukwayo,South Africa,1996-03-03,False,False,
+1616,1664,Kagiso Rabada,K Rabada,South Africa,1995-05-25,True,False,
+1619,1667,Aiden Markram,A Markram,South Africa,1994-10-04,False,True,
+1622,1670,Kusal Mendis,BKG Mendis,Sri Lanka,1995-02-02,False,True,
+1657,1705,Shimron Hetmyer,S Hetmyer,West India,1996-12-26,False,False,
+1668,1716,Luke Jongwe,L Jongwe,Zimbabwe,1995-02-06,False,True,
+1686,1734,Sabbir Rahman,S Rahman,Bangladesh,1991-08-20,False,True,
+1687,1735,Moeen Ali,M Ali,England,1987-06-18,False,False,
+1688,1736,Stephen Parry,S Parry,England,1986-01-12,False,True,
+1689,1737,Harry Gurney,H Gurney,England,1986-10-25,False,True,
+1690,1738,Kusal Perera,MDKJ Perera,Sri Lanka,1990-08-17,False,False,
+1709,1758,Nicole Bolton,N Bolton,Australia,1989-01-17,False,False,
+1734,1785,Lizelle Lee,L Lee,South Africa,1992-04-02,False,True,
+1743,1795,Timm van der Gugten,T van der Gugten,Netherlands,1991-02-25,False,True,
+1748,1800,Natalie Sciver,N Sciver,England,1992-08-20,False,True,
+1749,1801,Fran Wilson,F Wilson,England,1991-11-07,False,True,
+1764,1817,Beth Mooney,B Mooney,Australia,1994-01-14,False,False,
+1786,1839,Taskin Ahmed,T Ahmed,Bangladesh,1995-04-03,False,False,
+1787,1840,Sulieman Benn,S Benn,West India,1981-07-22,False,False,
+1788,1841,Jerome Taylor,J Taylor,West India,1984-06-22,False,True,
+1789,1842,Liam Plunkett,L Plunkett,England,1985-04-06,True,True,FAST_SEAM
+1790,1843,Sam Robson,S Robson,England,1989-07-01,False,True,
+1791,1844,Jermaine Blackwood,J Blackwood,West India,1991-11-20,False,True,
+1793,1846,Stiaan van Zyl,S van Zyl,South Africa,1987-09-19,False,False,
+1794,1847,Niroshan Dickwella,N Dickwella,Sri Lanka,1993-06-23,False,False,
+1798,1852,Donald Tiripano,D Tiripano,Zimbabwe,1988-03-17,False,True,
+1807,1861,Cameron Bancroft,C Bancroft,Australia,1992-11-19,False,True,
+1809,1863,Danushka Gunathilaka,D Gunathilaka,Sri Lanka,1991-03-17,False,False,
+1820,1874,Dane Vilas,D Vilas,South Africa,1985-06-10,False,True,
+1831,1885,Daryn Smit,D Smit,South Africa,1984-01-28,False,True,
+1840,1894,Keshav Maharaj,K Maharaj,South Africa,1990-02-07,False,True,
+1842,1896,Cameron Delport,C Delport,South Africa,1989-05-12,False,False,
+1843,1897,Shane Dowrich,S Dowrich,West India,1991-10-30,False,True,
+1844,1898,Ashley Nurse,A Nurse,West India,1988-12-22,False,True,
+1845,1899,Jonathan Carter,J Carter,West India,1987-11-16,False,False,
+1847,1901,Raymon Reifer,R Reifer,West India,1991-05-11,False,False,
+1849,1903,Mitchell Santner,M Santner,New Zealand,1992-02-05,False,False,
+1850,1904,Taijul Islam,T Islam,Bangladesh,1992-02-07,False,False,
+1852,1906,Jason Roy,J Roy,England,1990-07-21,True,True,
+1856,1911,Yasir Shah,Y Shah,Pakistan,1986-05-02,False,True,
+1861,1916,Peter Moor,P Moor,Zimbabwe,1992-02-02,False,True,
+1864,1919,Soumya Sarkar,S Sarkar,Bangladesh,1993-02-25,False,False,
+1866,1922,Simon Harmer,S Harmer,South Africa,1989-02-10,False,True,
+2542,2710,Ajmal Shahzad,A Shahzad,England,1985-07-27,False,True,
+2552,2720,Alexei Kervezee,AN Kervezee,Namibia,1989-09-11,False,True,
+2554,2722,Carlos Brathwaite,C Brathwaite,West India,1988-07-18,True,True,MEDIUM_SEAM
+2556,2724,Sohail Khan,S Khan,Pakistan,1984-03-06,False,True,
+2570,2738,Nitish Rana,N Rana,India,1993-12-27,True,False,
+2572,2740,Hardik Pandya,H Pandya,India,1993-10-11,True,True,
+2581,2749,Mark Wood,M Wood,England,1990-01-11,False,True,
+2583,2751,Shai Hope,S Hope,West India,1993-11-10,False,True,
+2586,2755,Zafar Ansari,Z Ansari,England,1991-12-10,False,False,
+2587,2756,Sam Billings,S Billings,England,1991-06-15,True,True,
+2588,2757,Lewis Gregory,L Gregory,England,1992-05-24,False,True,
+2589,2758,David Willey,D Willey,England,1990-02-28,False,True,
+2590,2759,Babar Azam,B Azam,Pakistan,1994-10-15,False,True,
+2591,2760,Imad Wasim,I Wasim,Pakistan,1988-12-18,False,False,
+2597,2766,Craig Overton,C Overton,England,1994-04-10,False,True,
+2604,2773,Anshy Rath,A Rath,Hong Kong,1997-11-05,False,False,ORTHODOX
+2615,2784,George Munsey,G Munsey,Scotland,1993-02-21,True,False,
+2631,2800,Lega Siaka,L Siaka,Papua,1992-12-21,False,True,
+2670,2839,Reece Topley,R Topley,England,1994-02-21,False,True,
+2706,2876,Dasun Shanaka,D Shanaka,Sri Lanka,1991-09-09,False,True,
+2708,2878,Mark Footitt,M Footitt,England,1985-11-25,False,True,
+2715,2885,Rashid Khan,R Khan,Afghanistan,1998-09-20,True,True,LEG_SPIN
+2720,2890,Henry Nicholls,H Nicholls,New Zealand,1991-11-15,False,False,
+2721,2891,Miguel Cummins,M Cummins,West India,1990-09-05,False,False,
+2726,2896,Mohammad Amir,M Amir,Pakistan,1992-04-13,False,False,
+2728,2898,Stephen Cook,S Cook,South Africa,1982-11-29,False,True,
+2766,2936,George Bartlett,G Bartlett,England,1998-03-14,False,True,
+2767,2937,Jack Burnham,J Burnham,England,1997-01-18,False,True,
+2768,2938,Mason Crane,M Crane,England,1997-02-18,False,True,
+2769,2939,Sam Curran,S Curran,England,1998-06-03,False,False,
+2770,2940,Ryan Davies,R Davies,England,1996-11-05,False,True,
+2771,2941,Aneurin Donald,A Donald,England,1996-12-20,False,True,
+2774,2944,Max Holden,M Holden,England,1997-12-18,False,False,
+2775,2945,Dan Lawrence,D Lawrence,England,1997-07-12,False,True,
+2777,2947,Tom Moores,T Moores,England,1996-09-04,False,False,
+2802,2972,Rishabh Pant,R Pant,India,1997-10-04,False,False,
+2803,2973,Washington Sundar,W Sundar,India,1999-10-05,True,False,
+2805,2975,Ishan Kishan,I Kishan,India,1998-07-18,False,False,
+2809,2979,Varun Chopra,V Chopra,Ireland,2000-02-01,False,True,
+2876,3046,Shadab Khan,S Khan,Pakistan,1998-10-04,False,True,
+2915,3085,Lahiru Kumara,L Kumara,Sri Lanka,1997-02-13,False,False,
+2931,3101,Keemo Paul,K Paul,West India,1998-02-21,False,True,
+2956,3126,Hayley Matthews,H Matthews,West India,1998-03-19,False,True,
+2969,3139,James Foster,J Foster,England,1980-04-15,False,True,
+2982,3153,Asela Gunaratne,A Gunaratne,Sri Lanka,1986-01-08,True,True,
+2995,3166,Veda Krishnamurthy,V Krishnamurthy,India,1992-10-16,False,True,
+3000,3171,Brad Wheal,B Wheal,Scotland,1996-08-28,False,True,
+3001,3172,Lauren Winfield,L Winfield,England,1990-08-16,False,True,
+3012,3183,Krunal Pandya,K Pandya,India,1991-03-24,False,False,
+3024,3195,Mohammad Nawaz,M Nawaz,Pakistan,1994-03-21,False,False,
+3138,3310,Jake Ball,J Ball,England,1991-03-14,False,True,
+3140,3312,Jeet Raval,J Raval,New Zealand,1988-09-22,False,False,
+3141,3313,Barry McCarthy,B McCarthy,Ireland,1992-09-13,False,True,
+3143,3315,Ruaidhri Smith,R Smith,Scotland,1994-08-05,False,True,
+3146,3318,Dawid Malan,D Malan,England,1987-09-03,False,False,
+3148,3320,Toby Roland-Jones,T Roland-Jones,England,1988-01-29,False,True,
+3149,3321,Roston Chase,R Chase,West India,1992-03-22,False,True,
+3153,3325,Hassan Ali,H Ali,Pakistan,1994-02-07,False,True,
+3160,3333,Rovman Powell,R Powell,West India,1993-07-23,True,True,MEDIUM_SEAM
+3162,3335,Gareth Batty,G Batty,England,1977-10-13,True,True,OFF_SPIN
+3163,3336,Haseeb Hameed,H Hameed,England,1997-01-17,True,True,LEG_SPIN
+3164,3337,Sophie Ecclestone,S Ecclestone,England,1999-05-06,False,True,ORTHODOX
+3168,3341,Matthew Taylor,M Taylor,England,1994-07-08,False,True,FAST_SEAM
+3170,3343,Tom Smith,T SMith,England,1987-09-03,False,True,ORTHODOX
+3172,3346,Darren Stevens,D Stevens,England,1976-04-30,True,True,MEDIUM_SEAM
+3174,3348,Ollie Rayner,O Rayner,,1985-11-01,False,False,OFF_SPIN
+3175,3349,Ravi Patel,R Patel,,1991-08-04,True,False,ORTHODOX
+3177,3352,Harry Podmore,H Podmore,,1994-07-23,False,False,MEDIUM_SEAM
+3178,3353,James Fuller,J Fuller,,1990-01-24,False,False,FAST_SEAM
+3181,3357,John Simpson,J Simpson,,1988-07-13,False,True,MEDIUM_SEAM
+3182,3358,Stevie Eskinazi,S Eskinazi,,1994-03-28,False,False,OFF_SPIN
+3184,3360,Nick Gubbins,N Gubbins,,1993-12-31,False,True,LEG_SPIN
+3185,3361,Tim Groenewald,T Groenewald,,1984-01-10,False,False,FAST_SEAM
+3187,3363,Jack Leach,J Leach,England,1991-06-22,False,False,ORTHODOX
+3188,3364,Jim Allenby,J Allenby,,1982-09-12,False,False,MEDIUM_SEAM
+3189,3365,Adam Hose,A Hose,,1992-10-25,False,False,MEDIUM_SEAM
+3190,3366,Johann Myburgh,J Myburgh,,1980-10-22,False,False,OFF_SPIN
+3191,3367,Max Waller,M Waller,,1988-03-03,False,False,LEG_SPIN
+3194,3371,Alex Lees,A Lees,,1993-04-14,False,True,LEG_SPIN
+3196,3373,Ben Coad,B Coad,,1994-01-10,False,False,MEDIUM_SEAM
+3198,3375,Harry Brook,H Brook,England,1999-02-22,True,True,MEDIUM_SEAM
+3199,3376,Jake Lehmann,J Lehmann,,1992-07-08,True,True,ORTHODOX
+3200,3377,Jack Brooks,J Brooks,,1984-06-04,False,False,FAST_SEAM
+3203,3382,Tom Wells,T Wells,,1993-03-15,False,False,MEDIUM_SEAM
+3205,3384,Greg Smith,G Smith,,1988-11-16,False,False,LEG_SPIN
+3206,3385,Lewis Hill,L Hill,,1990-10-05,False,False,MEDIUM_SEAM
+3207,3386,Michael Burgess,M Burgess,,1994-07-08,False,False,MEDIUM_SEAM
+3209,3388,Neil Dexter,N Dexter,,1984-08-21,False,False,MEDIUM_SEAM
+3210,3389,Dieter Klein,D Klein,,1988-10-31,True,False,FAST_SEAM
+3211,3390,Charlie Shreck,C Shreck,,1978-01-06,False,False,FAST_SEAM
+3212,3391,Ben Raine,B Raine,,1991-09-14,False,True,FAST_SEAM
+3213,3392,Harry Dearden,H Dearden,,1997-05-07,False,False,OFF_SPIN
+3215,3394,Ned Eckersley,E Eckersley,,1989-08-09,False,False,OFF_SPIN
+3217,3397,Paul Horton,P Horton,,1982-09-20,False,False,OFF_SPIN
+3218,3398,Mark Pettini,M Pettini,,1983-08-07,False,False,OFF_SPIN
+3219,3399,Zak Chappell,Z Chappell,,1996-08-21,False,False,FAST_SEAM
+3221,3401,Angus Robson,A Robson,,1992-02-19,False,False,LEG_SPIN
+3222,3402,Richard Gleeson,R Gleeson,,1987-12-02,False,False,MEDIUM_SEAM
+3226,3406,Ben Sanderson,B Sanderson,,1989-01-03,False,False,FAST_SEAM
+3227,3407,Laurie Evans,L Evans,England,1987-10-12,False,False,OFF_SPIN
+3228,3409,Robert Newton,R Newton,,1990-01-18,False,False,LEG_SPIN
+3229,3410,Graeme White,G White,,1987-04-18,True,False,ORTHODOX
+3230,3412,Steven Crook,S Crook,,1983-05-28,False,False,FAST_SEAM
+3231,3414,Olly Stone,O Stone,England,1993-10-09,True,True,FAST_SEAM
+3233,3416,Saif Zaib,S Zaib,,1998-05-22,True,True,ORTHODOX
+3234,3417,Rob Keogh,R Keogh,,1991-10-21,False,False,OFF_SPIN
+3235,3418,Jake Libby,J Libby,England,1993-01-03,False,False,OFF_SPIN
+3236,3419,Alex Wakely,A Wakely,,1988-11-03,False,False,OFF_SPIN
+3237,3420,Azharullah,M Azharullah,,1983-12-25,False,False,FAST_SEAM
+3238,3421,Adam Rossington,A Rossington,,1993-05-05,False,False,MEDIUM_SEAM
+3239,3422,Tom Poynton,T Poynton,,1989-11-25,False,False,MEDIUM_SEAM
+3244,3427,Wayne Madsen,W Madsen,,1984-01-02,False,False,OFF_SPIN
+3245,3428,Tom Taylor,T Taylor,,1994-12-21,False,False,MEDIUM_SEAM
+3246,3429,Ben Slater,B Slater,,1991-08-26,False,True,LEG_SPIN
+3247,3432,Harvey Hosein,H Hosein,,1996-08-12,False,False,MEDIUM_SEAM
+3250,3436,Chesney Hughes,C Hughes,,1991-01-20,True,True,ORTHODOX
+3252,3438,Shiv Thakor,S Thakor,,1993-10-22,False,False,MEDIUM_SEAM
+3253,3439,Ben Cotton,B Cotton,,1993-09-13,False,False,MEDIUM_SEAM
+3254,3441,Luke Fletcher,L Fletcher,,1988-09-18,False,False,FAST_SEAM
+3257,3444,Tony Palladino,A Palladino,,1983-06-29,False,False,MEDIUM_SEAM
+3258,3445,Alex Hughes,A Hughes,,1991-09-29,False,False,MEDIUM_SEAM
+3260,3448,Scott Elstone,S Elstone,,1990-06-10,False,False,OFF_SPIN
+3261,3450,Billy Godleman,B Godleman,,1989-02-11,False,True,LEG_SPIN
+3262,3451,Matthew Critchley,M Critchley,England,1995-08-13,False,False,LEG_SPIN
+3263,3452,Callum Parkinson,C Parkinson,,1996-10-24,True,True,ORTHODOX
+3265,3454,Steven Mullaney,S Mullaney,,1986-11-19,False,False,MEDIUM_SEAM
+3266,3456,Billy Root,W Root,,1992-08-05,False,True,OFF_SPIN
+3267,3457,Chris Read,C Read,,1978-08-10,False,False,MEDIUM_SEAM
+3268,3458,William Gidman,W Gidman,,1985-02-14,False,True,MEDIUM_SEAM
+3269,3459,Riki Wessels,M Wessels,,1985-11-12,False,False,OFF_SPIN
+3271,3462,Brett Hutton,B Hutton,,1993-02-06,False,False,MEDIUM_SEAM
+3272,3463,Ian Cockbain,I Cockbain,,1987-02-17,False,False,MEDIUM_SEAM
+3273,3464,Liam Norwell,L Norwell,,1991-12-27,False,False,MEDIUM_SEAM
+3275,3466,George Hankins,G Hankins,,1997-01-04,False,False,OFF_SPIN
+3277,3468,William Tavare,W Tavare,,1990-01-01,False,False,MEDIUM_SEAM
+3278,3470,Hamish Marshall,H Marshall,,1979-02-15,False,False,MEDIUM_SEAM
+3279,3471,Phil Mustard,P Mustard,,1982-10-08,False,True,LEG_SPIN
+3280,3472,James Bracey,J Bracey,,1997-05-03,False,True,MEDIUM_SEAM
+3281,3473,Gareth Roderick,G Roderick,,1991-08-28,False,False,MEDIUM_SEAM
+3282,3474,Jack Taylor,J Taylor,,1991-11-12,False,False,OFF_SPIN
+3283,3475,Craig Miles,C Miles,,1994-07-20,False,False,MEDIUM_SEAM
+3284,3476,Chris Liddle,C Liddle,,1984-02-01,True,False,FAST_SEAM
+3285,3477,Chris Dent,C Dent,England,1991-01-20,True,True,ORTHODOX
+3286,3478,Benny Howell,B Howell,,1988-10-05,False,False,MEDIUM_SEAM
+3287,3479,David Payne,D Payne,,1991-02-15,True,False,FAST_SEAM
+3290,3483,Ashar Zaidi,S Zaidi,,1981-07-13,True,True,ORTHODOX
+3292,3485,Nick Browne,N Browne,,1991-03-24,False,True,LEG_SPIN
+3294,3487,Adam Wheater,A Wheater,,1990-02-13,True,False,MEDIUM_SEAM
+3295,3488,David Masters,D Masters,,1978-04-22,False,False,FAST_SEAM
+3297,3491,Jaik Mickleburgh,J Mickleburgh,,1990-03-30,False,False,MEDIUM_SEAM
+3298,3492,Jamie Porter,J Porter,England,1993-05-25,True,True,FAST_SEAM
+3299,3493,Tom Westley,T Westley,England,1989-03-13,True,True,OFF_SPIN
+3300,3494,Paul Walter,P Walter,,1994-05-28,True,True,FAST_SEAM
+3303,3497,Luke Wells,L Wells,,1990-12-29,False,True,LEG_SPIN
+3304,3498,Will Beer,W Beer,England,1988-10-08,False,False,LEG_SPIN
+3307,3502,Jofra Archer,J Archer,England,1995-04-01,True,True,FAST_SEAM
+3311,3506,Steve Magoffin,S Magoffin,,1979-12-17,False,True,FAST_SEAM
+3312,3507,Ben Brown,B Brown,,1988-11-23,False,False,FAST_SEAM
+3313,3509,Craig Cachopa,C Cachopa,,1992-01-17,False,False,MEDIUM_SEAM
+3314,3511,Philip Salt,P Salt,,1996-08-28,False,False,OFF_SPIN
+3315,3512,Delray Rawlins,D Rawlins,,1997-09-14,True,True,ORTHODOX
+3316,3513,Chris Nash,C Nash,,1983-05-19,False,False,OFF_SPIN
+3318,3515,Karl Brown,K Brown,,1988-05-17,False,False,MEDIUM_SEAM
+3319,3516,Alex Davies,A Davies,,1994-08-23,False,False,MEDIUM_SEAM
+3320,3517,Arron Lilley,A Lilley,,1991-04-01,False,False,OFF_SPIN
+3321,3518,Jordan Clark,J Clark,,1990-10-14,False,False,MEDIUM_SEAM
+3322,3519,Luis Reece,L Reece,,1990-08-04,True,True,MEDIUM_SEAM
+3323,3521,Steven Croft,S Croft,,1984-10-11,False,False,OFF_SPIN
+3324,3522,Tom Bailey,T Bailey,,1991-04-21,False,False,FAST_SEAM
+3325,3523,Nathan Buck,N Buck,,1991-04-26,False,False,FAST_SEAM
+3327,3526,Gavin Griffiths,G Griffiths,,1993-11-19,False,False,FAST_SEAM
+3328,3527,Luke Procter,L Procter,,1988-06-24,False,True,MEDIUM_SEAM
+3330,3529,Matt Parkinson,M Parkinson,England,1996-10-24,True,True,LEG_SPIN
+3332,3531,Sam Hain,S Hain,England,1995-07-16,False,False,OFF_SPIN
+3334,3533,Chris Wright,C Wright,,1985-07-14,False,False,FAST_SEAM
+3335,3534,Keith Barker,K Barker,,1986-10-21,True,True,MEDIUM_SEAM
+3336,3535,Rikki Clarke,R Clarke,England,1981-09-29,False,False,FAST_SEAM
+3337,3536,Tim Ambrose,T Ambrose,,1982-12-01,False,False,MEDIUM_SEAM
+3338,3537,Ateeq Javid,A Javid,,1991-10-15,False,False,OFF_SPIN
+3339,3538,Aaron Thomason,A Thomason,England,1997-06-26,True,True,FAST_SEAM
+3342,3541,Josh Poysden,J Poysden,,1991-08-08,False,True,LEG_SPIN
+3343,3542,Ian Westwood,I Westwood,,1982-07-13,False,True,OFF_SPIN
+3345,3544,Gordon Muchall,G Muchall,,1982-11-02,False,False,MEDIUM_SEAM
+3346,3545,Usman Arshad,U Arshad,,1993-01-09,False,False,MEDIUM_SEAM
+3347,3546,Michael Richardson,M Richardson,,1986-10-04,False,False,OFF_SPIN
+3351,3551,Graham Clark,G Clark,,1993-03-16,False,False,LEG_SPIN
+3352,3552,Chris Rushworth,C Rushworth,,1986-07-11,False,False,FAST_SEAM
+3353,3553,Paul Coughlin,P Coughlin,,1992-10-23,False,False,MEDIUM_SEAM
+3355,3555,Mark Stoneman,M Stoneman,England,1987-06-26,False,True,OFF_SPIN
+3358,3560,James Weighell,W Weighell,,1994-01-28,False,True,MEDIUM_SEAM
+3359,3561,Keaton Jennings,K Jennings,England,1992-06-19,True,False,MEDIUM_SEAM
+3360,3562,Ryan Pringle,R Pringle,,1992-04-17,False,False,OFF_SPIN
+3362,3564,Mark Wallace,M Wallace,,1981-11-19,True,True,MEDIUM_SEAM
+3363,3565,Andrew Salter,A Salter,,1993-06-01,False,False,OFF_SPIN
+3364,3566,Graham Wagg,G Wagg,,1983-04-28,True,False,MEDIUM_SEAM
+3366,3568,Owen Morgan,A Morgan,,1994-04-11,True,False,ORTHODOX
+3367,3570,Craig Meschede,C Meschede,,1991-11-21,False,False,FAST_SEAM
+3368,3571,Lukas Carey,L Carey,,1997-07-17,False,False,FAST_SEAM
+3370,3573,Will Bragg,W Bragg,,1986-10-24,False,True,MEDIUM_SEAM
+3372,3575,Jack Murphy,J Murphy,,1995-07-15,True,True,MEDIUM_SEAM
+3373,3576,Nick Selman,N Selman,,1995-10-18,False,False,MEDIUM_SEAM
+3375,3578,David Lloyd,D Lloyd,,1992-06-15,False,False,MEDIUM_SEAM
+3376,3579,Kiran Carlson,K Carlson,,1998-05-16,False,False,OFF_SPIN
+3377,3580,Chris Cooke,C Cooke,,1986-05-30,False,False,MEDIUM_SEAM
+3379,3582,Ben Cox,O Cox,England,1992-02-02,False,False,FAST_SEAM
+3380,3583,Richard Oliver,R Oliver,,1989-11-14,False,True,MEDIUM_SEAM
+3381,3584,Gareth Andrew,G Andrew,,1983-12-27,False,True,FAST_SEAM
+3382,3586,Brett D'Oliveira,B D'Oliveira,,1992-02-28,False,False,LEG_SPIN
+3383,3587,Joe Leach,J Leach,,1990-10-30,False,False,MEDIUM_SEAM
+3385,3589,Ross Whiteley,R Whiteley,,1988-09-13,True,True,MEDIUM_SEAM
+3386,3590,Jack Shantry,J Shantry,,1988-01-29,True,True,FAST_SEAM
+3388,3592,Josh Tongue,J Tongue,,1997-11-15,False,False,MEDIUM_SEAM
+3389,3593,Tom Kohler-Cadmore,T Kohler-Cadmore,,1994-08-19,False,False,OFF_SPIN
+3390,3594,Charlie Morris,C Morris,,1992-07-06,False,False,FAST_SEAM
+3391,3596,George Rhodes,G Rhodes,,1993-10-26,False,False,OFF_SPIN
+3392,3597,Tom Fell,T Fell,,1993-10-17,False,False,MEDIUM_SEAM
+3393,3598,Mitchell Claydon,M Claydon,,1982-11-25,False,True,FAST_SEAM
+3395,3600,Ivan Thomas,I Thomas,,1991-09-25,False,False,MEDIUM_SEAM
+3396,3601,Calum Haggett,C Haggett,,1990-10-30,False,True,MEDIUM_SEAM
+3398,3603,Alex Blake,A Blake,,1989-01-25,False,True,FAST_SEAM
+3399,3604,Daniel Bell-Drummond,D Bell-Drummond,England,1993-08-04,False,False,FAST_SEAM
+3400,3605,Fabian Cowdrey,F Cowdrey,,1993-01-30,True,False,ORTHODOX
+3403,3608,Matt Coles,M Coles,,1990-05-26,False,True,FAST_SEAM
+3404,3609,Sean Dickson,S Dickson,,1991-09-02,False,False,MEDIUM_SEAM
+3406,3611,Joe Denly,J Denly,England,1986-03-16,True,False,LEG_SPIN
+3408,3614,Adam Rouse,A Rouse,,1992-06-30,False,False,OFF_SPIN
+3409,3615,Sam Northeast,S Northeast,,1989-10-16,False,False,OFF_SPIN
+3412,3622,Tom Alsop,T Alsop,England,1995-11-26,True,True,ORTHODOX
+3413,3623,Lewis McManus,L McManus,,1994-10-09,False,False,MEDIUM_SEAM
+3414,3624,Will Smith,W Smith,,1982-09-28,False,False,OFF_SPIN
+3417,3629,Joe Weatherley,J Weatherley,,1997-01-19,False,False,OFF_SPIN
+3419,3631,Rory Burns,R Burns,England,1990-08-26,True,False,MEDIUM_SEAM
+3421,3635,Steve Davies,S Davies,,1986-06-17,False,True,MEDIUM_SEAM
+3422,3636,Ollie Pope,O Pope,England,1998-01-02,True,True,MEDIUM_SEAM
+3423,3637,Mathew Pillans,M Pillans,,1991-07-04,False,False,FAST_SEAM
+3425,3639,James Burke,J Burke,,1991-01-25,False,False,MEDIUM_SEAM
+3426,3640,Arun Harinath,A Harinath,,1987-04-03,False,True,OFF_SPIN
+3427,3641,Ben Foakes,B Foakes,England,1993-02-15,False,False,
+3428,3642,Daryl Mitchell,D Mitchell,England,1983-11-25,True,True,MEDIUM_SEAM
+3429,3643,Oliver Robinson,O Robinson,,1970-01-01,True,True,
+3430,3644,Liam Livingstone,L Livingstone,England,1993-08-04,True,True,LEG_SPIN
+3432,3646,Tom Curran,T Curran,England,1995-03-12,True,True,FAST_SEAM
+3434,3648,Jack Leaning,J Leaning,,1970-01-01,True,True,
+3443,3657,Aadil Ali,A Ali,England,1994-12-29,True,True,
+3446,3660,Tom Abell,T Abell,,1970-01-01,True,True,
+3450,3664,Tom Helm,T Helm,,1970-01-01,True,True,
+3454,3668,Matthew Salisbury,M Salisbury,,1970-01-01,True,True,
+3457,3671,Dom Bess,D Bess,England,1997-07-22,True,True,OFF_SPIN
+3472,3686,Bryony Smith,B Smith,,1970-01-01,True,True,
+3513,3728,Matt Renshaw,M Renshaw,Australia,1996-03-28,True,False,OFF_SPIN
+3526,3742,Tom Bruce,T Bruce,New Zealand,1991-08-02,True,True,OFF_SPIN
+3528,3744,Duanne Olivier,D Olivier,South Africa,1992-05-09,True,True,FAST_SEAM
+3532,3750,Cameron Steel,C Steel,,1995-09-13,True,True,LEG_SPIN
+3539,3761,Shubman Gill,S Gill,India,1999-09-08,True,True,OFF_SPIN
+3542,3764,Prithvi Shaw,P Shaw,India,1999-11-09,True,True,OFF_SPIN
+3548,3770,Tom Banton,T Banton,England,1998-11-11,True,True,
+3549,3771,Henry Brookes,H Brookes,,1970-01-01,True,True,
+3564,3786,Will Jacks,W Jacks,England,1998-11-21,True,True,MEDIUM_SEAM
+3578,3801,Fakhar Zaman,F Zaman,Pakistan,1990-04-10,False,False,ORTHODOX
+3611,3834,Krishnappa Gowtham,K Gowtham,India,1988-10-20,True,True,OFF_SPIN
+3615,3838,Rahul Tripathi,R Tripathi,India,1991-03-02,True,True,MEDIUM_SEAM
+3647,3882,Alex Carey,A Carey,Australia,1991-08-27,True,False,FAST_SEAM
+3652,3887,D'Arcy Short,D Short,Australia,1990-08-09,False,False,UNORTHODOX
+3659,3901,Marcus Harris,M Harris,Australia,1992-07-21,True,False,
+3661,3903,Jake Weatherald,J Weatherald,,1970-01-01,True,True,
+3665,3907,Ed Pollock,E Pollock,,1970-01-01,True,True,
+3762,4029,Marnus Labuschagne,M Labuschagne,Australia,1994-06-22,True,True,MEDIUM_SEAM
+3808,4101,Smriti Mandhana,S Mandhana,India,1996-07-18,True,False,MEDIUM_SEAM
+3868,4208,Faheem Ashraf,F Ashraf,Pakistan,1994-01-16,True,False,MEDIUM_SEAM
+3885,4285,Mohammad Abbas,M Abbas,Pakistan,1990-03-10,True,True,FAST_SEAM
+3889,4295,Colin Ackermann,C Ackermann,South Africa,1970-01-01,True,True,
+3925,4332,Zak Crawley,Z Crawley,England,1998-02-03,True,True,
+3930,4337,Amar Virdi,A Virdi,England,1998-07-19,True,True,OFF_SPIN
+3977,4386,Edward Byrom,E Byrom,,1970-01-01,True,True,
+4024,4433,Liam Banks,L Banks,England,1999-06-03,True,True,OFF_SPIN
+4035,4444,Ryan Patel,R Patel,,1970-01-01,True,True,
+4133,4572,Mujeeb Ur Rahman,M Ur Rahman,Afghanistan,2001-03-28,True,True,OFF_SPIN
+4528,5112,Ricardo Vasconcelos,R Vasconcelos,,1970-01-01,True,True,

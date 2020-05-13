@@ -1,0 +1,33 @@
+export class PlayerScore {
+    playerId: number;
+    innings: number;
+    position: number;
+    r: number;
+    b: number;
+    sr: number;
+    fours: number;
+    sixes: number;
+    over: number;
+    ball: number;
+    bowlerId: number;
+    additionalPlayerIds0: number;
+    dismissedMethod: number;
+    isOut: boolean;
+    irunRate: number;
+    ioverProgress: number;
+    ideclared: boolean;
+    iruns: number;
+    iwkts: number;
+    iallOut: number;
+    fowR: number;
+    fowW: number;
+    matchid: number;
+    venueid: number;
+    matchType: string;
+    teamId: number;
+    isKeeper: boolean;
+    isCaptain: boolean;
+    result: string;
+    matchDate: string;
+    oppTeam: number;
+}

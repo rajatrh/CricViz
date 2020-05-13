@@ -1,8 +1,13 @@
-<mat-form-field class="example-full-width">
-    <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of options" [value]="option">
-        {{option}}
-      </mat-option>
-    </mat-autocomplete>
-  </mat-form-field>
+<mat-form-field class="custom-width">
+  <input matInput
+         placeholder="Pick a player"
+         aria-label="Player"
+         [matAutocomplete]="auto"
+         [formControl]="playerCtrl">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let player of filteredPlayers | async" [value]="player.fullName" (onSelectionChange)="newPlayer(player)">
+      <img class="example-option-img" aria-hidden src="../../../../../assets/images/flags/{{player.nationality}}.png" height="25">
+      <span>{{player.fullName}}</span>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
