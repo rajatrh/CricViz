@@ -1,4 +1,4 @@
-<mat-form-field class="custom-width">
+<mat-form-field style="font-size: small; width: 90%; padding: 0px 10px;">
   <input matInput
          placeholder="Pick a player"
          aria-label="Player"
@@ -7,7 +7,7 @@
   <mat-autocomplete #auto="matAutocomplete">
     <mat-option *ngFor="let player of filteredPlayers | async" [value]="player.fullName" (onSelectionChange)="newPlayer(player)">
       <img class="example-option-img" aria-hidden src="../../../../../assets/images/flags/{{player.nationality}}.png" height="25">
-      <span>{{player.fullName}}</span>
+      <span style="font-size: small;">{{player.fullName}}</span>
     </mat-option>
   </mat-autocomplete>
 </mat-form-field>

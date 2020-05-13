@@ -12,8 +12,8 @@ import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 
 import { DataResolverService } from './shared/data-resolver.service';
 import { CommonDataService } from './shared/common-data.service';
-import { ControlBarComponent } from './structure/control-bar/control-bar.component';
-import { PlayerDropdownComponent } from './structure/control-bar/components/player-dropdown/player-dropdown.component';
+import { FiltersComponent } from './structure/control-bar/filters/filters.component';
+import { PlayerDropdownComponent } from './structure/control-bar/player-dropdown/player-dropdown.component';
 import { DashboardComponent } from './structure/dashboard/dashboard/dashboard.component';
 import { ParallelCoordComponent } from './charts/parallel-coord/parallel-coord.component';
 import { LoaderComponent } from './shared/loader/loader.component';
@@ -24,7 +24,7 @@ import { LoaderInterceptorService } from './shared/loader-interceptor.service';
   declarations: [
     AppComponent,
     BarChartComponent,
-    ControlBarComponent,
+    FiltersComponent,
     PlayerDropdownComponent,
     DashboardComponent,
     ParallelCoordComponent,

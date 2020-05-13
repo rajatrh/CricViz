@@ -1,0 +1,19 @@
+
+<div class="row" style="font-size: small;">
+    <div style="width: 25px">
+
+    </div>
+    <div *ngFor="let sel of filters">
+        <mat-form-field [style.width]="sel.width" style="margin-right: 15px;">
+            <mat-select placeholder="{{sel.name}}" [formControl]="sel.fc" multiple>
+                <mat-select-trigger>
+                    {{sel.fc.value ? sel.fc.value[0] : ''}}
+                    <span *ngIf="sel.fc.value?.length > 1" class="example-additional-selection">
+                        (+{{sel.fc.value.length - 1}} {{sel.fc.value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let op of sel.options" [value]="op">{{op}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>
