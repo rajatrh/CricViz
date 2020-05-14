@@ -11,29 +11,37 @@ import { PlayerScore } from './model/player-score';
   providedIn: 'root'
 })
 export class CommonDataService {
-  fetchPlayerSubject = new Subject<Player>()
-  refreshChartsSubject = new Subject<PlayerScore[]>()
+  fetchPlayerSubject = new Subject<any>()
+  refreshChartsSubject = new Subject<Boolean>()
+  applyFilter = new Subject<Boolean>()
+
   playerScoreCard: PlayerScore[];
+  filteredPlayerScoreCard: PlayerScore[];
   teams: Team[] = []
   venues: Venue[] = []
   players: Player[] = []
+
+  mapping = new Map<any,Map<any, any>>()
+
   dropdownPlayers: Player[] = []
 
   constructor(private httpClient: HttpClient,
     private urlPickerService: UrlPickerService) {
-    this.fetchPlayerSubject.subscribe((p: Player) => {
+    this.fetchPlayerSubject.subscribe((p) => {
       this.fetchPlayerData(p);
     })
   }
 
   fetchData() {
-    return this.httpClient.get<Player[]>(this.urlPickerService.getURL('/setupData'))
+    return this.httpClient.get<any>(this.urlPickerService.getURL('/setupData'))
   }
 
-  fetchPlayerData(p: Player) {
+  fetchPlayerData(p) {
     this.httpClient.get<PlayerScore[]>(this.urlPickerService.getURL('/fetchPlayerScorecard') + '?id=' + p.id).subscribe(res => {
       this.playerScoreCard = res;
-      this.refreshChartsSubject.next(res)
+      this.filteredPlayerScoreCard = res;
+      this.refreshChartsSubject.next(true)
+      this.applyFilter.next(true)
     })
   }
 }

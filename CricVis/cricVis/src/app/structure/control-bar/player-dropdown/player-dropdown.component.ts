@@ -25,6 +25,12 @@ export class PlayerDropdownComponent implements OnInit {
         startWith(''),
         map(state => state ? this._filterPlayers(state) : this.options.slice())
       );
+
+    this.playerCtrl.patchValue("MS Dhoni")
+    this.newPlayer({ id: 1, fullName: "MS Dhoni",
+    shortName: "MS Dhoni",
+    nationality: "India",
+    dateOfBirth: "1981-07-07" })
   }
 
   private _filterPlayers(value: string): Player[] {
