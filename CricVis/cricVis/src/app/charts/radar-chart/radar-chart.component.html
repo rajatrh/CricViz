@@ -1,13 +1,17 @@
-
-
 <div class="padding-5">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-8">
             <h6 style="border-bottom: 1px solid black;">{{cardTitle}}</h6>
         </div>
-       
-        <div class="col-md-2">
+
+        <div class="col-md-4">
+
             <span style="float: right; margin-right: 5px;">
+
+                <img (click)="changeView(0)" *ngIf="view == 1"
+                    src="https://img.icons8.com/material-outlined/16/000000/list.png" /> &nbsp;
+                <img (click)="changeView(1)" style="width: 15px;" *ngIf="view == 0"
+                    src="https://img.icons8.com/android/24/000000/radar-plot.png" /> &nbsp;
                 <img style="width: 15px;" src="https://img.icons8.com/android/24/000000/info.png" />
             </span>
         </div>
@@ -15,5 +19,21 @@
     <div class="row" style="padding-left: 25px;">
         <div class="col-md-12" #radarChartDiv style="height: 32vh; height: 90%;">
         </div>
+        <div *ngIf="view == 0" style="overflow-y: scroll; font-size: smaller;">
+            <table class="table table-striped" >
+                <tr>
+                    <td>Parameter</td>
+                    <td>Career</td>
+                    <td>Applied Filter</td>
+                </tr>
+                <tr *ngFor="let k of dataService.globalRadarData.actual;let i = index">
+                    <td>{{dataService.globalRadarData.getDescription(i)}}</td>
+                    <td>{{dataService.globalRadarData.actual[i]}}</td>
+                    <td>{{localRadarData.actual[i]}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
+
+
 </div>

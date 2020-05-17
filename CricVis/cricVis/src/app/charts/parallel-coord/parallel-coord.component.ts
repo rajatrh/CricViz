@@ -27,24 +27,26 @@ export class ParallelCoordComponent implements OnInit {
       this.dataService.filteredPlayerScoreCard.forEach(inning => {
         
         let row = []
-        row.push(this.nullCheck(inning.r))
-        row.push(inning.b)
-        row.push(inning.sr)
-        row.push(inning.fours)
-        row.push(inning.sixes)
-        data.push(row)
+        data.push({'Runs': this.nullCheck(inning.r),
+          'Balls Taken': inning.b,
+          'Strike Rate': inning.sr,
+          'Fours': inning.fours,
+          'Sixes': inning.sixes,
+          'Dismissal Mode': this.nullCheck(inning.dismissedMethod, 'dm')
+        })
       })
 
-      d3.parcoords()(this.myDiv.nativeElement)
+      d3.parcoords({dimensionTitles: {}})(this.myDiv.nativeElement)
       .alpha(0.7).color(this.color)
       .data(data).render().createAxes().brushMode("1D-axes");
     })
   }
 
-  nullCheck(val) {
+  nullCheck(val, col='none') {
     if (val == null) {
-      console.log(val)
-      return ''
+      if (col == 'dm') {
+        return 'Not Out'
+      }
     } else {
       return val
     }
