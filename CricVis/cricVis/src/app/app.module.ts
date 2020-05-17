@@ -19,6 +19,8 @@ import { ParallelCoordComponent } from './charts/parallel-coord/parallel-coord.c
 import { LoaderComponent } from './shared/loader/loader.component';
 import { LoaderService } from './shared/loader.service';
 import { LoaderInterceptorService } from './shared/loader-interceptor.service';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { RadarChartComponent } from './charts/radar-chart/radar-chart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { LoaderInterceptorService } from './shared/loader-interceptor.service';
     PlayerDropdownComponent,
     DashboardComponent,
     ParallelCoordComponent,
-    LoaderComponent
+    LoaderComponent,
+    PieChartComponent,
+    RadarChartComponent
   ],
   imports: [
     BrowserAnimationsModule,
