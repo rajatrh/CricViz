@@ -3,7 +3,7 @@
         <div class="col-md-10">
             <h6 style="border-bottom: 1px solid black;">Career Summary</h6>
         </div>
-       
+
         <div class="col-md-2">
             <span style="float: right; margin-right: 5px;">
                 <img style="width: 15px;" src="https://img.icons8.com/android/24/000000/info.png" />
@@ -11,7 +11,14 @@
         </div>
     </div>
     <div class="row" style="padding-left: 25px;">
-        <div class="col-md-12" #myDiv style="height: 35vh; width: 60vw" class="parcoords">
+        <div class="col-md-12">
+            <svg #myDiv [style.height]="heightpc" style="width: 60vw"></svg>
+            <div *ngIf="heightpc == '0vh'" style="font-size: smaller; color:lightred;">
+                
+                    <span>Data Not Available</span><br>
+                    <span *ngIf="dataService.filteredPlayerScoreCard.length == 1">(Only one record present)</span>
+                
+            </div>
         </div>
     </div>
 </div>

@@ -46,7 +46,7 @@ export class RadarChartComponent implements OnInit {
        **/
       // initiate default config
       var w = 220;
-      var h = 180;
+      var h = 150;
       var config = {
         w: w,
         h: h,
@@ -61,17 +61,17 @@ export class RadarChartComponent implements OnInit {
         polygonStrokeOpacity: 1,
         polygonPointSize: 4,
         legendBoxSize: 10,
-        translateX: w / 4,
-        translateY: h / 4,
+        translateX: 55,
+        translateY: 55,
         paddingX: w,
         paddingY: h,
-        colors: d3.scale.category10(),
+        colors: d3.scaleOrdinal(d3.schemeCategory10),
         showLevels: true,
         showLevelsLabels: false,
         showAxesLabels: true,
         showAxes: true,
         showLegend: false,
-        showVertices: true,
+        showVertices: false,
         showPolygons: true
       };
 
@@ -182,20 +182,17 @@ export class RadarChartComponent implements OnInit {
         vis.verticesTooltip = d3.select("body")
           .append("div").classed("verticesTooltip", true)
           .attr("opacity", 0)
-          .style({
-            "position": "absolute",
-            "color": "black",
-            "font-size": "10px",
-            "width": "100px",
-            "height": "auto",
-            "padding": "5px",
-            "border": "2px solid gray",
-            "border-radius": "5px",
-            "pointer-events": "none",
-            "opacity": "0",
-            "background": "#f4f4f4"
-          });
-
+          .attr("position", "absolute")
+          .attr("color", "black")
+          .attr("font-size", "10px")
+          .attr("width", "100px")
+          .attr("height", "auto")
+          .attr("padding", "5px")
+          .attr("border", "2px solid gray")
+          .attr("border-radius", "5px")
+          .attr("pointer-events", "none")
+          .attr("opacity", "0")
+          .attr("background", "#f4f4f4")
 
         // create levels
         vis.levels = vis.svg.selectAll(".levels")
@@ -395,7 +392,7 @@ export class RadarChartComponent implements OnInit {
     this.dataService.refreshChartsSubject.subscribe(s => {
       this.view = 1
       this.myDiv.nativeElement.innerHTML = '';
-      
+
       this.data[0].axes = []
       this.data[1].axes = []
 
@@ -426,7 +423,7 @@ export class RadarChartComponent implements OnInit {
               description: this.localRadarData.getDescription(i)
             })
           i += 1
-          
+
         })
       }
       this.createRadarChart()
@@ -444,8 +441,8 @@ export class RadarChartComponent implements OnInit {
 
   createRadarChart() {
     var config = {
-      w: window.innerWidth / 5,
-      h: window.innerHeight / 3.8
+      w: window.innerWidth / 5.5,
+      h: window.innerHeight / 4.5
     }
     this.RadarChart.draw(this.myDiv.nativeElement, this.data, config);
   }

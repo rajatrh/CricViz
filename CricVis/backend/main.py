@@ -18,6 +18,7 @@ playersDF = pd.read_csv('./data/top_players.csv', index_col=0)
 venueDF = pd.read_csv('./data/top_venues.csv', index_col=0)
 batsmanDF = pd.read_csv('./data/top_batsman.csv', index_col=0)
 scorecardDF = pd.read_csv('./data/top_batsman_score.csv', index_col=0)
+mergedDF = pd.read_csv('./data/merged_data_final.csv', index_col=0)
 
 @app.route('/')
 def home():
@@ -33,7 +34,7 @@ def setup():
 @app.route('/fetchPlayerScorecard')
 def fetchPlayerInfo():
     pId = request.args.get('id')
-    ret = scorecardDF[scorecardDF['playerId'] == float(pId)]
+    ret = mergedDF[mergedDF['playerId'] == float(pId)]
     resultJSON = ret.to_json(orient='records')
     return resultJSON
 

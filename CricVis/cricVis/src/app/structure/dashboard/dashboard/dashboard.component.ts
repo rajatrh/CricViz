@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
     this.dataService.venues.forEach(v => {
       localMap1.set(v.id, v.fullName + ' | ' + v.country)
     })
-    this.dataService.mapping.set('venueid', localMap1)
+    this.dataService.mapping.set('venueId', localMap1)
 
     let localMap2 = new Map<any, any>()
     this.dataService.players.forEach(p => {

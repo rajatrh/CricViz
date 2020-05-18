@@ -15,12 +15,13 @@ import { CommonDataService } from './shared/common-data.service';
 import { FiltersComponent } from './structure/control-bar/filters/filters.component';
 import { PlayerDropdownComponent } from './structure/control-bar/player-dropdown/player-dropdown.component';
 import { DashboardComponent } from './structure/dashboard/dashboard/dashboard.component';
-import { ParallelCoordComponent } from './charts/parallel-coord/parallel-coord.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { LoaderService } from './shared/loader.service';
 import { LoaderInterceptorService } from './shared/loader-interceptor.service';
 import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 import { RadarChartComponent } from './charts/radar-chart/radar-chart.component';
+import { ParallelCoordComponent } from './charts/parallel-coord/parallel-coord.component';
+import { TimelineChartComponent } from './charts/timeline-chart/timeline-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +30,11 @@ import { RadarChartComponent } from './charts/radar-chart/radar-chart.component'
     FiltersComponent,
     PlayerDropdownComponent,
     DashboardComponent,
-    ParallelCoordComponent,
     LoaderComponent,
     PieChartComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    ParallelCoordComponent,
+    TimelineChartComponent
   ],
   imports: [
     BrowserAnimationsModule,

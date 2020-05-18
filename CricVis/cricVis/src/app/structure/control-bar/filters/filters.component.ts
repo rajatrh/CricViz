@@ -22,7 +22,7 @@ export class FiltersComponent implements OnInit {
       fc: new FormControl(), width: '120px'
     },
     {
-      name: 'Venues', value: 'venueid',
+      name: 'Venues', value: 'venueId',
       options: this.op,
       fc: new FormControl(), width: '120px'
     }
