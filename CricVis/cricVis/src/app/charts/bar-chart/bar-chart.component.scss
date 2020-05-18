@@ -17,3 +17,10 @@
 .zeropadding {
     padding: 0px !important;
 }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
