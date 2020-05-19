@@ -189,6 +189,14 @@ export class CombinedChartComponent implements OnInit {
       .duration(1000)
       .attr("height", d => { return this.barChartData.height - y(d.length); })
       .delay(function (d, i) { return (i * 100) })
+
+      svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 42)
+      .attr("x", -10)
+      .style("text-anchor", "end")
+      .style("color", "black")
+      .text("Count")
   }
 
   pieChart(values) {

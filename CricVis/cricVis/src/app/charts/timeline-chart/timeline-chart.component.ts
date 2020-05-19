@@ -10,7 +10,7 @@ declare var d3: any;
 })
 export class TimelineChartComponent implements OnInit {
   @ViewChild('timelineChartDiv', { static: true }) myDiv: ElementRef;
-  cardTitle = 'Innings Timeline'
+  cardTitle = 'Fantasy Score Timeline'
 
   checkbox = {
     batFS: true,
@@ -34,11 +34,13 @@ export class TimelineChartComponent implements OnInit {
 
       this.lineChartData.parsedmasterData = []
       this.dataService.playerScoreCard.forEach(inning => {
+        
         this.lineChartData.parsedmasterData.push(
           {
             date: parseTime(inning.matchDate),
             batF: (inning.bat_score) || (inning.bat_score < 0) ? 0 : +inning.bat_score,
-            bowlF: (inning.bowl_score) || (inning.bowl_score < 0) ? 0 : +inning.bowl_score
+            bowlF: (inning.bowl_score) || (inning.bowl_score < 0) ? 0 : +inning.bowl_score,
+           
           }
         )
       })
@@ -46,11 +48,14 @@ export class TimelineChartComponent implements OnInit {
 
       this.lineChartData.data = []
       this.dataService.filteredPlayerScoreCard.forEach(inning => {
+        let opp = this.dataService.mapping.get('teamId').get(inning.oppTeamId)
         this.lineChartData.data.push(
           {
             date: parseTime(inning.matchDate),
             batF: inning.bat_score < 0 ? 0 : +inning.bat_score,
-            bowlF: inning.bowl_score < 0 ? 0 : +inning.bowl_score
+            bowlF: inning.bowl_score < 0 ? 0 : +inning.bowl_score,
+            batScore: inning.r_x ? inning.r_x + ' (' + inning.b + ') vs ' + opp : '',
+            bowlScore: inning.w ? inning.w + 'wickets vs '+ opp : ''
           }
         )
       })
@@ -82,8 +87,9 @@ export class TimelineChartComponent implements OnInit {
     let tip = d3.tip()
         .attr('class', 'd3-tip')
         .offset([-10,0])
-        .html(function(d) { 
-        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d + "</span>"
+        .html(function(d, score=null) { 
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>"
+        + d + " <span style='font-size:x-small;'>" +score + "</span></span>"
     });
 
     svg.call(tip);
@@ -116,8 +122,9 @@ export class TimelineChartComponent implements OnInit {
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
         .on("mouseover", function(d, i) {
+          console.log(d.score)
           d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
-          tip.show(d.batF, this);
+          tip.show(d.batF,d.batScore, this);
         }).on("mouseout", function(d) {
             d3.select(this).style('fill', "red").attr("r", 3)
             tip.hide(d);
@@ -134,11 +141,11 @@ export class TimelineChartComponent implements OnInit {
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
         .on("mouseover", function(d, i) {
-          d3.select(this).style("fill", "#000000")
+          d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
           //console.log("mouse over value:")
-          tip.show(d.bowlF, this);
+          tip.show(d.bowlF, d.bowlScore, this);
         }).on("mouseout", function(d) {
-            d3.select(this).style('fill', "green")
+            d3.select(this).style('fill', "green").attr("r", 3)
             tip.hide(d);
         });
     }

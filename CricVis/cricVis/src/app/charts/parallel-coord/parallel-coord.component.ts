@@ -23,7 +23,7 @@ export class ParallelCoordComponent implements OnInit {
 
       if (this.dataService.filteredPlayerScoreCard.length > 1) {
         this.dataService.filteredPlayerScoreCard.forEach(inning => {
-          if (inning.r_x != null) {
+          // if (inning.r_x != null) {
             this.data.push({
               'Runs': this.nullCheck(inning.r_x),
               'Balls Taken': this.nullCheck(inning.b),
@@ -31,9 +31,16 @@ export class ParallelCoordComponent implements OnInit {
               'Fours': this.nullCheck(inning.fours),
               'Sixes': this.nullCheck(inning.sixes),
               // 'Dismissal Mode': this.nullCheck(inning.dismissedMethod, 'dm'),
+              
+            // })
+          // } if (inning.ov != null) {
+            // this.data.push({
+              'Overs Bowled': this.nullCheck(inning.ov),
+              'Economy Rate': this.nullCheck(inning.e),
+              'Wickets Taken': this.nullCheck(inning.w),
               'result': this.nullCheck(inning.result)
             })
-          }
+          // }
         })
         this.pc()
       } else {
