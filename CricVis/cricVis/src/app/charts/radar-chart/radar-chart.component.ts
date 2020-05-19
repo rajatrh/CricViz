@@ -390,17 +390,17 @@ export class RadarChartComponent implements OnInit {
       function verticesTooltipShow(d) {
         console.log(d)
         tip.show(d, this);
-        vis.verticesTooltip.style("opacity", 0.9)
-          .html("<strong>Value</strong>: " + d.value + "<br />" +
-            "<strong>Description</strong>: " + d.description + "<br />")
-          .style("left", (d3.event.pageX) + "px")
-          .style("top", (d3.event.pageY) + "px");
+        // vis.verticesTooltip.style("opacity", 0.9)
+        //   .html("<strong>Value</strong>: " + d.value + "<br />" +
+        //     "<strong>Description</strong>: " + d.description + "<br />")
+        //   .style("left", (d3.event.pageX) + "px")
+        //   .style("top", (d3.event.pageY) + "px");
       }
 
       // hide tooltip of vertices
       function verticesTooltipHide() {
         tip.hide();
-        vis.verticesTooltip.style("opacity", 0);
+        // vis.verticesTooltip.style("opacity", 0);
       }
     }
   };
