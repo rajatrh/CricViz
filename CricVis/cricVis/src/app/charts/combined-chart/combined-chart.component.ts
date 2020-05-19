@@ -110,6 +110,17 @@ export class CombinedChartComponent implements OnInit {
       .attr("width", "100%")
       .attr("height", "100%")
 
+  let tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10,0])
+      .html(function(d) { 
+      console.log('Tip', d);
+      // return '<span></span>'; 
+      return "<strong>Freq:</strong> <span style='color:#000'>" + d.length + "</span>";
+  });
+
+  svg.call(tip);
+
     var g = svg.append("g")
       .attr("transform", "translate(" + this.barChartData.margin.left + "," + this.barChartData.margin.top + ")");
 
@@ -164,6 +175,16 @@ export class CombinedChartComponent implements OnInit {
       .attr("width", x(bins[0].x1) - x(bins[0].x0) - 2)
       .attr("height", d => {
         return this.barChartData.height - y(0);
+      })
+      .on("mouseover", function(d, i) {
+        d3.select(this).style("fill", "#000000")
+        //console.log("mouse over value:")
+        //console.log(d);
+
+        tip.show(d, this);
+        }).on("mouseout", function(d) {
+        d3.select(this).style("fill", "steelblue")
+        tip.hide(d);
       });
 
     svg.selectAll("rect")
@@ -201,10 +222,32 @@ export class CombinedChartComponent implements OnInit {
       .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
+      let tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10,0])
+      .html(function(d) { 
+      console.log('Tip', d);
+      // return '<span></span>'; 
+      return "<strong>"+d.name+":</strong> <span style='color:#000'>" + d.value + "</span>";
+  });
+
+  svg.call(tip);
+
     var g = svg.selectAll(".arc")
       .data(pie(values))
       .enter().append("g")
-      .attr("class", "arc");
+      .attr("class", "arc")
+      .on("mouseover", function(d, i) {
+        d3.select(this).style("fill", "#000000")
+        //console.log("mouse over value:")
+        console.log(d);
+
+        tip.show(d, this);
+        }).on("mouseout", function(d) {
+        d3.select(this).style("fill", "steelblue")
+        tip.hide(d);
+      });
+      
 
     g.append("path")
       .attr("d", arc)

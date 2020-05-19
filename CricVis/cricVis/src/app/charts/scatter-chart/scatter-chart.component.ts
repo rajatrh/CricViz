@@ -54,6 +54,16 @@ export class ScatterChartComponent implements OnInit {
         "translate(" + this.scatterChartData.margin.left + ","
         + this.scatterChartData.margin.top + ")");
 
+    let tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10,0])
+        .html(function(d) { 
+        console.log('Tip', d);
+        // return '<span></span>'; 
+        return "<strong>Name:</strong> <span style='color:#000'>" + d.name + "</span>";
+    });
+
+    svg.call(tip);
 
     // Scale the range of the data
     x.domain(d3.extent(this.scatterChartData.data, function (d) { return d.x; }));
@@ -72,7 +82,16 @@ export class ScatterChartComponent implements OnInit {
       .style('fill', function(d){return color(d.cluster);})
       .attr("cx", function (d, i) { return x(0) })
       .attr("cy", function (d) { return y(d.y) })
-      .attr("r", 3);
+      .attr("r", 3)
+      .on("mouseover", function(d, i) {
+        d3.select(this).style("fill", "#000000")
+        console.log("mouse over value:")
+        //console.log(d);
+        tip.show(d, this);
+      }).on("mouseout", function(d) {
+          d3.select(this).style('fill', function(d){return color(d.target);})
+          tip.hide(d);
+      });
 
     svg.selectAll("circle")
       .transition()

@@ -78,6 +78,17 @@ export class TimelineChartComponent implements OnInit {
       .attr("transform",
         "translate(" + this.lineChartData.margin.left + ","
         + this.lineChartData.margin.top + ")");
+    
+    let tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10,0])
+        .html(function(d) { 
+        console.log('Tip', d);
+        // return '<span></span>'; 
+        return "<strong>Score:</strong> <span style='color:#0'>" + d + "</span>";
+    });
+
+    svg.call(tip);
 
     // if (parseData) {
     //   this.lineChartData.data.forEach(function (d) {
@@ -113,7 +124,16 @@ export class TimelineChartComponent implements OnInit {
         .attr("class", "batClass")
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
-        .attr("r", 3);
+        .attr("r", 3)
+        .on("mouseover", function(d, i) {
+          d3.select(this).style("fill", "#000000")
+          console.log("mouse over value:")
+          //console.log(d);
+          tip.show(d.batF, this);
+        }).on("mouseout", function(d) {
+            d3.select(this).style('fill', "red")
+            tip.hide(d);
+        });
     }
 
     if (this.checkbox.bowlFS) {
@@ -124,7 +144,16 @@ export class TimelineChartComponent implements OnInit {
         .attr("class", "bowlClass")
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
-        .attr("r", 3);
+        .attr("r", 3)
+        .on("mouseover", function(d, i) {
+          d3.select(this).style("fill", "#000000")
+          //console.log("mouse over value:")
+          console.log(d);
+          tip.show(d.bowlF, this);
+        }).on("mouseout", function(d) {
+            d3.select(this).style('fill', "green")
+            tip.hide(d);
+        });
     }
 
     svg.selectAll("circle").filter(".batClass")
@@ -133,6 +162,7 @@ export class TimelineChartComponent implements OnInit {
       .duration(1200)
       .attr("cx", function (d) { return x(d.date); })
       .attr("cy", function (d) { return y(d.batF); })
+      
 
     svg.selectAll("circle").filter(".bowlClass")
       .transition()
