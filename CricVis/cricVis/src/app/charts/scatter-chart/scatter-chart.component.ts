@@ -26,8 +26,11 @@ export class ScatterChartComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.refreshChartsSubject.subscribe(s => {
-      this.myDiv.nativeElement.innerHTML = '';
-      this.createScatterChart()
+      if (s[4]) {
+        this.myDiv.nativeElement.innerHTML = '';
+        this.createScatterChart()
+      }
+
     })
   }
 
@@ -68,7 +71,7 @@ export class ScatterChartComponent implements OnInit {
     let tip = d3.tip()
       .offset([-10, 0])
       .html(function (d) {
-       
+
         return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d.name + "</span>";
       });
 
@@ -121,9 +124,9 @@ export class ScatterChartComponent implements OnInit {
       .text(clusterAxis[0])
 
     svg.append("text")
-       
+
       .attr("x", this.scatterChartData.width)
-      .attr("y", this.scatterChartData.height-6)
+      .attr("y", this.scatterChartData.height - 6)
       .style("text-anchor", "end")
       .style("color", "black")
       .text(clusterAxis[1])

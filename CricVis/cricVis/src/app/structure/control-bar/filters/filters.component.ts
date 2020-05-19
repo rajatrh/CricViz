@@ -97,7 +97,7 @@ export class FiltersComponent implements OnInit {
         this.dataService.filteredPlayerScoreCard = this.filterBasedOnKey(f.value, f.fc.value)
       }
     })
-    this.dataService.refreshChartsSubject.next(true)
+    this.dataService.refreshChartsSubject.next([true, true, true, true, false])
   }
 
   filterBasedOnKey(key, filVal) {

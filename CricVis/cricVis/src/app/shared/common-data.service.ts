@@ -13,11 +13,12 @@ import { RadarData } from './model/radar-data';
 })
 export class CommonDataService {
   fetchPlayerSubject = new Subject<any>()
-  refreshChartsSubject = new Subject<Boolean>()
+  refreshChartsSubject = new Subject<any[]>()
   applyFilter = new Subject<Boolean>()
 
   //Interaction Here
   timelineHoverSubject = new Subject<any>();
+  pcModifyService = new Subject<any>();
 
   playerScoreCard: PlayerScore[];
   filteredPlayerScoreCard: PlayerScore[];
@@ -41,6 +42,11 @@ export class CommonDataService {
     this.fetchPlayerSubject.subscribe((p) => {
       this.fetchPlayerData(p);
     })
+
+    this.pcModifyService.subscribe(p => {
+      this.filteredPlayerScoreCard = p;
+      this.refreshChartsSubject.next([true, false, true, true, false])
+    })
   }
 
   fetchData() {
@@ -53,7 +59,7 @@ export class CommonDataService {
         this.playerScoreCard = res;
         this.filteredPlayerScoreCard = res;
         this.globalRadarData.getValues(res);
-        this.refreshChartsSubject.next(true)
+        this.refreshChartsSubject.next([true, true, true, true, true])
         this.applyFilter.next(true)
       })
   }

@@ -405,43 +405,45 @@ export class RadarChartComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.refreshChartsSubject.subscribe(s => {
-      this.view = 1
-      this.myDiv.nativeElement.innerHTML = '';
-
-      this.data[0].axes = []
-      this.data[1].axes = []
-
-      let i = 0
-
-      this.dataService.globalRadarData.scaled.forEach(k => {
-        this.data[0].axes.push(
-          {
-            axis: this.dataService.globalRadarData.getDescription(i),
-            value: k,
-            description: this.dataService.globalRadarData.getDescription(i)
-          })
-        i += 1
-
-      })
-
-      // Create Local Radar data
-      if (this.dataService.filteredPlayerScoreCard.length
-        != this.dataService.playerScoreCard.length) {
+      if (s[0]) {
+        this.view = 1
+        this.myDiv.nativeElement.innerHTML = '';
+  
+        this.data[0].axes = []
+        this.data[1].axes = []
+  
         let i = 0
-        this.localRadarData.getValues(this.dataService.filteredPlayerScoreCard)
-
-        this.localRadarData.scaled.forEach(k => {
-          this.data[1].axes.push(
+  
+        this.dataService.globalRadarData.scaled.forEach(k => {
+          this.data[0].axes.push(
             {
-              axis: this.localRadarData.getDescription(i),
+              axis: this.dataService.globalRadarData.getDescription(i),
               value: k,
-              description: this.localRadarData.getDescription(i)
+              description: this.dataService.globalRadarData.getDescription(i)
             })
           i += 1
-
+  
         })
+  
+        // Create Local Radar data
+        if (this.dataService.filteredPlayerScoreCard.length
+          != this.dataService.playerScoreCard.length) {
+          let i = 0
+          this.localRadarData.getValues(this.dataService.filteredPlayerScoreCard)
+  
+          this.localRadarData.scaled.forEach(k => {
+            this.data[1].axes.push(
+              {
+                axis: this.localRadarData.getDescription(i),
+                value: k,
+                description: this.localRadarData.getDescription(i)
+              })
+            i += 1
+  
+          })
+        }
+        this.createRadarChart()
       }
-      this.createRadarChart()
     })
   }
 

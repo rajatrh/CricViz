@@ -59,7 +59,9 @@ export class CombinedChartComponent implements OnInit {
   constructor(private dataService: CommonDataService) { }
   ngOnInit() {
     this.dataService.refreshChartsSubject.subscribe(s => {
-      this.processData()
+      if (s[2]) {
+        this.processData()
+      }
     })
   }
 
@@ -92,7 +94,7 @@ export class CombinedChartComponent implements OnInit {
 
       labelMapping = new Map([...labelMapping.entries()].sort((a, b) => b[1] - a[1]));
       for (const [key, value] of labelMapping.entries()) {
-        currentAttr.attrData.data.push({a: key, v: +value})
+        currentAttr.attrData.data.push({ a: key, v: +value })
       }
 
       this.pieChart(currentAttr.attrData.data)
@@ -176,7 +178,7 @@ export class CombinedChartComponent implements OnInit {
         return this.barChartData.height - y(0);
       })
       .on("mouseover", function (d, i) {
-        d3.select(this).style("opacity", "0.7").style("cursor","pointer")
+        d3.select(this).style("opacity", "0.7").style("cursor", "pointer")
 
         tip.show(d, this);
       }).on("mouseout", function (d) {
@@ -190,7 +192,7 @@ export class CombinedChartComponent implements OnInit {
       .attr("height", d => { return this.barChartData.height - y(d.length); })
       .delay(function (d, i) { return (i * 100) })
 
-      svg.append("text")
+    svg.append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 42)
       .attr("x", -10)
@@ -230,7 +232,7 @@ export class CombinedChartComponent implements OnInit {
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function (d) {
-        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d.data.a+  " : " + d.value + "</span>"
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d.data.a + " : " + d.value + "</span>"
       });
 
     svg.call(tip);
@@ -240,7 +242,7 @@ export class CombinedChartComponent implements OnInit {
       .enter().append("g")
       .attr("class", "arc")
       .on("mouseover", function (d, i) {
-        d3.select(this).style("opacity", "0.7").style("cursor","pointer")
+        d3.select(this).style("opacity", "0.7").style("cursor", "pointer")
 
         tip.show(d, this);
       }).on("mouseout", function (d) {
@@ -255,7 +257,7 @@ export class CombinedChartComponent implements OnInit {
     g.append("text")
       .attr("transform", function (d) { return "translate(" + labelArc.centroid(d) + ")"; })
       .attr("dy", ".35em")
-      .style("stroke","#fff")
+      .style("stroke", "#fff")
       .text(function (d) { return d.data.v; });
   }
 

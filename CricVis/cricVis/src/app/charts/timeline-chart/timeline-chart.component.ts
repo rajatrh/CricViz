@@ -31,35 +31,36 @@ export class TimelineChartComponent implements OnInit {
   ngOnInit() {
     var parseTime = d3.timeParse("%Y-%m-%d");
     this.dataService.refreshChartsSubject.subscribe(s => {
+      if (s[3]) {
+        this.lineChartData.parsedmasterData = []
+        this.dataService.playerScoreCard.forEach(inning => {
 
-      this.lineChartData.parsedmasterData = []
-      this.dataService.playerScoreCard.forEach(inning => {
-        
-        this.lineChartData.parsedmasterData.push(
-          {
-            date: parseTime(inning.matchDate),
-            batF: (inning.bat_score) || (inning.bat_score < 0) ? 0 : +inning.bat_score,
-            bowlF: (inning.bowl_score) || (inning.bowl_score < 0) ? 0 : +inning.bowl_score,
-          }
-        )
-      })
+          this.lineChartData.parsedmasterData.push(
+            {
+              date: parseTime(inning.matchDate),
+              batF: (inning.bat_score) || (inning.bat_score < 0) ? 0 : +inning.bat_score,
+              bowlF: (inning.bowl_score) || (inning.bowl_score < 0) ? 0 : +inning.bowl_score,
+            }
+          )
+        })
 
 
-      this.lineChartData.data = []
-      this.dataService.filteredPlayerScoreCard.forEach(inning => {
-        let opp = this.dataService.mapping.get('teamId').get(inning.oppTeamId)
-        this.lineChartData.data.push(
-          {
-            date: parseTime(inning.matchDate),
-            batF: inning.bat_score < 0 ? 0 : +inning.bat_score,
-            bowlF: inning.bowl_score < 0 ? 0 : +inning.bowl_score,
-            batScore: inning.r_x ? inning.r_x + ' (' + inning.b + ') vs ' + opp : '',
-            bowlScore: inning.w ? inning.w + 'wickets vs '+ opp : '',
-            inId: inning.playerId.toString() + inning.matchId.toString()
-          }
-        )
-      })
-      this.createLineChart()
+        this.lineChartData.data = []
+        this.dataService.filteredPlayerScoreCard.forEach(inning => {
+          let opp = this.dataService.mapping.get('teamId').get(inning.oppTeamId)
+          this.lineChartData.data.push(
+            {
+              date: parseTime(inning.matchDate),
+              batF: inning.bat_score < 0 ? 0 : +inning.bat_score,
+              bowlF: inning.bowl_score < 0 ? 0 : +inning.bowl_score,
+              batScore: inning.r_x ? inning.r_x + ' (' + inning.b + ') vs ' + opp : '',
+              bowlScore: inning.w ? inning.w + 'wickets vs ' + opp : '',
+              inId: inning.playerId.toString() + inning.matchId.toString()
+            }
+          )
+        })
+        this.createLineChart()
+      }
     })
   }
 
@@ -83,14 +84,14 @@ export class TimelineChartComponent implements OnInit {
       .attr("transform",
         "translate(" + this.lineChartData.margin.left + ","
         + this.lineChartData.margin.top + ")");
-    
+
     let tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([-10,0])
-        .html(function(d, score=null) { 
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function (d, score = null) {
         return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>"
-        + d + " <span style='font-size:x-small;'>" +score + "</span></span>"
-    });
+          + d + " <span style='font-size:x-small;'>" + score + "</span></span>"
+      });
 
     svg.call(tip);
 
@@ -121,8 +122,8 @@ export class TimelineChartComponent implements OnInit {
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
-        .on("mouseover", (d,i,n) => this.mouseOverBat(d,i,n, tip))
-        .on("mouseout", (d,i,n) => this.mouseOut(d,i,n, tip));
+        .on("mouseover", (d, i, n) => this.mouseOverBat(d, i, n, tip))
+        .on("mouseout", (d, i, n) => this.mouseOut(d, i, n, tip));
     }
 
     if (this.checkbox.bowlFS) {
@@ -134,8 +135,8 @@ export class TimelineChartComponent implements OnInit {
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
-        .on("mouseover", (d,i,n) => this.mouseOverBowl(d,i,n, tip))
-        .on("mouseout", (d,i,n) => this.mouseOut(d,i,n, tip, "green"));
+        .on("mouseover", (d, i, n) => this.mouseOverBowl(d, i, n, tip))
+        .on("mouseout", (d, i, n) => this.mouseOut(d, i, n, tip, "green"));
     }
 
     svg.selectAll("circle").filter(".batClass")
@@ -144,7 +145,7 @@ export class TimelineChartComponent implements OnInit {
       .duration(1200)
       .attr("cx", function (d) { return x(d.date); })
       .attr("cy", function (d) { return y(d.batF); })
-      
+
 
     svg.selectAll("circle").filter(".bowlClass")
       .transition()
@@ -166,21 +167,21 @@ export class TimelineChartComponent implements OnInit {
   }
 
   mouseOverBat(d, i, n, tip) {
-    d3.select(n[i]).style("fill", "pink").attr("r", 6).style("cursor","pointer")
-    tip.show(d.batF,d.batScore, n[i]);
+    d3.select(n[i]).style("fill", "pink").attr("r", 6).style("cursor", "pointer")
+    tip.show(d.batF, d.batScore, n[i]);
     this.dataService.timelineHoverSubject.next([d.inId, 1]);
   }
 
   mouseOverBowl(d, i, n, tip) {
-    d3.select(n[i]).style("fill", "lightgreen").attr("r", 6).style("cursor","pointer")
-    tip.show(d.bowlF,d.batScore, n[i]);
+    d3.select(n[i]).style("fill", "lightgreen").attr("r", 6).style("cursor", "pointer")
+    tip.show(d.bowlF, d.batScore, n[i]);
     this.dataService.timelineHoverSubject.next([d.inId, 1]);
   }
 
-  mouseOut(d, i, n, tip, color='red') {
-      d3.select(n[i]).style('fill', color).attr("r", 3)
-      tip.hide(d);
-      this.dataService.timelineHoverSubject.next([d.inId, 0]);
+  mouseOut(d, i, n, tip, color = 'red') {
+    d3.select(n[i]).style('fill', color).attr("r", 3)
+    tip.hide(d);
+    this.dataService.timelineHoverSubject.next([d.inId, 0]);
   }
 
 }
