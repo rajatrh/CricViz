@@ -91,6 +91,13 @@ export class RadarChartComponent implements OnInit {
         axes: null
       };
 
+      let tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function (d) {
+          return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d.description+  " : " + d.value + "</span>"
+        });
+
       // feed user configuration options
       if ("undefined" !== typeof options) {
         for (var i in options) {
@@ -156,11 +163,11 @@ export class RadarChartComponent implements OnInit {
         buildCoordinates(data);
         if (config.showLevels) buildLevels();
         if (config.showLevelsLabels) buildLevelsLabels();
-        if (config.showAxes) buildAxes();
-        if (config.showAxesLabels) buildAxesLabels();
-        if (config.showLegend) buildLegend(data);
-        if (config.showVertices) buildVertices(data);
-        if (config.showPolygons) buildPolygons(data);
+        if (config.showAxes) {buildAxes();}
+        buildAxesLabels();
+        buildLegend(data, ["Career Stats", "Filter Stats"]);
+        buildVertices(data);
+        buildPolygons(data);
       }
 
       // build main vis components
@@ -177,6 +184,11 @@ export class RadarChartComponent implements OnInit {
           .attr("height", config.h + config.paddingY)
           .append("svg:g")
           .attr("transform", "translate(" + config.translateX + "," + config.translateY + ")");;
+
+
+        
+    
+        vis.svg.call(tip);
 
         // create verticesTooltip
         vis.verticesTooltip = d3.select("body")
@@ -326,6 +338,7 @@ export class RadarChartComponent implements OnInit {
           .attr("fill-opacity", config.polygonAreaOpacity)
           .attr("stroke-opacity", config.polygonStrokeOpacity)
           .on(over, function (d) {
+            //console.log(d)
             vis.svg.selectAll(".polygon-areas") // fade all other polygons out
               .transition(250)
               .attr("fill-opacity", 0.1)
@@ -345,7 +358,7 @@ export class RadarChartComponent implements OnInit {
 
 
       // builds out the legend
-      function buildLegend(data) {
+      function buildLegend(data, filter) {
         //Create legend squares
         vis.legend.selectAll(".legend-tiles")
           .data(data).enter()
@@ -365,14 +378,18 @@ export class RadarChartComponent implements OnInit {
           .attr("dy", 0.07 * config.legendBoxSize + "em")
           .attr("font-size", 11 * config.labelScale + "px")
           .attr("fill", "gray")
-          .text(function (d) {
-            return d.group;
+          .text(function (d, i) {
+            console.log("group")
+            console.log(d);
+            return d.className;
           });
       }
 
 
       // show tooltip of vertices
       function verticesTooltipShow(d) {
+        console.log(d)
+        tip.show(d, this);
         vis.verticesTooltip.style("opacity", 0.9)
           .html("<strong>Value</strong>: " + d.value + "<br />" +
             "<strong>Description</strong>: " + d.description + "<br />")
@@ -382,6 +399,7 @@ export class RadarChartComponent implements OnInit {
 
       // hide tooltip of vertices
       function verticesTooltipHide() {
+        tip.hide();
         vis.verticesTooltip.style("opacity", 0);
       }
     }
