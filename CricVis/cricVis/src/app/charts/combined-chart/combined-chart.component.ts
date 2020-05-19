@@ -44,7 +44,7 @@ export class CombinedChartComponent implements OnInit {
   selectedAttribute = 'sr'
 
   barChartData = {
-    width: window.innerWidth/5.8,
+    width: window.innerWidth / 5.8,
     height: 215,
     margin: {
       left: 30,
@@ -84,15 +84,15 @@ export class CombinedChartComponent implements OnInit {
         let val = inn[currentAttr.value]
         if (val) {
           if (!labelMapping.has(val)) {
-            labelMapping.set(val,0)
+            labelMapping.set(val, 0)
           }
-          labelMapping.set(val,labelMapping.get(val)+1)
+          labelMapping.set(val, labelMapping.get(val) + 1)
         }
       })
 
       labelMapping = new Map([...labelMapping.entries()].sort((a, b) => b[1] - a[1]));
       for (const [key, value] of labelMapping.entries()) {
-        currentAttr.attrData.data.push(+value)
+        currentAttr.attrData.data.push({a: key, v: +value})
       }
 
       this.pieChart(currentAttr.attrData.data)
@@ -101,8 +101,7 @@ export class CombinedChartComponent implements OnInit {
   }
 
   barChart(values, numberOfBins) {
-
-    if(values.length < 1) return;
+    if (values.length < 1) return;
 
     this.myDiv.nativeElement.innerHTML = '';
     var svg = d3.select(this.myDiv.nativeElement)
@@ -110,16 +109,15 @@ export class CombinedChartComponent implements OnInit {
       .attr("width", "100%")
       .attr("height", "100%")
 
-  let tip = d3.tip()
+    let tip = d3.tip()
       .attr('class', 'd3-tip')
-      .offset([-10,0])
-      .html(function(d) { 
-      console.log('Tip', d);
-      // return '<span></span>'; 
-      return "<strong>Freq:</strong> <span style='color:#000'>" + d.length + "</span>";
-  });
+      .offset([-10, 0])
+      .html(function (d) {
+        // return '<span></span>'; 
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>count :" + d.length + "</span>"
+      });
 
-  svg.call(tip);
+    svg.call(tip);
 
     var g = svg.append("g")
       .attr("transform", "translate(" + this.barChartData.margin.left + "," + this.barChartData.margin.top + ")");
@@ -165,7 +163,8 @@ export class CombinedChartComponent implements OnInit {
     var bar = g.selectAll(".bar")
       .data(bins)
       .enter().append("g")
-      .style("fill", "steelblue")
+      .style("fill", "orange")
+      .style("opacity", "1")
       .attr("transform", function (d) {
         return "translate(" + x(d.x0) + "," + y(d.length) + ")";
       })
@@ -176,14 +175,12 @@ export class CombinedChartComponent implements OnInit {
       .attr("height", d => {
         return this.barChartData.height - y(0);
       })
-      .on("mouseover", function(d, i) {
-        d3.select(this).style("fill", "#000000")
-        //console.log("mouse over value:")
-        //console.log(d);
+      .on("mouseover", function (d, i) {
+        d3.select(this).style("opacity", "0.7").style("cursor","pointer")
 
         tip.show(d, this);
-        }).on("mouseout", function(d) {
-        d3.select(this).style("fill", "steelblue")
+      }).on("mouseout", function (d) {
+        d3.select(this).style("opacity", "1").style("fill", "orange")
         tip.hide(d);
       });
 
@@ -201,8 +198,7 @@ export class CombinedChartComponent implements OnInit {
       height = 200,
       radius = Math.min(width, height) / 2;
 
-    var color = d3.scaleOrdinal()
-      .range(["#98abc5", "#8a89a6", "#7b6888"]);
+    var color = d3.scaleOrdinal(d3.schemeCategory10)
 
     var arc = d3.arc()
       .outerRadius(radius - 10)
@@ -214,7 +210,7 @@ export class CombinedChartComponent implements OnInit {
 
     var pie = d3.pie()
       .sort(null)
-      .value(function (d) { return d; });
+      .value(function (d) { return d.v; });
 
     var svg = d3.select(this.myDiv.nativeElement).append("svg")
       .attr("width", width)
@@ -222,41 +218,37 @@ export class CombinedChartComponent implements OnInit {
       .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-      let tip = d3.tip()
+    let tip = d3.tip()
       .attr('class', 'd3-tip')
-      .offset([-10,0])
-      .html(function(d) { 
-      console.log('Tip', d);
-      // return '<span></span>'; 
-      return "<strong>"+d.name+":</strong> <span style='color:#000'>" + d.value + "</span>";
-  });
+      .offset([-10, 0])
+      .html(function (d) {
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d.data.a+  " : " + d.value + "</span>"
+      });
 
-  svg.call(tip);
+    svg.call(tip);
 
     var g = svg.selectAll(".arc")
       .data(pie(values))
       .enter().append("g")
       .attr("class", "arc")
-      .on("mouseover", function(d, i) {
-        d3.select(this).style("fill", "#000000")
-        //console.log("mouse over value:")
-        console.log(d);
+      .on("mouseover", function (d, i) {
+        d3.select(this).style("opacity", "0.7").style("cursor","pointer")
 
         tip.show(d, this);
-        }).on("mouseout", function(d) {
-        d3.select(this).style("fill", "steelblue")
+      }).on("mouseout", function (d) {
+        d3.select(this).style("opacity", "1")
         tip.hide(d);
       });
-      
 
     g.append("path")
       .attr("d", arc)
-      .style("fill", function (d) { return color(d.data); });
+      .style("fill", function (d) { return color(d.data.a); });
 
     g.append("text")
       .attr("transform", function (d) { return "translate(" + labelArc.centroid(d) + ")"; })
       .attr("dy", ".35em")
-      .text(function (d) { return d.data; });
+      .style("stroke","#fff")
+      .text(function (d) { return d.data.v; });
   }
 
   eventSelection() {

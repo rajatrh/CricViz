@@ -83,20 +83,10 @@ export class TimelineChartComponent implements OnInit {
         .attr('class', 'd3-tip')
         .offset([-10,0])
         .html(function(d) { 
-        console.log('Tip', d);
-        // return '<span></span>'; 
-        return "<strong>Score:</strong> <span style='color:#0'>" + d + "</span>";
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d + "</span>"
     });
 
     svg.call(tip);
-
-    // if (parseData) {
-    //   this.lineChartData.data.forEach(function (d) {
-    //     d.date = parseTime(d.date);
-    //     d.batF = +d.batF;
-    //     d.bowlF = +d.bowlF;
-    //   });
-    // }
 
     // Scale the range of the data
     x.domain(d3.extent(this.lineChartData.data, function (d) { return d.date; }));
@@ -126,12 +116,10 @@ export class TimelineChartComponent implements OnInit {
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
         .on("mouseover", function(d, i) {
-          d3.select(this).style("fill", "#000000")
-          console.log("mouse over value:")
-          //console.log(d);
+          d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
           tip.show(d.batF, this);
         }).on("mouseout", function(d) {
-            d3.select(this).style('fill', "red")
+            d3.select(this).style('fill', "red").attr("r", 3)
             tip.hide(d);
         });
     }
@@ -148,7 +136,6 @@ export class TimelineChartComponent implements OnInit {
         .on("mouseover", function(d, i) {
           d3.select(this).style("fill", "#000000")
           //console.log("mouse over value:")
-          console.log(d);
           tip.show(d.bowlF, this);
         }).on("mouseout", function(d) {
             d3.select(this).style('fill', "green")

@@ -32,7 +32,6 @@ export class ScatterChartComponent implements OnInit {
   }
 
   createScatterChart() {
-    console.log(this.scatterChartData.data)
     this.myDiv.nativeElement.innerHTML = '';
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -55,12 +54,13 @@ export class ScatterChartComponent implements OnInit {
         + this.scatterChartData.margin.top + ")");
 
     let tip = d3.tip()
-        .attr('class', 'd3-tip')
         .offset([-10,0])
         .html(function(d) { 
-        console.log('Tip', d);
-        // return '<span></span>'; 
-        return "<strong>Name:</strong> <span style='color:#000'>" + d.name + "</span>";
+        let n = 'Rajat Bhatia'
+        if ( d.name != undefined) {
+          n =d.name
+        } 
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + n + "</span>";
     });
 
     svg.call(tip);
@@ -84,12 +84,11 @@ export class ScatterChartComponent implements OnInit {
       .attr("cy", function (d) { return y(d.y) })
       .attr("r", 3)
       .on("mouseover", function(d, i) {
-        d3.select(this).style("fill", "#000000")
-        console.log("mouse over value:")
-        //console.log(d);
+        d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
+
         tip.show(d, this);
       }).on("mouseout", function(d) {
-          d3.select(this).style('fill', function(d){return color(d.target);})
+          d3.select(this).style('fill', function(d){return color(d.cluster);}).attr("r", 3)
           tip.hide(d);
       });
 
