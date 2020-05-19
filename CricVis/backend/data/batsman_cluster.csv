@@ -1,4 +1,4 @@
-,Player_Id,Runs,Balls_played,Strike_Rate,cluster,@id,@shortName
+,Player_Id,Runs,Balls_played,Strike_Rate,cluster,@id,shortName
 0,1,1349.0,1326,101.73,2,1,MS Dhoni
 1,2,2435.0,1954,124.62,1,2,A Mukund
 2,4,1322.0,1101,120.07,2,4,G Vignesh

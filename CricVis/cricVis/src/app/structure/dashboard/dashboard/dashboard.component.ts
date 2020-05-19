@@ -51,11 +51,11 @@ export class DashboardComponent implements OnInit {
     this.dataService.mapping.set('playerId', localMap2)
 
     this.data['bowlerCluster'].forEach(element => {
-      let name = this.dataService.mapping.get('playerId').get(element.Player_Id)
+      // let name = this.dataService.mapping.get('playerId').get(element.Player_Id)
       this.dataService.scatterData.bowler.push(
         {
           id: element.Player_Id,
-          name: name,
+          name: element.shortName,
           x: element.Econ_Rate,
           y: element.Runs,
           cluster: element.cluster
@@ -64,11 +64,11 @@ export class DashboardComponent implements OnInit {
     });
 
     this.data['batsmanCluster'].forEach(element => {
-      let name = this.dataService.mapping.get('playerId').get(element.Player_Id)
+      // let name = this.dataService.mapping.get('playerId').get(element.Player_Id)
       this.dataService.scatterData.batsman.push(
         {
           id: element.Player_Id,
-          name: name,
+          name: element.shortName,
           x: element.Strike_Rate,
           y: element.Runs,
           cluster: element.cluster

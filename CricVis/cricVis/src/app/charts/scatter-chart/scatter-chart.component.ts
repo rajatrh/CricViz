@@ -12,6 +12,7 @@ export class ScatterChartComponent implements OnInit {
   @ViewChild('scatterChartDiv', { static: true }) myDiv: ElementRef;
 
   cardTitle = 'Player Cluster'
+  typeOfCluster = 'batsman'
 
   scatterChartData = {
     width: window.innerWidth / 6,
@@ -26,16 +27,27 @@ export class ScatterChartComponent implements OnInit {
   ngOnInit() {
     this.dataService.refreshChartsSubject.subscribe(s => {
       this.myDiv.nativeElement.innerHTML = '';
-      this.scatterChartData.data = this.dataService.scatterData.batsman
       this.createScatterChart()
     })
   }
 
+  eventSelection() {
+    this.createScatterChart()
+  }
+
   createScatterChart() {
+    var clusterAxis = []
+    if (this.typeOfCluster == 'batsman') {
+      this.scatterChartData.data = this.dataService.scatterData.batsman
+      clusterAxis = ['Runs Scored', 'Strike Rate']
+    } else {
+      this.scatterChartData.data = this.dataService.scatterData.bowler
+      clusterAxis = ['Runs Conceded', 'Economy']
+    }
     this.myDiv.nativeElement.innerHTML = '';
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
-   
+
     // set the ranges
     var x = d3.scaleLinear().range([0, this.scatterChartData.width]);
     var y = d3.scaleLinear().range([this.scatterChartData.height, 0]);
@@ -54,14 +66,11 @@ export class ScatterChartComponent implements OnInit {
         + this.scatterChartData.margin.top + ")");
 
     let tip = d3.tip()
-        .offset([-10,0])
-        .html(function(d) { 
-        let n = 'Rajat Bhatia'
-        if ( d.name != undefined) {
-          n =d.name
-        } 
-        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + n + "</span>";
-    });
+      .offset([-10, 0])
+      .html(function (d) {
+       
+        return "<span style='background-color:steelblue;padding:5px;opacity:1; color:#fff'>" + d.name + "</span>";
+      });
 
     svg.call(tip);
 
@@ -79,29 +88,45 @@ export class ScatterChartComponent implements OnInit {
     svg.selectAll(".dot")
       .data(this.scatterChartData.data)
       .enter().append("circle") // Uses the enter().append() method
-      .style('fill', function(d){return color(d.cluster);})
+      .style('fill', function (d) { return color(d.cluster); })
       .attr("cx", function (d, i) { return x(0) })
       .attr("cy", function (d) { return y(d.y) })
       .attr("r", 3)
-      .on("mouseover", function(d, i) {
-        d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
+      .on("mouseover", function (d, i) {
+        d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor", "pointer")
 
         tip.show(d, this);
-      }).on("mouseout", function(d) {
-          d3.select(this).style('fill', function(d){return color(d.cluster);}).attr("r", 3)
-          tip.hide(d);
+      }).on("mouseout", function (d) {
+        d3.select(this).style('fill', function (d) { return color(d.cluster); }).attr("r", 3)
+        tip.hide(d);
       });
 
     svg.selectAll("circle")
       .transition()
       .delay(function (d, i) { return (i * 3) })
-      .style('fill', function(d){return color(d.cluster);})
+      .style('fill', function (d) { return color(d.cluster); })
       .duration(1400)
       .attr("cx", function (d) { return x(d.x); })
       .attr("cy", function (d) { return y(d.y); })
 
     svg.append("g")
       .call(d3.axisLeft(y).ticks(8))
+
+    svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .style("color", "black")
+      .text(clusterAxis[0])
+
+    svg.append("text")
+       
+      .attr("x", this.scatterChartData.width)
+      .attr("y", this.scatterChartData.height-6)
+      .style("text-anchor", "end")
+      .style("color", "black")
+      .text(clusterAxis[1])
   }
 
 }
