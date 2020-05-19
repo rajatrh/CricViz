@@ -6,7 +6,7 @@
          [formControl]="playerCtrl">
   <mat-autocomplete #auto="matAutocomplete">
     <mat-option *ngFor="let player of filteredPlayers | async" [value]="player.fullName" (onSelectionChange)="newPlayer(player)">
-      <img class="example-option-img" aria-hidden src="../../../../../assets/images/flags/{{player.nationality}}.png" height="25">
+      <img class="example-option-img" aria-hidden src="../../../../../assets/images/{{player.nationality}}.png" height="25">
       <span style="font-size: small;">{{player.fullName}}</span>
     </mat-option>
   </mat-autocomplete>

@@ -2,8 +2,8 @@ runtime: nodejs12
 
 
 handlers:
-  - url: /(.*\.(js|css|svg|png)(|\.map))$
-    static_files: cricVis/\1
+  - url: /(.*\.(gif|svg|png)(|\.map))$
+    static_files: cricVis/assets/images\1
     upload: cricVis/(.*)(|\.map)
   - url: /.*
     static_files: cricVis/index.html

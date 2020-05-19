@@ -165,7 +165,6 @@ export class ParallelCoordComponent implements OnInit {
         if (isActive) selected.push(d);
         return (isActive) ? null : "none";
       });
-
     }
   }
 }
