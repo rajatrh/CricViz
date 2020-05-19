@@ -379,8 +379,6 @@ export class RadarChartComponent implements OnInit {
           .attr("font-size", 11 * config.labelScale + "px")
           .attr("fill", "gray")
           .text(function (d, i) {
-            console.log("group")
-            console.log(d);
             return d.className;
           });
       }
@@ -388,7 +386,6 @@ export class RadarChartComponent implements OnInit {
 
       // show tooltip of vertices
       function verticesTooltipShow(d) {
-        console.log(d)
         tip.show(d, this);
         // vis.verticesTooltip.style("opacity", 0.9)
         //   .html("<strong>Value</strong>: " + d.value + "<br />" +

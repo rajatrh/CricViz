@@ -102,9 +102,6 @@ export class RadarData {
                 this.actual.push(0)
                 this.scaled.push(0)
             }
-
-            console.log(this.actual)
-            console.log(this.scaled)
         }
     }
 }

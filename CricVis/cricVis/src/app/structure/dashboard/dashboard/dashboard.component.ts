@@ -64,7 +64,6 @@ export class DashboardComponent implements OnInit {
     });
 
     this.data['batsmanCluster'].forEach(element => {
-      console.log(element)
       // let name = this.dataService.mapping.get('playerId').get(element.Player_Id)
       this.dataService.scatterData.batsman.push(
         {
@@ -76,7 +75,6 @@ export class DashboardComponent implements OnInit {
         }
       )
     });
-    console.log(  this.dataService.scatterData)
   }
 
   

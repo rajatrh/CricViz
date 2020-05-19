@@ -40,7 +40,6 @@ export class TimelineChartComponent implements OnInit {
             date: parseTime(inning.matchDate),
             batF: (inning.bat_score) || (inning.bat_score < 0) ? 0 : +inning.bat_score,
             bowlF: (inning.bowl_score) || (inning.bowl_score < 0) ? 0 : +inning.bowl_score,
-           
           }
         )
       })
@@ -55,7 +54,8 @@ export class TimelineChartComponent implements OnInit {
             batF: inning.bat_score < 0 ? 0 : +inning.bat_score,
             bowlF: inning.bowl_score < 0 ? 0 : +inning.bowl_score,
             batScore: inning.r_x ? inning.r_x + ' (' + inning.b + ') vs ' + opp : '',
-            bowlScore: inning.w ? inning.w + 'wickets vs '+ opp : ''
+            bowlScore: inning.w ? inning.w + 'wickets vs '+ opp : '',
+            inId: inning.playerId.toString() + inning.matchId.toString()
           }
         )
       })
@@ -121,11 +121,8 @@ export class TimelineChartComponent implements OnInit {
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
-        .on("mouseover", (d,i,n) => this.mouseOver(d,i,n, tip))
-        .on("mouseout", function(d) {
-            d3.select(this).style('fill', "red").attr("r", 3)
-            tip.hide(d);
-        });
+        .on("mouseover", (d,i,n) => this.mouseOverBat(d,i,n, tip))
+        .on("mouseout", (d,i,n) => this.mouseOut(d,i,n, tip));
     }
 
     if (this.checkbox.bowlFS) {
@@ -137,14 +134,8 @@ export class TimelineChartComponent implements OnInit {
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
-        .on("mouseover", function(d, i) {
-          d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
-          //console.log("mouse over value:")
-          tip.show(d.bowlF, d.bowlScore, this);
-        }).on("mouseout", function(d) {
-            d3.select(this).style('fill', "green").attr("r", 3)
-            tip.hide(d);
-        });
+        .on("mouseover", (d,i,n) => this.mouseOverBowl(d,i,n, tip))
+        .on("mouseout", (d,i,n) => this.mouseOut(d,i,n, tip, "green"));
     }
 
     svg.selectAll("circle").filter(".batClass")
@@ -162,7 +153,6 @@ export class TimelineChartComponent implements OnInit {
       .attr("cx", function (d) { return x(d.date); })
       .attr("cy", function (d) { return y(d.bowlF); })
 
-
     svg.append("g")
       .call(d3.axisLeft(y))
 
@@ -175,10 +165,22 @@ export class TimelineChartComponent implements OnInit {
       .text("Fantasy Score")
   }
 
-  mouseOver(d, i, n, tip) {
+  mouseOverBat(d, i, n, tip) {
     d3.select(n[i]).style("fill", "pink").attr("r", 6).style("cursor","pointer")
     tip.show(d.batF,d.batScore, n[i]);
-    this.dataService.timelineHoverSubject.next('Hola');
+    this.dataService.timelineHoverSubject.next([d.inId, 1]);
+  }
+
+  mouseOverBowl(d, i, n, tip) {
+    d3.select(n[i]).style("fill", "lightgreen").attr("r", 6).style("cursor","pointer")
+    tip.show(d.bowlF,d.batScore, n[i]);
+    this.dataService.timelineHoverSubject.next([d.inId, 1]);
+  }
+
+  mouseOut(d, i, n, tip, color='red') {
+      d3.select(n[i]).style('fill', color).attr("r", 3)
+      tip.hide(d);
+      this.dataService.timelineHoverSubject.next([d.inId, 0]);
   }
 
 }

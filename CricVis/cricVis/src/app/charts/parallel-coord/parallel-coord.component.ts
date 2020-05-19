@@ -17,6 +17,8 @@ export class ParallelCoordComponent implements OnInit, OnDestroy {
   constructor(public dataService: CommonDataService) {
   }
 
+  highlighted;
+
   ngOnInit() {
     this.dataService.refreshChartsSubject.subscribe(s => {
       this.heightpc = '34vh'
@@ -25,25 +27,18 @@ export class ParallelCoordComponent implements OnInit, OnDestroy {
 
       if (this.dataService.filteredPlayerScoreCard.length > 1) {
         this.dataService.filteredPlayerScoreCard.forEach(inning => {
-          // if (inning.r_x != null) {
-            this.data.push({
-              'Runs': this.nullCheck(inning.r_x),
-              'Balls Taken': this.nullCheck(inning.b),
-              'Strike Rate': this.nullCheck(inning.sr),
-              'Fours': this.nullCheck(inning.fours),
-              'Sixes': this.nullCheck(inning.sixes),
-              // 'Dismissal Mode': this.nullCheck(inning.dismissedMethod, 'dm'),
-              
-            // })
-          // } if (inning.ov != null) {
-            // this.data.push({
-              'Overs Bowled': this.nullCheck(inning.ov),
-              'Economy Rate': this.nullCheck(inning.e),
-              'Wickets Taken': this.nullCheck(inning.w),
-              'result': this.nullCheck(inning.result),
-              'id' : this.nullCheck(inning.playerId).toString() +  this.nullCheck(inning.playerId).toString()
-            })
-          // }
+          this.data.push({
+            'Runs': this.nullCheck(inning.r_x),
+            'Balls Taken': this.nullCheck(inning.b),
+            'Strike Rate': this.nullCheck(inning.sr),
+            'Fours': this.nullCheck(inning.fours),
+            'Sixes': this.nullCheck(inning.sixes),
+            'Overs Bowled': this.nullCheck(inning.ov),
+            'Economy Rate': this.nullCheck(inning.e),
+            'Wickets Taken': this.nullCheck(inning.w),
+            'result': this.nullCheck(inning.result),
+            'id': this.nullCheck(inning.playerId).toString() + this.nullCheck(inning.matchId).toString()
+          })
         })
         this.pc()
       } else {
@@ -51,10 +46,12 @@ export class ParallelCoordComponent implements OnInit, OnDestroy {
       }
     })
 
-    this.timelineHover = this.dataService.timelineHoverSubject.subscribe(ev => 
-      {
-      
-      })
+    this.timelineHover = this.dataService.timelineHoverSubject.subscribe(ev => {
+      this.highlighted
+        .filter(function (d) { return d.id == ev[0]; })
+        .style("opacity", ev[1])
+
+    })
   }
 
   nullCheck(val) {
@@ -114,10 +111,21 @@ export class ParallelCoordComponent implements OnInit, OnDestroy {
       .data(this.data)
       .enter().append("path")
       .attr("d", path)
+
       .style("stroke", d => {
         return resultColorScale(d['result'])
       })
       .style("opacity", 0.6)
+
+    this.highlighted = svg_adjusted.append("g")
+      .attr("class", "foreground")
+      .style("stroke-width", "5")
+      .selectAll("path")
+      .data(this.data)
+      .enter().append("path")
+      .attr("d", path)
+      .style("stroke", "steelblue")
+      .style("opacity", 0)
 
     // Add a group element for each dimension.
     const g = svg_adjusted.selectAll(".dimension")
@@ -178,7 +186,6 @@ export class ParallelCoordComponent implements OnInit, OnDestroy {
         });
         // Only render rows that are active across all selectors
         if (isActive) selected.push(d);
-        console.log(isActive)
         return (isActive) ? null : "none";
       });
     }

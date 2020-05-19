@@ -163,7 +163,7 @@ export class CombinedChartComponent implements OnInit {
     var bar = g.selectAll(".bar")
       .data(bins)
       .enter().append("g")
-      .style("fill", "orange")
+      .style("fill", "steelblue")
       .style("opacity", "1")
       .attr("transform", function (d) {
         return "translate(" + x(d.x0) + "," + y(d.length) + ")";
@@ -180,7 +180,7 @@ export class CombinedChartComponent implements OnInit {
 
         tip.show(d, this);
       }).on("mouseout", function (d) {
-        d3.select(this).style("opacity", "1").style("fill", "orange")
+        d3.select(this).style("opacity", "1").style("fill", "steelblue")
         tip.hide(d);
       });
 
