@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
+import { CombinedChartComponent } from './charts/combined-chart/combined-chart.component';
 
 import { DataResolverService } from './shared/data-resolver.service';
 import { CommonDataService } from './shared/common-data.service';
@@ -18,7 +18,7 @@ import { DashboardComponent } from './structure/dashboard/dashboard/dashboard.co
 import { LoaderComponent } from './shared/loader/loader.component';
 import { LoaderService } from './shared/loader.service';
 import { LoaderInterceptorService } from './shared/loader-interceptor.service';
-import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { ScatterChartComponent } from './charts/scatter-chart/scatter-chart.component';
 import { RadarChartComponent } from './charts/radar-chart/radar-chart.component';
 import { ParallelCoordComponent } from './charts/parallel-coord/parallel-coord.component';
 import { TimelineChartComponent } from './charts/timeline-chart/timeline-chart.component';
@@ -26,12 +26,12 @@ import { TimelineChartComponent } from './charts/timeline-chart/timeline-chart.c
 @NgModule({
   declarations: [
     AppComponent,
-    BarChartComponent,
+    CombinedChartComponent,
     FiltersComponent,
     PlayerDropdownComponent,
     DashboardComponent,
     LoaderComponent,
-    PieChartComponent,
+    ScatterChartComponent,
     RadarChartComponent,
     ParallelCoordComponent,
     TimelineChartComponent

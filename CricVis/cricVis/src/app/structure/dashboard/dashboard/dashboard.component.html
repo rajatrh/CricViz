@@ -1,7 +1,6 @@
-
 <div class="wrapper">
     <div id="body" class="active">
-        <nav class="navbar navbar-expand-lg navbar-primary bg-success">
+        <nav class="navbar navbar-expand-lg navbar-primary" style="color: blue">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
                     <li style="color:white"> CricViz
@@ -46,21 +45,28 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12 col-md-5 zeropadding">
+                    <div class="col-sm-12 col-md-3 zeropadding">
                         <div class="card">
                             <div class="content" style="height: 41vh">
-                                
+                                <app-combined-chart></app-combined-chart>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-7 zeropadding">
+                    <div class="col-sm-12 col-md-6 zeropadding">
                         <div class="card">
                             <div class="content" style="height: 41vh;">
-                                <!-- <bar-chart></bar-chart> -->
+                                <app-timeline-chart></app-timeline-chart>
                             </div>
                         </div>
                     </div>
-                   
+                    <div class="col-sm-12 col-md-3 zeropadding">
+                        <div class="card">
+                            <div class="content" style="height: 41vh;">
+                                <app-scatter-chart></app-scatter-chart>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

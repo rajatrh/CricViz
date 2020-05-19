@@ -1,0 +1,25 @@
+<div class="padding-5">
+    <div class="row">
+        <div class="col-md-10">
+            <h6 style="border-bottom: 1px solid black;">{{cardTitle}}</h6>
+        </div>
+       
+        <div class="col-md-2">
+            <span style="float: right; margin-right: 5px;">
+                <img style="width: 15px;" src="https://img.icons8.com/android/24/000000/info.png" />
+            </span>
+        </div>
+    </div>
+    <div style="padding-left: 25px;">
+        <div #timelineChartDiv style="height: 35vh; width: 90%;">
+        </div>
+        <div style="position: absolute; top:90%; left:35%; z-index: 30; font-size: small;">
+            <mat-checkbox [(ngModel)]="checkbox.batFS" (change)="createLineChart(false)">Batting FS
+                <span style="border-radius: 7px;font-size:xx-small; background-color: red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </mat-checkbox> &nbsp;&nbsp;
+            <mat-checkbox [(ngModel)]="checkbox.bowlFS" (change)="createLineChart(false)">Bowling FS
+                <span style="border-radius: 7px; font-size:xx-small; background-color: green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </mat-checkbox>
+        </div>
+    </div>
+</div>

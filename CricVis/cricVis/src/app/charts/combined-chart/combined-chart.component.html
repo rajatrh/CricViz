@@ -1,0 +1,26 @@
+<div class="padding-5">
+    <div class="row">
+        <div class="col-md-10" >
+            <h6 style="border-bottom: 1px solid black;">Features Breakdown</h6>
+        </div>
+        <div class="col-md-2">
+            <span style="float: right; margin-right: 5px;">
+                <img style="width: 15px;" src="https://img.icons8.com/android/24/000000/info.png"/>
+            </span>
+        </div>
+    </div>
+    <div>
+        <div #combinedChartDiv style="height: 35vh;">
+        </div>
+        <div style="position: absolute; top:85%; left:15%; z-index: 30; font-size: small;">
+            <mat-form-field>
+                <mat-label>Attribute Breakdown</mat-label>
+                <mat-select [(ngModel)]="selectedAttribute" (selectionChange)="eventSelection()">
+                  <mat-option *ngFor="let attr of attributes" [value]="attr.value">
+                    {{attr.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div>
+</div>

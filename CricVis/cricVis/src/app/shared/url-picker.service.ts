@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 
 const LOCALHOST_PREFIX = 'http://localhost:8081';
-const PYTHON_PREFIX =  'https://sdg-python.ue.r.appspot.com'
+const PYTHON_PREFIX =  'https://cricviz-backend.uk.r.appspot.com/'
 
 @Injectable({
   providedIn: 'root'

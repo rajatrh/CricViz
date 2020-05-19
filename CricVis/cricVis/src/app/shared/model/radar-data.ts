@@ -51,7 +51,7 @@ export class RadarData {
                 if (inn.isOut) {
                     notOutCount += 1
                 }
-                sumOfRuns += inn.r
+                sumOfRuns += inn.r_x
 
                 if (inn.sr) {
                     sumStrikeRate = (sumStrikeRate + +inn.sr)
@@ -69,7 +69,7 @@ export class RadarData {
                     sumOfWickets += inn.w
                     wInnings += 1
                 }
-                if (inn.bat_score) {
+                if (inn.bat_score && inn.bat_score > 0) {
                     battingFSSum += inn.bat_score
                     battingCount += 1
                 }
@@ -89,14 +89,22 @@ export class RadarData {
             this.actual.push(Math.round((boundaries / ps.length) * 100) / 100)
             this.scaled.push((Math.round(((boundaries / ps.length) / bl_boundaries) * 100.0)))
 
-            //---
+            if (wInnings > 0) {
+                this.actual.push(Math.round((economy / wInnings) * 100) / 100)
+                this.scaled.push(Math.round(((economy / wInnings) / bl_economy) * 100.0))
 
-            this.actual.push(Math.round((economy / wInnings) * 100) / 100)
-            this.scaled.push(Math.round(((economy / wInnings) / bl_economy) * 100.0))
+                this.actual.push(Math.round((sumOfWickets / wInnings) * 100) / 100)
+                this.scaled.push(Math.round(((sumOfWickets / wInnings) / bl_sumOfWickets) * 100.0))
+            } else {
+                this.actual.push(0)
+                this.scaled.push(0)
+                
+                this.actual.push(0)
+                this.scaled.push(0)
+            }
 
-            this.actual.push(Math.round((sumOfWickets / wInnings) * 100) / 100)
-            this.scaled.push(Math.round(((sumOfWickets / wInnings) / bl_sumOfWickets) * 100.0))
-
+            console.log(this.actual)
+            console.log(this.scaled)
         }
     }
 }

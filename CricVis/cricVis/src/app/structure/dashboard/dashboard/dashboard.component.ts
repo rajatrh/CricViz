@@ -29,12 +29,14 @@ export class DashboardComponent implements OnInit {
     this.dataService.venues = this.data['venues']
     this.dataService.players = this.data['players']
 
+
     // Load name id mapping
     let localMap = new Map<any, any>()
     this.dataService.teams.forEach(t => {
       localMap.set(t.id, t.abbreviation)
     })
     this.dataService.mapping.set('teamId', localMap)
+    this.dataService.mapping.set('oppTeamId', localMap)
 
     let localMap1 = new Map<any, any>()
     this.dataService.venues.forEach(v => {
@@ -47,6 +49,28 @@ export class DashboardComponent implements OnInit {
       localMap2.set(p.id, p.fullName)
     })
     this.dataService.mapping.set('playerId', localMap2)
+
+    this.data['bowlerCluster'].forEach(element => {
+      this.dataService.scatterData.bowler.push(
+        {
+          id: element.Player_Id,
+          x: element.Econ_Rate,
+          y: element.Runs,
+          cluster: element.cluster
+        }
+      )
+    });
+
+    this.data['batsmanCluster'].forEach(element => {
+      this.dataService.scatterData.batsman.push(
+        {
+          id: element.Player_Id,
+          x: element.Strike_Rate,
+          y: element.Runs,
+          cluster: element.cluster
+        }
+      )
+    });
   }
 
 }

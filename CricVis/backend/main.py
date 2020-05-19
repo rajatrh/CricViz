@@ -17,19 +17,26 @@ teamsDF = pd.read_csv('./data/top_teams.csv', index_col=0)
 playersDF = pd.read_csv('./data/top_players.csv', index_col=0)
 venueDF = pd.read_csv('./data/top_venues.csv', index_col=0)
 batsmanDF = pd.read_csv('./data/top_batsman.csv', index_col=0)
-scorecardDF = pd.read_csv('./data/top_batsman_score.csv', index_col=0)
-mergedDF = pd.read_csv('./data/merged_data_final.csv', index_col=0)
+# scorecardDF = pd.read_csv('./data/top_batsman_score.csv', index_col=0)
+mergedDF = pd.read_csv('./data/final.csv', index_col=0)
+cbatsman = pd.read_csv('./data/batsman_cluster.csv', index_col=0)
+cbowler = pd.read_csv('./data/bowlers_cluster.csv', index_col=0)
 
 @app.route('/')
 def home():
-    return json.dumps({'resp' :'All OK'})
+    return json.dumps({'resp': 'All OK'})
+
 
 @app.route('/setupData')
 def setup():
-    return json.dumps({'teams' : json.loads(teamsDF.to_json(orient='records')),
-    'batsmen' : json.loads(batsmanDF.to_json(orient='records')),
-    'players' : json.loads(playersDF.to_json(orient='records')),
-    'venues' : json.loads(venueDF.to_json(orient='records'))})
+    return json.dumps({'teams': json.loads(teamsDF.to_json(orient='records')),
+                       'batsmen': json.loads(batsmanDF.to_json(orient='records')),
+                       'players': json.loads(playersDF.to_json(orient='records')),
+                       'venues': json.loads(venueDF.to_json(orient='records')),
+                       'bowlerCluster': json.loads(cbowler.to_json(orient='records')),
+                       'batsmanCluster': json.loads(cbatsman.to_json(orient='records'))
+                       })
+
 
 @app.route('/fetchPlayerScorecard')
 def fetchPlayerInfo():

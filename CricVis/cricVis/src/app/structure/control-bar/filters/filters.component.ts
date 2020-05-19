@@ -25,6 +25,11 @@ export class FiltersComponent implements OnInit {
       name: 'Venues', value: 'venueId',
       options: this.op,
       fc: new FormControl(), width: '120px'
+    },
+    {
+      name: 'Opponent', value: 'oppTeamId',
+      options: this.op,
+      fc: new FormControl(), width: '90px'
     }
   ]
 
@@ -46,7 +51,6 @@ export class FiltersComponent implements OnInit {
           selectedOptions.push(element)
         })
         f.fc.setValue(selectedOptions)
-
       });
     })
   }

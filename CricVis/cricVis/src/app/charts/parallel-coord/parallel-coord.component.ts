@@ -23,19 +23,18 @@ export class ParallelCoordComponent implements OnInit {
 
       if (this.dataService.filteredPlayerScoreCard.length > 1) {
         this.dataService.filteredPlayerScoreCard.forEach(inning => {
-
-          this.data.push({
-            'Runs': this.nullCheck(inning.r),
-            'Balls Taken': inning.b,
-            'Strike Rate': inning.sr,
-            'Fours': inning.fours,
-            'Sixes': inning.sixes,
-            // 'Dismissal Mode': this.nullCheck(inning.dismissedMethod, 'dm'),
-            'result': inning.result
-          })
+          if (inning.r_x != null) {
+            this.data.push({
+              'Runs': this.nullCheck(inning.r_x),
+              'Balls Taken': this.nullCheck(inning.b),
+              'Strike Rate': this.nullCheck(inning.sr),
+              'Fours': this.nullCheck(inning.fours),
+              'Sixes': this.nullCheck(inning.sixes),
+              // 'Dismissal Mode': this.nullCheck(inning.dismissedMethod, 'dm'),
+              'result': this.nullCheck(inning.result)
+            })
+          }
         })
-  
-        console.log(this.data)
         this.pc()
       } else {
         this.heightpc = '0vh'
@@ -43,11 +42,9 @@ export class ParallelCoordComponent implements OnInit {
     })
   }
 
-  nullCheck(val, col = 'none') {
+  nullCheck(val) {
     if (val == null) {
-      if (col == 'dm') {
-        return 'Not Out'
-      }
+      return ''
     } else {
       return val
     }
@@ -55,8 +52,8 @@ export class ParallelCoordComponent implements OnInit {
 
   pc() {
     var resultColorScale = d3.scaleOrdinal()
-    .domain(["W", "L", "N", "D"])
-    .range(["lightgreen", "red", "black", "black"]);
+      .domain(["W", "L", "N", "D"])
+      .range(["lightgreen", "red", "black", "black"]);
 
     var margin = { top: 30, right: 10, bottom: 10, left: 10 };
     var width = (window.innerWidth * 0.6) - margin.left - margin.right;
@@ -102,7 +99,7 @@ export class ParallelCoordComponent implements OnInit {
       .data(this.data)
       .enter().append("path")
       .attr("d", path)
-      .style("stroke", d=> {
+      .style("stroke", d => {
         return resultColorScale(d['result'])
       })
       .style("opacity", 0.6)
@@ -117,7 +114,7 @@ export class ParallelCoordComponent implements OnInit {
     // Add an axis and title.
     g.append("g")
       .attr("class", "axis")
-      .each(function(d) { d3.select(this).call(axis.scale(y[d])); })
+      .each(function (d) { d3.select(this).call(axis.scale(y[d])); })
       .append("text")
       .style("text-anchor", "middle")
       .attr("y", -9)
@@ -126,7 +123,7 @@ export class ParallelCoordComponent implements OnInit {
     // Add and store a brush for each axis.
     g.append("g")
       .attr("class", "brush")
-      .each(function(d) {
+      .each(function (d) {
         d3.select(this).call(y[d].brush = d3.brushY()
           .extent([[-10, 0], [10, height]])
           .on("brush", brush)
@@ -145,11 +142,11 @@ export class ParallelCoordComponent implements OnInit {
     function brush() {
       var actives = [];
       svg.selectAll(".brush")
-        .filter(function(d) {
+        .filter(function (d) {
           y[d].brushSelectionValue = d3.brushSelection(this);
           return d3.brushSelection(this);
         })
-        .each(function(d){
+        .each(function (d) {
           // Get extents of brush along each active selection axis (the Y axes)
           actives.push({
             dimension: d,
@@ -159,8 +156,8 @@ export class ParallelCoordComponent implements OnInit {
 
       var selected = [];
       // Update foreground to only display selected values
-      foreground.style("display", function(d) {
-        let isActive = actives.every(function(active) {
+      foreground.style("display", function (d) {
+        let isActive = actives.every(function (active) {
           let result = active.extent[1] <= d[active.dimension] && d[active.dimension] <= active.extent[0];
           return result;
         });
@@ -168,7 +165,7 @@ export class ParallelCoordComponent implements OnInit {
         if (isActive) selected.push(d);
         return (isActive) ? null : "none";
       });
-      
+
     }
   }
 }

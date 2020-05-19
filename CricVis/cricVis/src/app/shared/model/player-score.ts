@@ -2,7 +2,7 @@ export class PlayerScore {
     innings: number;
 position: number;
 playerId: number;
-r: number;
+r_x: number;
 b: number;
 sr: number;
 fours: number;
@@ -33,7 +33,7 @@ year: number;
 month: number;
 innings_bowl: number;
 ov: number;
-runsConceded: number;
+r_y: number;
 w: number;
 d: number;
 maid: number;

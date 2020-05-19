@@ -22,8 +22,12 @@ export class CommonDataService {
   teams: Team[] = []
   venues: Venue[] = []
   players: Player[] = []
+  scatterData = {
+    batsman: [],
+    bowler: []
+  };
 
-  mapping = new Map<any,Map<any, any>>()
+  mapping = new Map<any, Map<any, any>>()
 
   dropdownPlayers: Player[] = []
 
@@ -42,12 +46,12 @@ export class CommonDataService {
 
   fetchPlayerData(p) {
     this.httpClient.get<PlayerScore[]>(this.urlPickerService.getURL('/fetchPlayerScorecard') + '?id=' + p.id)
-    .subscribe((res:PlayerScore[]) => {
-      this.playerScoreCard = res;
-      this.filteredPlayerScoreCard = res;
-      this.globalRadarData.getValues(res);
-      this.refreshChartsSubject.next(true)
-      this.applyFilter.next(true)
-    })
+      .subscribe((res: PlayerScore[]) => {
+        this.playerScoreCard = res;
+        this.filteredPlayerScoreCard = res;
+        this.globalRadarData.getValues(res);
+        this.refreshChartsSubject.next(true)
+        this.applyFilter.next(true)
+      })
   }
 }
