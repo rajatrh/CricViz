@@ -16,6 +16,9 @@ export class CommonDataService {
   refreshChartsSubject = new Subject<Boolean>()
   applyFilter = new Subject<Boolean>()
 
+  //Interaction Here
+  timelineHoverSubject = new Subject<any>();
+
   playerScoreCard: PlayerScore[];
   filteredPlayerScoreCard: PlayerScore[];
 

@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { CommonDataService } from 'src/app/shared/common-data.service';
+import { Subscription } from 'rxjs/internal/Subscription';
 
 declare var d3: any;
 
@@ -8,10 +9,11 @@ declare var d3: any;
   templateUrl: './parallel-coord.component.html',
   styleUrls: ['./parallel-coord.component.scss']
 })
-export class ParallelCoordComponent implements OnInit {
+export class ParallelCoordComponent implements OnInit, OnDestroy {
   @ViewChild('myDiv', { static: true }) myDiv: ElementRef;
   heightpc = '34vh'
   data = []
+  timelineHover = new Subscription()
   constructor(public dataService: CommonDataService) {
   }
 
@@ -38,7 +40,8 @@ export class ParallelCoordComponent implements OnInit {
               'Overs Bowled': this.nullCheck(inning.ov),
               'Economy Rate': this.nullCheck(inning.e),
               'Wickets Taken': this.nullCheck(inning.w),
-              'result': this.nullCheck(inning.result)
+              'result': this.nullCheck(inning.result),
+              'id' : this.nullCheck(inning.playerId).toString() +  this.nullCheck(inning.playerId).toString()
             })
           // }
         })
@@ -47,6 +50,11 @@ export class ParallelCoordComponent implements OnInit {
         this.heightpc = '0vh'
       }
     })
+
+    this.timelineHover = this.dataService.timelineHoverSubject.subscribe(ev => 
+      {
+      
+      })
   }
 
   nullCheck(val) {
@@ -86,7 +94,7 @@ export class ParallelCoordComponent implements OnInit {
 
     // Extract the list of dimensions and create a scale for each.
     x.domain(dimensions = d3.keys(this.data[0]).filter(d => {
-      return ((d != "name") && (d != "result")) && (y[d] = d3.scaleLinear()
+      return ((d != "name") && (d != "result") && (d != 'id')) && (y[d] = d3.scaleLinear()
         .domain(d3.extent(this.data, p => { return +p[d]; }))
         .range([height, 0]));
     }));
@@ -170,8 +178,13 @@ export class ParallelCoordComponent implements OnInit {
         });
         // Only render rows that are active across all selectors
         if (isActive) selected.push(d);
+        console.log(isActive)
         return (isActive) ? null : "none";
       });
     }
+  }
+
+  ngOnDestroy() {
+    this.timelineHover.unsubscribe()
   }
 }

@@ -121,11 +121,8 @@ export class TimelineChartComponent implements OnInit {
         .attr("cx", function (d, i) { return x(d.date) })
         .attr("cy", function (d) { return y(0) })
         .attr("r", 3)
-        .on("mouseover", function(d, i) {
-          console.log(d.score)
-          d3.select(this).style("fill", "#000000").attr("r", 6).style("cursor","pointer")
-          tip.show(d.batF,d.batScore, this);
-        }).on("mouseout", function(d) {
+        .on("mouseover", (d,i,n) => this.mouseOver(d,i,n, tip))
+        .on("mouseout", function(d) {
             d3.select(this).style('fill', "red").attr("r", 3)
             tip.hide(d);
         });
@@ -176,6 +173,12 @@ export class TimelineChartComponent implements OnInit {
       .style("text-anchor", "end")
       .style("color", "black")
       .text("Fantasy Score")
+  }
+
+  mouseOver(d, i, n, tip) {
+    d3.select(n[i]).style("fill", "pink").attr("r", 6).style("cursor","pointer")
+    tip.show(d.batF,d.batScore, n[i]);
+    this.dataService.timelineHoverSubject.next('Hola');
   }
 
 }
