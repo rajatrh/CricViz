@@ -1,11 +1,9 @@
-
-
 <div class="padding-5">
     <div class="row">
         <div class="col-md-10">
             <h6 style="border-bottom: 1px solid black;">{{cardTitle}}</h6>
         </div>
-       
+
         <div class="col-md-2">
             <span style="float: right; margin-right: 5px;">
                 <img style="width: 15px;" src="https://img.icons8.com/android/24/000000/info.png" />
@@ -14,6 +12,19 @@
     </div>
     <div style="padding-left: 25px;">
         <div #scatterChartDiv style="height: 35vh; width: 100%;">
+        </div>
+        <div style="position: absolute; top:85%; left:30%; z-index: 30; font-size: small;">
+            <mat-form-field>
+                <mat-label>Type of cluster</mat-label>
+                <mat-select [(ngModel)]="typeOfCluster" (selectionChange)="eventSelection()">
+                    <mat-option value="batsman">
+                        Batsman
+                    </mat-option>
+                    <mat-option value="bowler">
+                        Bowler
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </div>
 </div>
