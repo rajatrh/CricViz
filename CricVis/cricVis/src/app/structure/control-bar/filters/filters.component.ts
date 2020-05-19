@@ -31,6 +31,11 @@ export class FiltersComponent implements OnInit {
       options: this.op,
       fc: new FormControl(), width: '90px'
     }
+    // {
+    //   name: 'Year', value: 'year',
+    //   options: this.op,
+    //   fc: new FormControl(), width: '90px'
+    // }
   ]
 
   constructor(public dataService: CommonDataService) {
