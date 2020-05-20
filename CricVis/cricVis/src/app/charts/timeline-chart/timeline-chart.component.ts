@@ -10,7 +10,7 @@ declare var d3: any;
 })
 export class TimelineChartComponent implements OnInit {
   @ViewChild('timelineChartDiv', { static: true }) myDiv: ElementRef;
-  cardTitle = 'Fantasy Score Timeline'
+  cardTitle = 'Score Timeline'
 
   checkbox = {
     batFS: true,

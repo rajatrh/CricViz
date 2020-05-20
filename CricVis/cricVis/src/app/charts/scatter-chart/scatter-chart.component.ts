@@ -45,7 +45,7 @@ export class ScatterChartComponent implements OnInit {
       clusterAxis = ['Runs Scored', 'Strike Rate']
     } else {
       this.scatterChartData.data = this.dataService.scatterData.bowler
-      clusterAxis = ['Runs Conceded', 'Economy']
+      clusterAxis = ['Balls Bowled', 'Economy']
     }
     this.myDiv.nativeElement.innerHTML = '';
 
