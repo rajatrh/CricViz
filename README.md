@@ -1,6 +1,7 @@
 #### CricViz
 
 Backend: Flask with Python3
+
 Frontend: Angular 8, D3 JS (v4)
 
 Link to <a href="https://cric-viz.uk.r.appspot.com/dashboard"> demo </a>. (Hosted on GCP)
